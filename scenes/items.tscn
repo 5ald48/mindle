@@ -8,13 +8,13 @@
 [node name="Items" type="Node2D" unique_id=463308397]
 
 [node name="iron" parent="." unique_id=2043541000 instance=ExtResource("1_cdcin")]
-position = Vector2(111, 28)
+position = Vector2(185, 209)
 
 [node name="gold" parent="." unique_id=417355115 instance=ExtResource("2_d17p1")]
-position = Vector2(551, 20)
+position = Vector2(491, 206)
 
 [node name="copper" parent="." unique_id=309828057 instance=ExtResource("3_me73k")]
-position = Vector2(412, 21)
+position = Vector2(344, 207)
 
 [node name="coal" parent="." unique_id=113848066 instance=ExtResource("4_4ludf")]
-position = Vector2(277, 23)
+position = Vector2(23, 207)

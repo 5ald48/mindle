@@ -5,30 +5,43 @@
 [ext_resource type="Script" uid="uid://c8fggxt866fd2" path="res://scripts/copper_ui.gd" id="3_yev5y"]
 [ext_resource type="Script" uid="uid://dlofv5tubp23g" path="res://scripts/coal_ui.gd" id="4_gdt2y"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_nt7q6"]
-
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1543564076]
+scale = Vector2(0.5, 0.5)
+transform = Transform2D(0.5, 0, 0, 0.5, 0, 0)
 
-[node name="ironUI" type="Label" parent="." unique_id=806606325]
-offset_right = 30.0
+[node name="ironUI" type="RichTextLabel" parent="." unique_id=795153280]
+offset_right = 32.0
 offset_bottom = 23.0
-label_settings = SubResource("LabelSettings_nt7q6")
+bbcode_enabled = true
+text = "iron"
+fit_content = true
+autowrap_mode = 0
 script = ExtResource("1_nt7q6")
 
-[node name="goldUI" type="Label" parent="." unique_id=1000550768]
-offset_left = 316.0
-offset_right = 356.0
-offset_bottom = 23.0
+[node name="goldUI" type="RichTextLabel" parent="." unique_id=1594939914]
+offset_left = 1.0
+offset_top = 17.0
+offset_right = 41.0
+offset_bottom = 40.0
+text = "gold"
+fit_content = true
+autowrap_mode = 0
 script = ExtResource("2_x4jx1")
 
-[node name="copperUI" type="Label" parent="." unique_id=1205082363]
-offset_left = 117.0
-offset_right = 157.0
-offset_bottom = 23.0
+[node name="copperUI" type="RichTextLabel" parent="." unique_id=1006604538]
+offset_top = 37.0
+offset_right = 54.0
+offset_bottom = 60.0
+text = "copper"
+fit_content = true
+autowrap_mode = 0
 script = ExtResource("3_yev5y")
 
-[node name="coalUI" type="Label" parent="." unique_id=997690966]
-offset_left = 226.0
-offset_right = 255.0
-offset_bottom = 23.0
+[node name="coalUI" type="RichTextLabel" parent="." unique_id=1225782600]
+offset_top = 56.0
+offset_right = 32.0
+offset_bottom = 79.0
+text = "coal"
+fit_content = true
+autowrap_mode = 0
 script = ExtResource("4_gdt2y")

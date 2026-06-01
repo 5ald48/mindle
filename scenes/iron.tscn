@@ -6,8 +6,8 @@
 [node name="Node2D" type="Node2D" unique_id=2043541000]
 
 [node name="TextureButton" type="TextureButton" parent="." unique_id=1159424253]
-offset_right = 128.0
-offset_bottom = 128.0
+offset_right = 59.0
+offset_bottom = 42.0
 texture_normal = ExtResource("2_txt7i")
 script = ExtResource("3_4hkna")
 
