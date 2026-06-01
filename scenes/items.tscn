@@ -8,7 +8,7 @@
 [node name="Items" type="Node2D" unique_id=463308397]
 
 [node name="iron" parent="." unique_id=2043541000 instance=ExtResource("1_cdcin")]
-position = Vector2(140, 24)
+position = Vector2(111, 28)
 
 [node name="gold" parent="." unique_id=417355115 instance=ExtResource("2_d17p1")]
 position = Vector2(551, 20)
