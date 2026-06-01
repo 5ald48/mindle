@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://kbgvgcpid0bd"]
+
+[ext_resource type="PackedScene" uid="uid://ce2kl1t6jcm3d" path="res://scenes/items.tscn" id="2_ce2h5"]
+[ext_resource type="PackedScene" uid="uid://db40xavlkt8ln" path="res://scenes/ui.tscn" id="2_k0ot2"]
+
+[node name="MainScene" type="Node2D" unique_id=579106627]
+
+[node name="CanvasLayer" parent="." unique_id=1543564076 instance=ExtResource("2_k0ot2")]
+
+[node name="Items" parent="." unique_id=463308397 instance=ExtResource("2_ce2h5")]

@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://db40xavlkt8ln"]
+
+[ext_resource type="Script" uid="uid://ds4h1uqpmrh2e" path="res://scripts/ironUI.gd" id="1_nt7q6"]
+[ext_resource type="Script" uid="uid://biuing2f7wgui" path="res://scripts/goldUI.gd" id="2_x4jx1"]
+[ext_resource type="Script" uid="uid://c8fggxt866fd2" path="res://scripts/copper_ui.gd" id="3_yev5y"]
+[ext_resource type="Script" uid="uid://dlofv5tubp23g" path="res://scripts/coal_ui.gd" id="4_gdt2y"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nt7q6"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1543564076]
+
+[node name="ironUI" type="Label" parent="." unique_id=806606325]
+offset_right = 30.0
+offset_bottom = 23.0
+label_settings = SubResource("LabelSettings_nt7q6")
+script = ExtResource("1_nt7q6")
+
+[node name="goldUI" type="Label" parent="." unique_id=1000550768]
+offset_left = 316.0
+offset_right = 356.0
+offset_bottom = 23.0
+script = ExtResource("2_x4jx1")
+
+[node name="copperUI" type="Label" parent="." unique_id=1205082363]
+offset_left = 117.0
+offset_right = 157.0
+offset_bottom = 23.0
+script = ExtResource("3_yev5y")
+
+[node name="coalUI" type="Label" parent="." unique_id=997690966]
+offset_left = 226.0
+offset_right = 255.0
+offset_bottom = 23.0
+script = ExtResource("4_gdt2y")
