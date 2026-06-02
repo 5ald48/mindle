@@ -13,7 +13,7 @@ config_version=5
 config/name="mindle"
 run/main_scene="uid://kbgvgcpid0bd"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://textures/icon.svg"
 
 [autoload]
 
@@ -21,8 +21,8 @@ Gamedata="*uid://0hk4lxk7edvu"
 
 [display]
 
-window/size/viewport_width=640
-window/size/viewport_height=360
+window/size/viewport_width=320
+window/size/viewport_height=180
 window/stretch/mode="canvas_items"
 
 [physics]

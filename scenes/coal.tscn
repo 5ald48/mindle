@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://chpel2js5ba3s"]
 
-[ext_resource type="Texture2D" uid="uid://ix8t61p0721q" path="res://icon.svg" id="1_q86jm"]
+[ext_resource type="Texture2D" uid="uid://brsrp40nc3bkr" path="res://textures/IRON ORE.png" id="1_q86jm"]
 [ext_resource type="Script" uid="uid://bdvc5hofcfwy2" path="res://scripts/coal.gd" id="2_q86jm"]
 
 [node name="Node2D" type="Node2D" unique_id=2043541000]
 
 [node name="TextureButton" type="TextureButton" parent="." unique_id=1159424253]
-offset_right = 128.0
-offset_bottom = 128.0
+offset_right = 16.0
+offset_bottom = 16.0
 texture_normal = ExtResource("1_q86jm")
 script = ExtResource("2_q86jm")
 

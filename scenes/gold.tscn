@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://2ennxcacubyc"]
 
-[ext_resource type="Texture2D" uid="uid://ix8t61p0721q" path="res://icon.svg" id="2_txt7i"]
+[ext_resource type="Texture2D" uid="uid://brsrp40nc3bkr" path="res://textures/IRON ORE.png" id="1_yna14"]
 [ext_resource type="Script" uid="uid://dnv3jlk8mgo0s" path="res://scripts/gold.gd" id="2_yna14"]
 
 [node name="Node2D" type="Node2D" unique_id=2043541000]
 
 [node name="TextureButton" type="TextureButton" parent="." unique_id=1159424253]
-offset_right = 128.0
-offset_bottom = 128.0
-texture_normal = ExtResource("2_txt7i")
+offset_right = 16.0
+offset_bottom = 16.0
+texture_normal = ExtResource("1_yna14")
 script = ExtResource("2_yna14")
 
 [connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]
