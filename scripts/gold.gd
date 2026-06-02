@@ -3,7 +3,7 @@ extends TextureButton
 
 
 func _process(delta: float) -> void:
-	if Gamedata.gold_miner_unlocked == true:
+	if Gamedata.gold_miner_on_off == true:
 		Gamedata.gold += Gamedata.iron_per_sec * delta
 
 
