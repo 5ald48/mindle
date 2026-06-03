@@ -1,11 +1,8 @@
 [gd_scene format=3 uid="uid://db40xavlkt8ln"]
 
 [ext_resource type="Texture2D" uid="uid://brkmkkoxxcg2t" path="res://textures/GEAR.png" id="1_8dubc"]
-[ext_resource type="Script" uid="uid://ds4h1uqpmrh2e" path="res://scripts/ironUI.gd" id="1_nt7q6"]
 [ext_resource type="Script" uid="uid://l3p4hjqb46af" path="res://scripts/unlocks_window.gd" id="1_wm3ai"]
-[ext_resource type="Script" uid="uid://biuing2f7wgui" path="res://scripts/goldUI.gd" id="2_x4jx1"]
-[ext_resource type="Script" uid="uid://c8fggxt866fd2" path="res://scripts/copper_ui.gd" id="3_yev5y"]
-[ext_resource type="Script" uid="uid://dlofv5tubp23g" path="res://scripts/coal_ui.gd" id="4_gdt2y"]
+[ext_resource type="PackedScene" uid="uid://bowr1hxt4hv57" path="res://scenes/items_ui.tscn" id="4_gdt2y"]
 [ext_resource type="PackedScene" uid="uid://14m2cfavd4ae" path="res://scenes/unlockes_window.tscn" id="7_p7vwb"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1543564076]
@@ -21,42 +18,7 @@ texture_normal = ExtResource("1_8dubc")
 stretch_mode = 0
 script = ExtResource("1_wm3ai")
 
-[node name="ironUI" type="RichTextLabel" parent="." unique_id=795153280]
-offset_right = 32.0
-offset_bottom = 23.0
-bbcode_enabled = true
-text = "iron"
-fit_content = true
-autowrap_mode = 0
-script = ExtResource("1_nt7q6")
-
-[node name="goldUI" type="RichTextLabel" parent="." unique_id=1594939914]
-offset_left = 1.0
-offset_top = 17.0
-offset_right = 41.0
-offset_bottom = 40.0
-text = "gold"
-fit_content = true
-autowrap_mode = 0
-script = ExtResource("2_x4jx1")
-
-[node name="copperUI" type="RichTextLabel" parent="." unique_id=1006604538]
-offset_top = 37.0
-offset_right = 54.0
-offset_bottom = 60.0
-text = "copper"
-fit_content = true
-autowrap_mode = 0
-script = ExtResource("3_yev5y")
-
-[node name="coalUI" type="RichTextLabel" parent="." unique_id=1225782600]
-offset_top = 56.0
-offset_right = 32.0
-offset_bottom = 79.0
-text = "coal"
-fit_content = true
-autowrap_mode = 0
-script = ExtResource("4_gdt2y")
+[node name="items ui" parent="." unique_id=832062190 instance=ExtResource("4_gdt2y")]
 
 [node name="unlockes window" parent="." unique_id=1700945610 instance=ExtResource("7_p7vwb")]
 offset_left = 1.0842022e-19

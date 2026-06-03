@@ -4,7 +4,7 @@ extends TextureButton
 
 func _process(delta: float) -> void:
 	if Gamedata.iron_miner_on_off == true:
-		Gamedata.iron += Gamedata.iron_per_sec * delta
+		Gamedata.iron.plus_equals(Gamedata.iron_per_sec.multiply(delta))
 
 
 
@@ -12,4 +12,4 @@ func _process(delta: float) -> void:
 
 func _on_pressed() -> void:
 	if Gamedata.pickaxe_level >= 1:
-		Gamedata.iron += 1
+		Gamedata.iron.plus_equals(1)

@@ -12,8 +12,8 @@ func _process(delta: float) -> void:
 
 
 func _on_pressed() -> void:
-	if Gamedata.iron >= Gamedata.iron_miner_upgrade_cost:
+	if Gamedata.iron.is_greater_than_or_equal_to(Gamedata.iron_miner_upgrade_cost):
 		Gamedata.iron_miner_on_off = true
-		Gamedata.iron -= Gamedata.iron_miner_upgrade_cost
-		Gamedata.iron_miner_upgrade_cost *= 1.1
-		Gamedata.iron_per_sec *= 1.1
+		Gamedata.iron.minus_equals(Gamedata.iron_miner_upgrade_cost)
+		Gamedata.iron_miner_upgrade_cost.multiply_equals(1.1)
+		Gamedata.iron_per_sec.multiply_equals(1.1)
