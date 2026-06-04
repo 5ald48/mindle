@@ -8,4 +8,4 @@ func _process(delta: float) -> void:
 
 func _on_pressed() -> void:
 	if Gamedata.pickaxe_level >= 3:
-		Gamedata.copper.plus_equals(1)
+		Gamedata.copper.plus_equals(Gamedata.pickaxe_click_multiplier)

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://ce13aky1v6trk"]
+
+[ext_resource type="PackedScene" uid="uid://e1yml3p661j7" path="res://scenes/iron.tscn" id="1_03x1o"]
+[ext_resource type="PackedScene" uid="uid://chpel2js5ba3s" path="res://scenes/coal.tscn" id="2_vx7ym"]
+[ext_resource type="PackedScene" uid="uid://o4wb0oy57grv" path="res://scenes/copper.tscn" id="3_4txet"]
+[ext_resource type="PackedScene" uid="uid://2ennxcacubyc" path="res://scenes/gold.tscn" id="4_2tv1d"]
+
+[node name="tower & everything on tower" type="Node2D" unique_id=1992095660]
+
+[node name="iron" parent="." unique_id=1352760490 instance=ExtResource("1_03x1o")]
+position = Vector2(-0.28964233, 0)
+
+[node name="coal" parent="." unique_id=162836495 instance=ExtResource("2_vx7ym")]
+position = Vector2(-0.32702637, -1.5258789e-05)
+
+[node name="copper" parent="." unique_id=1609614674 instance=ExtResource("3_4txet")]
+
+[node name="gold" parent="." unique_id=1085759372 instance=ExtResource("4_2tv1d")]

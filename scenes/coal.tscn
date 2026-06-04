@@ -1,14 +1,80 @@
 [gd_scene format=3 uid="uid://chpel2js5ba3s"]
 
-[ext_resource type="Texture2D" uid="uid://brsrp40nc3bkr" path="res://textures/IRON ORE.png" id="1_q86jm"]
-[ext_resource type="Script" uid="uid://bdvc5hofcfwy2" path="res://scripts/coal.gd" id="2_q86jm"]
+[ext_resource type="Texture2D" uid="uid://bmsslbfnc3vbx" path="res://textures/tower.png" id="1_jpt6k"]
+[ext_resource type="FontFile" uid="uid://c24bc2hmt208c" path="res://font/Jersey10-Regular.ttf" id="2_hqgp6"]
+[ext_resource type="Script" uid="uid://dlofv5tubp23g" path="res://scripts/coal_ui.gd" id="3_4slx1"]
+[ext_resource type="Texture2D" uid="uid://brkmkkoxxcg2t" path="res://textures/GEAR.png" id="4_0tt2m"]
+[ext_resource type="Script" uid="uid://bkqrabbrt20kf" path="res://scripts/coal_miner_upgrade.gd" id="5_4slx1"]
+[ext_resource type="Texture2D" uid="uid://cbegkp4oqc21" path="res://textures/items/item574.png" id="5_uhxyx"]
+[ext_resource type="Script" uid="uid://bdvc5hofcfwy2" path="res://scripts/coal.gd" id="6_hqgp6"]
 
-[node name="Node2D" type="Node2D" unique_id=2043541000]
+[sub_resource type="GDScript" id="GDScript_y2yhy"]
+script/source = "extends RichTextLabel
 
-[node name="TextureButton" type="TextureButton" parent="." unique_id=1159424253]
-offset_right = 16.0
-offset_bottom = 16.0
-texture_normal = ExtResource("1_q86jm")
-script = ExtResource("2_q86jm")
 
-[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta: float) -> void:
+	text = Gamedata.coal_miner_upgrade_cost.to_metric_name(true)
+"
+
+[node name="coal" type="Node2D" unique_id=162836495]
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=176889873]
+position = Vector2(212.21822, 156.299)
+texture = ExtResource("1_jpt6k")
+
+[node name="coalUI" type="RichTextLabel" parent="Sprite2D2" unique_id=1720337057]
+offset_top = -4.7073364
+offset_right = 46.0
+offset_bottom = 30.292664
+scale = Vector2(0.2, 0.2)
+theme_override_fonts/normal_font = ExtResource("2_hqgp6")
+theme_override_font_sizes/normal_font_size = 32
+text = "coal"
+fit_content = true
+autowrap_mode = 0
+script = ExtResource("3_4slx1")
+
+[node name="coal miner upgrade" type="TextureButton" parent="Sprite2D2" unique_id=1377077125]
+offset_left = -24.38234
+offset_top = -8.206482
+offset_right = -8.3823395
+offset_bottom = 7.793518
+texture_normal = ExtResource("4_0tt2m")
+stretch_mode = 0
+script = ExtResource("5_4slx1")
+
+[node name="upgrade cost" type="RichTextLabel" parent="Sprite2D2/coal miner upgrade" unique_id=638968076]
+layout_mode = 0
+offset_left = 4.5028667
+offset_top = 10.723968
+offset_right = 54.50287
+offset_bottom = 45.72397
+scale = Vector2(0.2, 0.2)
+theme_override_fonts/normal_font = ExtResource("2_hqgp6")
+theme_override_font_sizes/normal_font_size = 32
+text = "100"
+fit_content = true
+autowrap_mode = 0
+script = SubResource("GDScript_y2yhy")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D2" unique_id=722664790]
+position = Vector2(-4, -0.54615784)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_uhxyx")
+
+[node name="coal2" type="TextureButton" parent="." unique_id=299535415]
+offset_left = 200.73874
+offset_top = 219.32149
+offset_right = 216.73874
+offset_bottom = 235.3215
+texture_normal = ExtResource("5_uhxyx")
+script = ExtResource("6_hqgp6")
+
+[connection signal="pressed" from="Sprite2D2/coal miner upgrade" to="Sprite2D2/coal miner upgrade" method="_on_pressed"]
+[connection signal="pressed" from="coal2" to="coal2" method="_on_pressed"]

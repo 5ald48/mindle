@@ -1,14 +1,80 @@
 [gd_scene format=3 uid="uid://o4wb0oy57grv"]
 
-[ext_resource type="Texture2D" uid="uid://brsrp40nc3bkr" path="res://textures/IRON ORE.png" id="1_xpmwn"]
-[ext_resource type="Script" uid="uid://cofyeghsp7xcw" path="res://scripts/copper.gd" id="2_xpmwn"]
+[ext_resource type="Texture2D" uid="uid://bmsslbfnc3vbx" path="res://textures/tower.png" id="1_7ilhj"]
+[ext_resource type="FontFile" uid="uid://c24bc2hmt208c" path="res://font/Jersey10-Regular.ttf" id="2_i7jv5"]
+[ext_resource type="Script" uid="uid://c8fggxt866fd2" path="res://scripts/copper_ui.gd" id="3_n50sp"]
+[ext_resource type="Texture2D" uid="uid://brkmkkoxxcg2t" path="res://textures/GEAR.png" id="4_3ugby"]
+[ext_resource type="Script" uid="uid://blby3y5jnsgrq" path="res://scripts/copper_miner_upgrade.gd" id="5_7yyfa"]
+[ext_resource type="Texture2D" uid="uid://doantctnar2eu" path="res://textures/items/item577.png" id="6_urivo"]
+[ext_resource type="Script" uid="uid://cofyeghsp7xcw" path="res://scripts/copper.gd" id="7_idd8a"]
 
-[node name="Node2D" type="Node2D" unique_id=2043541000]
+[sub_resource type="GDScript" id="GDScript_uvqcw"]
+script/source = "extends RichTextLabel
 
-[node name="TextureButton" type="TextureButton" parent="." unique_id=1159424253]
-offset_right = 16.0
-offset_bottom = 16.0
-texture_normal = ExtResource("1_xpmwn")
-script = ExtResource("2_xpmwn")
 
-[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta: float) -> void:
+	text = Gamedata.copper_miner_upgrade_cost.to_metric_name(true)
+"
+
+[node name="copper" type="Node2D" unique_id=1609614674]
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=944308749]
+position = Vector2(212.21822, 138.25662)
+texture = ExtResource("1_7ilhj")
+
+[node name="copperUI" type="RichTextLabel" parent="Sprite2D2" unique_id=1669906359]
+offset_top = -5.2186356
+offset_right = 81.0
+offset_bottom = 29.781372
+scale = Vector2(0.2, 0.2)
+theme_override_fonts/normal_font = ExtResource("2_i7jv5")
+theme_override_font_sizes/normal_font_size = 32
+text = "copper"
+fit_content = true
+autowrap_mode = 0
+script = ExtResource("3_n50sp")
+
+[node name="copper miner upgrade" type="TextureButton" parent="Sprite2D2" unique_id=1315470033]
+offset_left = -24.38234
+offset_top = -8.545563
+offset_right = -8.3823395
+offset_bottom = 7.4544373
+texture_normal = ExtResource("4_3ugby")
+stretch_mode = 0
+script = ExtResource("5_7yyfa")
+
+[node name="upgrade cost" type="RichTextLabel" parent="Sprite2D2/copper miner upgrade" unique_id=825386744]
+layout_mode = 0
+offset_left = 4.5028667
+offset_top = 10.723968
+offset_right = 54.50287
+offset_bottom = 45.72397
+scale = Vector2(0.2, 0.2)
+theme_override_fonts/normal_font = ExtResource("2_i7jv5")
+theme_override_font_sizes/normal_font_size = 32
+text = "100"
+fit_content = true
+autowrap_mode = 0
+script = SubResource("GDScript_uvqcw")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D2" unique_id=1141327898]
+position = Vector2(-4, -1.2186279)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_urivo")
+
+[node name="copper" type="TextureButton" parent="." unique_id=1026285657]
+offset_left = 200.73874
+offset_top = 243.83777
+offset_right = 216.73874
+offset_bottom = 259.83777
+texture_normal = ExtResource("6_urivo")
+script = ExtResource("7_idd8a")
+
+[connection signal="pressed" from="Sprite2D2/copper miner upgrade" to="Sprite2D2/copper miner upgrade" method="_on_pressed"]
+[connection signal="pressed" from="copper" to="copper" method="_on_pressed"]
