@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://db40xavlkt8ln"]
 
-[ext_resource type="Texture2D" uid="uid://brkmkkoxxcg2t" path="res://textures/GEAR.png" id="1_8dubc"]
+[ext_resource type="Texture2D" uid="uid://brkmkkoxxcg2t" path="res://textures/my art/GEAR.png" id="1_8dubc"]
 [ext_resource type="FontFile" uid="uid://c24bc2hmt208c" path="res://font/Jersey10-Regular.ttf" id="1_ktti3"]
 [ext_resource type="Script" uid="uid://d2flmddlousyx" path="res://scripts/coins.gd" id="1_p7vwb"]
 [ext_resource type="Script" uid="uid://l3p4hjqb46af" path="res://scripts/unlocks_window.gd" id="1_wm3ai"]

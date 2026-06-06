@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c4b33ouu4c684"]
+
+[ext_resource type="PackedScene" uid="uid://dp1rm1jf7fumv" path="res://scenes/resource.tscn" id="1_hf51l"]
+[ext_resource type="Texture2D" uid="uid://c7wqc7juvvvsj" path="res://textures/items/item566.png" id="2_h4q65"]
+
+[node name="Node2D" unique_id=402219238 instance=ExtResource("1_hf51l")]
+resource_name = "iron_ingot"
+resource_used1 = "iron"
+
+[node name="Sprite2D" parent="Sprite2D2/miner upgrade" parent_id_path=PackedInt32Array(270947365) index="1" unique_id=939404416]
+texture = ExtResource("2_h4q65")
+
+[node name="resource" parent="Sprite2D2" parent_id_path=PackedInt32Array(793220251) index="3" unique_id=451976459]
+offset_left = -36.0
+offset_top = -5.0
+offset_right = -20.0
+offset_bottom = 11.0
+texture_normal = ExtResource("2_h4q65")

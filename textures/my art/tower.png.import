@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brkmkkoxxcg2t"
-path="res://.godot/imported/GEAR.png-ada96844f1bbc6c17fda7601d4ece037.ctex"
+uid="uid://bmsslbfnc3vbx"
+path="res://.godot/imported/tower.png-bcf4b1894888ddd5e7b6e59d0c6039c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/GEAR.png"
-dest_files=["res://.godot/imported/GEAR.png-ada96844f1bbc6c17fda7601d4ece037.ctex"]
+source_file="res://textures/my art/tower.png"
+dest_files=["res://.godot/imported/tower.png-bcf4b1894888ddd5e7b6e59d0c6039c7.ctex"]
 
 [params]
 

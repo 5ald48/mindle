@@ -12,6 +12,7 @@ func _process(_delta: float) -> void:
 
 
 func _on_pressed() -> void:
+
 	if Gamedata.iron.is_greater_than_or_equal_to(Gamedata.iron_miner_upgrade_cost):
 		Gamedata.iron_miner_on_off = true
 		Gamedata.iron_miner_unlocked = true

@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://dp1rm1jf7fumv"]
+
+[ext_resource type="Script" uid="uid://cgarfyu0xif6p" path="res://scripts/resource.gd" id="1_3rbbe"]
+[ext_resource type="Texture2D" uid="uid://celj4wyriw2e8" path="res://textures/my art/MAIN SPRITE-64x48-64x16.png" id="1_o1pcp"]
+[ext_resource type="Texture2D" uid="uid://cxsb8xaj6gp0i" path="res://textures/my art/MAIN SPRITE-80x0-16x16.png" id="2_o1pcp"]
+[ext_resource type="FontFile" uid="uid://c24bc2hmt208c" path="res://font/Jersey10-Regular.ttf" id="2_oukxn"]
+[ext_resource type="Texture2D" uid="uid://c0kb1s8kehegh" path="res://textures/my art/MAIN SPRITE-96x32-32x16.png" id="4_ofw20"]
+[ext_resource type="Texture2D" uid="uid://dpbxbh3kws16f" path="res://textures/items/item585.png" id="6_n42d4"]
+[ext_resource type="Texture2D" uid="uid://dd8oo6xymvmdy" path="res://textures/my art/MAIN SPRITE-64x16-16x16.png" id="7_8e877"]
+
+[node name="Node2D" type="Node2D" unique_id=402219238]
+script = ExtResource("1_3rbbe")
+texture_on = ExtResource("2_o1pcp")
+texture_off = ExtResource("7_8e877")
+resource_used1 = "coal"
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=793220251]
+texture = ExtResource("1_o1pcp")
+
+[node name="resourceUI" type="RichTextLabel" parent="Sprite2D2" unique_id=113634182]
+offset_left = -23.0
+offset_top = -3.0
+offset_right = 82.0
+offset_bottom = 32.0
+scale = Vector2(0.2, 0.2)
+theme_override_fonts/normal_font = ExtResource("2_oukxn")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "resource"
+fit_content = true
+autowrap_mode = 0
+
+[node name="miner upgrade" type="TextureButton" parent="Sprite2D2" unique_id=270947365]
+offset_left = -10.0
+offset_top = -6.0
+offset_right = 22.0
+offset_bottom = 10.0
+scale = Vector2(0.75, 0.75)
+texture_normal = ExtResource("4_ofw20")
+stretch_mode = 0
+
+[node name="upgrade cost" type="RichTextLabel" parent="Sprite2D2/miner upgrade" unique_id=1082285736]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 5.3333335
+offset_right = 62.0
+offset_bottom = 40.333332
+scale = Vector2(0.2, 0.2)
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("2_oukxn")
+theme_override_font_sizes/normal_font_size = 32
+text = "100"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D2/miner upgrade" unique_id=939404416]
+position = Vector2(5.333336, 8)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_n42d4")
+
+[node name="on off" type="TextureButton" parent="Sprite2D2" unique_id=727703705]
+offset_left = 14.0
+offset_top = -8.0
+offset_right = 30.0
+offset_bottom = 8.0
+texture_normal = ExtResource("7_8e877")
+
+[node name="resource" type="TextureButton" parent="Sprite2D2" unique_id=451976459]
+offset_left = -35.0
+offset_top = -6.0
+offset_right = -19.0
+offset_bottom = 10.0
+scale = Vector2(0.75, 0.75)
+texture_normal = ExtResource("6_n42d4")
+
+[connection signal="pressed" from="Sprite2D2/miner upgrade" to="." method="_on_miner_upgrade_pressed"]
+[connection signal="pressed" from="Sprite2D2/on off" to="." method="_on_on_off_pressed"]
+[connection signal="pressed" from="Sprite2D2/resource" to="." method="_on_resource_pressed"]

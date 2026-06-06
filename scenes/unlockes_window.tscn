@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://14m2cfavd4ae"]
 
 [ext_resource type="Script" uid="uid://c2wnna6pja631" path="res://scripts/window botton.gd" id="1_fgu8n"]
-[ext_resource type="Texture2D" uid="uid://brkmkkoxxcg2t" path="res://textures/GEAR.png" id="2_n6iy4"]
+[ext_resource type="Texture2D" uid="uid://brkmkkoxxcg2t" path="res://textures/my art/GEAR.png" id="2_n6iy4"]
 [ext_resource type="Script" uid="uid://p0mfa6y8xy50" path="res://scripts/exit botton.gd" id="3_n6iy4"]
 
 [node name="unlockes window" type="Panel" unique_id=1700945610]

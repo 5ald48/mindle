@@ -11,5 +11,5 @@ func _process(delta: float) -> void:
 
 
 func _on_pressed() -> void:
-	if Gamedata.pickaxe_level >= 1:
+	if Gamedata.pickaxe_level.is_greater_than_or_equal_to(1):
 		Gamedata.iron.plus_equals(Gamedata.pickaxe_click_multiplier)
