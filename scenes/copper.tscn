@@ -1,134 +1,13 @@
 [gd_scene format=3 uid="uid://o4wb0oy57grv"]
 
-[ext_resource type="Texture2D" uid="uid://celj4wyriw2e8" path="res://textures/my art/MAIN SPRITE-64x48-64x16.png" id="1_7ilhj"]
-[ext_resource type="FontFile" uid="uid://c24bc2hmt208c" path="res://font/Jersey10-Regular.ttf" id="2_i7jv5"]
-[ext_resource type="Script" uid="uid://c8fggxt866fd2" path="res://scripts/copper_ui.gd" id="3_n50sp"]
-[ext_resource type="Texture2D" uid="uid://c0kb1s8kehegh" path="res://textures/my art/MAIN SPRITE-96x32-32x16.png" id="4_7ilhj"]
-[ext_resource type="Script" uid="uid://blby3y5jnsgrq" path="res://scripts/copper_miner_upgrade.gd" id="5_7yyfa"]
+[ext_resource type="PackedScene" uid="uid://ojoq1u3eyjir" path="res://scenes/free_resource.tscn" id="1_4lqx2"]
 [ext_resource type="Texture2D" uid="uid://doantctnar2eu" path="res://textures/items/item577.png" id="6_urivo"]
-[ext_resource type="Texture2D" uid="uid://dd8oo6xymvmdy" path="res://textures/my art/MAIN SPRITE-64x16-16x16.png" id="7_i7jv5"]
-[ext_resource type="Script" uid="uid://cofyeghsp7xcw" path="res://scripts/copper.gd" id="7_idd8a"]
-[ext_resource type="Texture2D" uid="uid://cxsb8xaj6gp0i" path="res://textures/my art/MAIN SPRITE-80x0-16x16.png" id="8_n50sp"]
 
-[sub_resource type="GDScript" id="GDScript_uvqcw"]
-script/source = "extends RichTextLabel
+[node name="Node2D" unique_id=402219238 instance=ExtResource("1_4lqx2")]
+resource_name = "copper"
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	text = Gamedata.copper_miner_upgrade_cost.to_metric_name(true)
-"
-
-[sub_resource type="GDScript" id="GDScript_n50sp"]
-script/source = "extends TextureButton
-
-@export var texture_on : Texture2D
-@export var texture_off : Texture2D
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	if Gamedata.copper_miner_on_off == true :
-		texture_normal = texture_on
-	
-	elif  Gamedata.copper_miner_on_off == false:
-		texture_normal = texture_off
-
-
-
-func _on_pressed() -> void:
-	if Gamedata.copper_miner_unlocked == true :
-		
-		if Gamedata.copper_miner_on_off == false :
-			Gamedata.copper_miner_on_off = true
-			
-		
-		
-		elif Gamedata.copper_miner_on_off == true :
-			Gamedata.copper_miner_on_off = false
-			
-"
-
-[node name="copper" type="Node2D" unique_id=1609614674]
-
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=944308749]
-texture = ExtResource("1_7ilhj")
-
-[node name="copperUI" type="RichTextLabel" parent="Sprite2D2" unique_id=1669906359]
-offset_left = -23.218214
-offset_top = -3.25663
-offset_right = 57.781784
-offset_bottom = 31.743378
-scale = Vector2(0.2, 0.2)
-theme_override_fonts/normal_font = ExtResource("2_i7jv5")
-theme_override_font_sizes/normal_font_size = 32
-text = "copper"
-fit_content = true
-autowrap_mode = 0
-script = ExtResource("3_n50sp")
-
-[node name="copper miner upgrade" type="TextureButton" parent="Sprite2D2" unique_id=1315470033]
-offset_left = -10.0
-offset_top = -6.0
-offset_right = 22.0
-offset_bottom = 10.0
-scale = Vector2(0.75, 0.75)
-texture_normal = ExtResource("4_7ilhj")
-stretch_mode = 0
-script = ExtResource("5_7yyfa")
-
-[node name="upgrade cost" type="RichTextLabel" parent="Sprite2D2/copper miner upgrade" unique_id=825386744]
-layout_mode = 0
-offset_left = 12.21883
-offset_top = 4.000009
-offset_right = 62.21883
-offset_bottom = 39.000008
-scale = Vector2(0.2, 0.2)
-mouse_filter = 2
-theme_override_fonts/normal_font = ExtResource("2_i7jv5")
-theme_override_font_sizes/normal_font_size = 32
-text = "100"
-fit_content = true
-autowrap_mode = 0
-script = SubResource("GDScript_uvqcw")
-
-[node name="Sprite2D" type="Sprite2D" parent="Sprite2D2" unique_id=1141327898]
-position = Vector2(-27.218216, -0.2566223)
-scale = Vector2(0.5, 0.5)
+[node name="Sprite2D" parent="Sprite2D2/miner upgrade" parent_id_path=PackedInt32Array(270947365) index="1" unique_id=939404416]
 texture = ExtResource("6_urivo")
 
-[node name="on off" type="TextureButton" parent="Sprite2D2" unique_id=1985569802]
-offset_left = 14.0
-offset_top = -8.0
-offset_right = 30.0
-offset_bottom = 8.0
-texture_normal = ExtResource("7_i7jv5")
-script = SubResource("GDScript_n50sp")
-texture_on = ExtResource("8_n50sp")
-texture_off = ExtResource("7_i7jv5")
-
-[node name="copper" type="TextureButton" parent="." unique_id=1026285657]
-offset_left = -7.0
-offset_top = 182.0
-offset_right = 9.0
-offset_bottom = 198.0
+[node name="resource" parent="Sprite2D2" parent_id_path=PackedInt32Array(793220251) index="3" unique_id=451976459]
 texture_normal = ExtResource("6_urivo")
-script = ExtResource("7_idd8a")
-
-[node name="Item585" type="Sprite2D" parent="." unique_id=379829377]
-position = Vector2(-5, 0)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("6_urivo")
-
-[connection signal="pressed" from="Sprite2D2/copper miner upgrade" to="Sprite2D2/copper miner upgrade" method="_on_pressed"]
-[connection signal="pressed" from="Sprite2D2/on off" to="Sprite2D2/on off" method="_on_pressed"]
-[connection signal="pressed" from="copper" to="copper" method="_on_pressed"]

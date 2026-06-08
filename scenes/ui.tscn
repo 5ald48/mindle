@@ -1,10 +1,7 @@
 [gd_scene format=3 uid="uid://db40xavlkt8ln"]
 
-[ext_resource type="Texture2D" uid="uid://brkmkkoxxcg2t" path="res://textures/my art/GEAR.png" id="1_8dubc"]
 [ext_resource type="FontFile" uid="uid://c24bc2hmt208c" path="res://font/Jersey10-Regular.ttf" id="1_ktti3"]
 [ext_resource type="Script" uid="uid://d2flmddlousyx" path="res://scripts/coins.gd" id="1_p7vwb"]
-[ext_resource type="Script" uid="uid://l3p4hjqb46af" path="res://scripts/unlocks_window.gd" id="1_wm3ai"]
-[ext_resource type="PackedScene" uid="uid://14m2cfavd4ae" path="res://scenes/unlockes_window.tscn" id="7_p7vwb"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1543564076]
 scale = Vector2(0.2, 0.2)
@@ -21,20 +18,3 @@ text = "coins"
 fit_content = true
 autowrap_mode = 0
 script = ExtResource("1_p7vwb")
-
-[node name="window botton" type="TextureButton" parent="." unique_id=115918372]
-visible = false
-offset_left = 1460.0
-offset_top = 760.0
-offset_right = 1610.0
-offset_bottom = 910.0
-texture_normal = ExtResource("1_8dubc")
-stretch_mode = 0
-script = ExtResource("1_wm3ai")
-
-[node name="unlockes window" parent="." unique_id=1700945610 instance=ExtResource("7_p7vwb")]
-visible = false
-offset_left = 1.0842022e-19
-offset_top = 5.421011e-20
-
-[connection signal="pressed" from="window botton" to="window botton" method="_on_pressed"]

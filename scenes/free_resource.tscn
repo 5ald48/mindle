@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ojoq1u3eyjir"]
+
+[ext_resource type="PackedScene" uid="uid://dp1rm1jf7fumv" path="res://scenes/resource.tscn" id="1_1e5qr"]
+[ext_resource type="Script" uid="uid://cw7nbgcpryhex" path="res://scripts/free_resource.gd" id="2_7yq8k"]
+
+[node name="Node2D" unique_id=402219238 instance=ExtResource("1_1e5qr")]
+script = ExtResource("2_7yq8k")
+
+[node name="Sprite2D2" parent="." index="0" unique_id=793220251]
+position = Vector2(0, 0)

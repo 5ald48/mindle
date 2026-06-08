@@ -1,134 +1,13 @@
 [gd_scene format=3 uid="uid://2ennxcacubyc"]
 
-[ext_resource type="Texture2D" uid="uid://celj4wyriw2e8" path="res://textures/my art/MAIN SPRITE-64x48-64x16.png" id="1_kxhfr"]
-[ext_resource type="FontFile" uid="uid://c24bc2hmt208c" path="res://font/Jersey10-Regular.ttf" id="2_yqlv4"]
-[ext_resource type="Script" uid="uid://biuing2f7wgui" path="res://scripts/goldUI.gd" id="3_kmql5"]
-[ext_resource type="Texture2D" uid="uid://c0kb1s8kehegh" path="res://textures/my art/MAIN SPRITE-96x32-32x16.png" id="4_kxhfr"]
-[ext_resource type="Script" uid="uid://8tynwymh2wvc" path="res://scripts/gold_miner_upgrade.gd" id="5_vkgjr"]
+[ext_resource type="PackedScene" uid="uid://ojoq1u3eyjir" path="res://scenes/free_resource.tscn" id="1_ls0pt"]
 [ext_resource type="Texture2D" uid="uid://bj00rn335ke7k" path="res://textures/items/item579.png" id="6_hqwsd"]
-[ext_resource type="Script" uid="uid://dnv3jlk8mgo0s" path="res://scripts/gold.gd" id="7_mthv6"]
-[ext_resource type="Texture2D" uid="uid://dd8oo6xymvmdy" path="res://textures/my art/MAIN SPRITE-64x16-16x16.png" id="7_yqlv4"]
-[ext_resource type="Texture2D" uid="uid://cxsb8xaj6gp0i" path="res://textures/my art/MAIN SPRITE-80x0-16x16.png" id="8_kmql5"]
 
-[sub_resource type="GDScript" id="GDScript_egmlc"]
-script/source = "extends RichTextLabel
+[node name="Node2D" unique_id=402219238 instance=ExtResource("1_ls0pt")]
+resource_name = "gold"
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	text = Gamedata.gold_miner_upgrade_cost.to_metric_name(true)
-"
-
-[sub_resource type="GDScript" id="GDScript_kmql5"]
-script/source = "extends TextureButton
-
-@export var texture_on : Texture2D
-@export var texture_off : Texture2D
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	if Gamedata.gold_miner_on_off == true :
-		texture_normal = texture_on
-	
-	elif  Gamedata.gold_miner_on_off == false:
-		texture_normal = texture_off
-
-
-
-func _on_pressed() -> void:
-	if Gamedata.gold_miner_unlocked == true :
-		
-		if Gamedata.gold_miner_on_off == false :
-			Gamedata.gold_miner_on_off = true
-			
-		
-		
-		elif Gamedata.gold_miner_on_off == true :
-			Gamedata.gold_miner_on_off = false
-			
-"
-
-[node name="gold" type="Node2D" unique_id=1085759372]
-
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1907347232]
-texture = ExtResource("1_kxhfr")
-
-[node name="goldUI" type="RichTextLabel" parent="Sprite2D2" unique_id=707017418]
-offset_left = -23.218214
-offset_top = -3.8145065
-offset_right = 22.781786
-offset_bottom = 31.185493
-scale = Vector2(0.2, 0.2)
-theme_override_fonts/normal_font = ExtResource("2_yqlv4")
-theme_override_font_sizes/normal_font_size = 32
-text = "gold"
-fit_content = true
-autowrap_mode = 0
-script = ExtResource("3_kmql5")
-
-[node name="gold miner upgrade" type="TextureButton" parent="Sprite2D2" unique_id=1432576786]
-offset_left = -10.0
-offset_top = -6.0
-offset_right = 22.0
-offset_bottom = 10.0
-scale = Vector2(0.75, 0.75)
-texture_normal = ExtResource("4_kxhfr")
-stretch_mode = 0
-script = ExtResource("5_vkgjr")
-
-[node name="upgrade cost" type="RichTextLabel" parent="Sprite2D2/gold miner upgrade" unique_id=1192252261]
-layout_mode = 0
-offset_left = 13.333332
-offset_top = 3.999999
-offset_right = 63.333332
-offset_bottom = 39.0
-scale = Vector2(0.2, 0.2)
-mouse_filter = 2
-theme_override_fonts/normal_font = ExtResource("2_yqlv4")
-theme_override_font_sizes/normal_font_size = 32
-text = "100"
-fit_content = true
-autowrap_mode = 0
-script = SubResource("GDScript_egmlc")
-
-[node name="Sprite2D" type="Sprite2D" parent="Sprite2D2" unique_id=428146428]
-position = Vector2(-27.218216, -0.81450653)
-scale = Vector2(0.5, 0.5)
+[node name="Sprite2D" parent="Sprite2D2/miner upgrade" parent_id_path=PackedInt32Array(270947365) index="1" unique_id=939404416]
 texture = ExtResource("6_hqwsd")
 
-[node name="on off" type="TextureButton" parent="Sprite2D2" unique_id=1256500196]
-offset_left = 14.0
-offset_top = -8.0
-offset_right = 30.0
-offset_bottom = 8.0
-texture_normal = ExtResource("7_yqlv4")
-script = SubResource("GDScript_kmql5")
-texture_on = ExtResource("8_kmql5")
-texture_off = ExtResource("7_yqlv4")
-
-[node name="gold" type="TextureButton" parent="." unique_id=1332386340]
-offset_left = -6.0
-offset_top = 282.0
-offset_right = 10.0
-offset_bottom = 298.0
+[node name="resource" parent="Sprite2D2" parent_id_path=PackedInt32Array(793220251) index="3" unique_id=451976459]
 texture_normal = ExtResource("6_hqwsd")
-script = ExtResource("7_mthv6")
-
-[node name="Item585" type="Sprite2D" parent="." unique_id=697047832]
-position = Vector2(-6, 0)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("6_hqwsd")
-
-[connection signal="pressed" from="Sprite2D2/gold miner upgrade" to="Sprite2D2/gold miner upgrade" method="_on_pressed"]
-[connection signal="pressed" from="Sprite2D2/on off" to="Sprite2D2/on off" method="_on_pressed"]
-[connection signal="pressed" from="gold" to="gold" method="_on_pressed"]

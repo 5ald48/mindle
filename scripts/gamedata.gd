@@ -3,7 +3,7 @@ var pickaxe_level : BigNumber = BigNumber.new()
 var pickaxe_click_multiplier : BigNumber = BigNumber.new()
 var coin : BigNumber = BigNumber.new()
 
-var cost0 : BigNumber = BigNumber.new()
+
 # ── IRON ──────────────────────────────────────
 var iron : BigNumber = BigNumber.new()
 var iron_per_sec : BigNumber = BigNumber.new()
@@ -12,6 +12,7 @@ var iron_miner_on_off : bool = false
 var iron_miner_unlocked : bool = false
 var iron_miner_upgrade_cost : BigNumber = BigNumber.new()
 var iron_miner_upgrade_cost_multiplier : BigNumber = BigNumber.new()
+
 
 # ── GOLD ──────────────────────────────────────
 var gold : BigNumber = BigNumber.new()
@@ -22,6 +23,7 @@ var gold_miner_unlocked : bool = false
 var gold_miner_upgrade_cost : BigNumber = BigNumber.new()
 var gold_miner_upgrade_cost_multiplier : BigNumber = BigNumber.new()
 
+
 # ── COPPER ────────────────────────────────────
 var copper : BigNumber = BigNumber.new()
 var copper_per_sec : BigNumber = BigNumber.new()
@@ -31,6 +33,7 @@ var copper_miner_unlocked : bool = false
 var copper_miner_upgrade_cost : BigNumber = BigNumber.new()
 var copper_miner_upgrade_cost_multiplier : BigNumber = BigNumber.new()
 
+
 # ── COAL ──────────────────────────────────────
 var coal : BigNumber = BigNumber.new()
 var coal_per_sec : BigNumber = BigNumber.new()
@@ -39,6 +42,7 @@ var coal_miner_on_off : bool = false
 var coal_miner_unlocked : bool = false
 var coal_miner_upgrade_cost : BigNumber = BigNumber.new()
 var coal_miner_upgrade_cost_multiplier : BigNumber = BigNumber.new()
+
 
 # ── IRON INGOT ────────────────────────────────
 var iron_ingot : BigNumber = BigNumber.new()
@@ -59,10 +63,11 @@ func _ready():
 	coin.mantissa = 0.0
 	coin.exponent = 0
 	
+
 	
 	# ── IRON ──────────────────────────────────────
-	iron.mantissa = 01.0
-	iron.exponent = 011
+	iron.mantissa = 1.0
+	iron.exponent = 2
 	
 	iron_per_sec.mantissa = 1.0
 	iron_per_sec.exponent = 0
@@ -75,6 +80,8 @@ func _ready():
 	
 	iron_miner_upgrade_cost_multiplier.mantissa = 1.1
 	iron_miner_upgrade_cost_multiplier.exponent = 0
+	
+
 	
 	# ── GOLD ──────────────────────────────────────
 	gold.mantissa = 0.0
@@ -92,6 +99,7 @@ func _ready():
 	gold_miner_upgrade_cost_multiplier.mantissa = 1.1
 	gold_miner_upgrade_cost_multiplier.exponent = 0
 	
+
 	# ── COPPER ────────────────────────────────────
 	copper.mantissa = 0.0
 	copper.exponent = 0
@@ -108,6 +116,7 @@ func _ready():
 	copper_miner_upgrade_cost_multiplier.mantissa = 1.1
 	copper_miner_upgrade_cost_multiplier.exponent = 0
 	
+
 	# ── COAL ──────────────────────────────────────
 	coal.mantissa = 0.0
 	coal.exponent = 0
@@ -124,9 +133,10 @@ func _ready():
 	coal_miner_upgrade_cost_multiplier.mantissa = 1.1
 	coal_miner_upgrade_cost_multiplier.exponent = 0
 	
+
 	# ── IRON INGOT ────────────────────────────────
 	iron_ingot.mantissa = 1.0
-	iron_ingot.exponent = 04
+	iron_ingot.exponent = 12
 	
 	iron_ingot_per_sec.mantissa = 1.0
 	iron_ingot_per_sec.exponent = 0
