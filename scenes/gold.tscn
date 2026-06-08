@@ -77,10 +77,10 @@ autowrap_mode = 0
 script = ExtResource("3_kmql5")
 
 [node name="gold miner upgrade" type="TextureButton" parent="Sprite2D2" unique_id=1432576786]
-offset_left = -11.218216
-offset_top = -5.8145065
-offset_right = 20.781784
-offset_bottom = 10.185493
+offset_left = -10.0
+offset_top = -6.0
+offset_right = 22.0
+offset_bottom = 10.0
 scale = Vector2(0.75, 0.75)
 texture_normal = ExtResource("4_kxhfr")
 stretch_mode = 0
@@ -123,6 +123,11 @@ offset_right = 10.0
 offset_bottom = 298.0
 texture_normal = ExtResource("6_hqwsd")
 script = ExtResource("7_mthv6")
+
+[node name="Item585" type="Sprite2D" parent="." unique_id=697047832]
+position = Vector2(-6, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_hqwsd")
 
 [connection signal="pressed" from="Sprite2D2/gold miner upgrade" to="Sprite2D2/gold miner upgrade" method="_on_pressed"]
 [connection signal="pressed" from="Sprite2D2/on off" to="Sprite2D2/on off" method="_on_pressed"]

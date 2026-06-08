@@ -125,6 +125,11 @@ offset_bottom = 62.0
 texture_normal = ExtResource("6_s40v4")
 script = ExtResource("7_dxnft")
 
+[node name="Item585" type="Sprite2D" parent="." unique_id=816177128]
+position = Vector2(-5, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_s40v4")
+
 [connection signal="pressed" from="Sprite2D2/iron miner upgrade" to="Sprite2D2/iron miner upgrade" method="_on_pressed"]
 [connection signal="pressed" from="Sprite2D2/on off" to="Sprite2D2/on off" method="_on_pressed"]
 [connection signal="pressed" from="iron" to="iron" method="_on_pressed"]

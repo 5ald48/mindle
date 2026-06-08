@@ -77,10 +77,10 @@ autowrap_mode = 0
 script = ExtResource("3_4slx1")
 
 [node name="coal miner upgrade" type="TextureButton" parent="Sprite2D2" unique_id=1377077125]
-offset_left = -13.218216
-offset_top = -6.298996
-offset_right = 18.781784
-offset_bottom = 9.701004
+offset_left = -10.0
+offset_top = -6.0
+offset_right = 22.0
+offset_bottom = 10.0
 scale = Vector2(0.75, 0.75)
 texture_normal = ExtResource("4_4slx1")
 stretch_mode = 0
@@ -123,6 +123,11 @@ offset_right = 8.0
 offset_bottom = 110.000015
 texture_normal = ExtResource("5_uhxyx")
 script = ExtResource("6_hqgp6")
+
+[node name="Item585" type="Sprite2D" parent="." unique_id=1928545071]
+position = Vector2(-5, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_uhxyx")
 
 [connection signal="pressed" from="Sprite2D2/coal miner upgrade" to="Sprite2D2/coal miner upgrade" method="_on_pressed"]
 [connection signal="pressed" from="Sprite2D2/on off" to="Sprite2D2/on off" method="_on_pressed"]

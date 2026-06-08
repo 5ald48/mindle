@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://chpel2js5ba3s" path="res://scenes/coal.tscn" id="2_vx7ym"]
 [ext_resource type="PackedScene" uid="uid://o4wb0oy57grv" path="res://scenes/copper.tscn" id="3_4txet"]
 [ext_resource type="PackedScene" uid="uid://2ennxcacubyc" path="res://scenes/gold.tscn" id="4_2tv1d"]
+[ext_resource type="PackedScene" uid="uid://lm886g0vglki" path="res://scenes/irontest.tscn" id="6_4txet"]
 
 [node name="tower & everything on tower" type="Node2D" unique_id=1992095660]
 
@@ -21,4 +22,7 @@ position = Vector2(224, 135.81541)
 position = Vector2(224, 119.81541)
 
 [node name="iron ingot" parent="." unique_id=402219238 instance=ExtResource("2_4txet")]
-position = Vector2(224, 104.15054)
+position = Vector2(223, 96.07845)
+
+[node name="irontest" parent="." unique_id=143164095 instance=ExtResource("6_4txet")]
+position = Vector2(224, 63.190536)
