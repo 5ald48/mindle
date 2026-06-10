@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://dchlak3lg7uxl"]
+
+[ext_resource type="Script" uid="uid://b37clcs2fj7vo" path="res://scripts/pickaxe.gd" id="1_40cab"]
+[ext_resource type="Texture2D" uid="uid://c0kb1s8kehegh" path="res://textures/my art/MAIN SPRITE-96x32-32x16.png" id="2_2ikqw"]
+
+[node name="pickaxe" type="Node2D" unique_id=1632089896]
+script = ExtResource("1_40cab")
+
+[node name="pickaxe level upgrade" type="TextureButton" parent="." unique_id=632866617]
+offset_right = 32.0
+offset_bottom = 16.0
+texture_normal = ExtResource("2_2ikqw")
+
+[node name="pickaxe level req" type="RichTextLabel" parent="pickaxe level upgrade" unique_id=368368048]
+layout_mode = 0
+offset_left = 12.003325
+offset_top = 5.7762966
+offset_right = 49.003326
+offset_bottom = 28.776297
+scale = Vector2(0.2, 0.2)
+mouse_filter = 2
+text = "1000"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="pickaxe click upgrade" type="TextureButton" parent="." unique_id=1035437831]
+offset_top = 16.0
+offset_right = 32.0
+offset_bottom = 32.0
+texture_normal = ExtResource("2_2ikqw")
+
+[connection signal="pressed" from="pickaxe level upgrade" to="." method="_on_pickaxe_level_upgrade_pressed"]
+[connection signal="pressed" from="pickaxe click upgrade" to="." method="_on_pickaxe_click_upgrade_pressed"]

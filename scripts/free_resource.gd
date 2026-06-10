@@ -4,8 +4,7 @@ extends Node2D
 @export var texture_off: Texture2D
 @export var resource_name: String
 
-func _ready() -> void:
-	pass
+
 
 
 
@@ -44,7 +43,8 @@ func _on_on_off_pressed() -> void:
 
 
 func _on_resource_pressed() -> void:
-	Gamedata.get(resource_name).plus_equals(Gamedata.pickaxe_click_multiplier)
+	if Gamedata.pickaxe_level >= Gamedata.get(resource_name + "_pickaxe_level_req"):
+		Gamedata.get(resource_name).plus_equals(Gamedata.pickaxe_click_multiplier)
 
 
 

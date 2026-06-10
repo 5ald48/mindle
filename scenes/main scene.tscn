@@ -9,7 +9,6 @@
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1012002039]
 anchor_mode = 0
-zoom = Vector2(0.75, 0.75)
 limit_bottom = 1000
 limit_smoothed = true
 script = ExtResource("1_d2vo2")

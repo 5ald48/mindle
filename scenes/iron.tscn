@@ -4,3 +4,4 @@
 
 [node name="Node2D" unique_id=402219238 instance=ExtResource("1_dttaf")]
 resource_name = "iron"
+pickaxe_level_req = 1

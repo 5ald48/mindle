@@ -1,6 +1,12 @@
 extends Node
-var pickaxe_level : BigNumber = BigNumber.new()
+
+
+var pickaxe_level : int = 1
 var pickaxe_click_multiplier : BigNumber = BigNumber.new()
+var pickaxe_upgradecost1 : BigNumber = BigNumber.new()
+var pickaxe_upgradecost2 : BigNumber = BigNumber.new()
+var pickaxe_upgradecost3 : BigNumber = BigNumber.new()
+
 var coin : BigNumber = BigNumber.new()
 
 
@@ -12,6 +18,7 @@ var iron_miner_on_off : bool = false
 var iron_miner_unlocked : bool = false
 var iron_miner_upgrade_cost : BigNumber = BigNumber.new()
 var iron_miner_upgrade_cost_multiplier : BigNumber = BigNumber.new()
+var iron_pickaxe_level_req : int = 1
 
 
 # ── GOLD ──────────────────────────────────────
@@ -22,7 +29,7 @@ var gold_miner_on_off : bool = false
 var gold_miner_unlocked : bool = false
 var gold_miner_upgrade_cost : BigNumber = BigNumber.new()
 var gold_miner_upgrade_cost_multiplier : BigNumber = BigNumber.new()
-
+var gold_pickaxe_level_req : int = 4
 
 # ── COPPER ────────────────────────────────────
 var copper : BigNumber = BigNumber.new()
@@ -32,7 +39,7 @@ var copper_miner_on_off : bool = false
 var copper_miner_unlocked : bool = false
 var copper_miner_upgrade_cost : BigNumber = BigNumber.new()
 var copper_miner_upgrade_cost_multiplier : BigNumber = BigNumber.new()
-
+var copper_pickaxe_level_req : int = 3
 
 # ── COAL ──────────────────────────────────────
 var coal : BigNumber = BigNumber.new()
@@ -42,7 +49,7 @@ var coal_miner_on_off : bool = false
 var coal_miner_unlocked : bool = false
 var coal_miner_upgrade_cost : BigNumber = BigNumber.new()
 var coal_miner_upgrade_cost_multiplier : BigNumber = BigNumber.new()
-
+var coal_pickaxe_level_req : int = 2
 
 # ── IRON INGOT ────────────────────────────────
 var iron_ingot : BigNumber = BigNumber.new()
@@ -56,18 +63,28 @@ var iron_ingot_cost1 : BigNumber = BigNumber.new()
 
 func _ready():
 	
-	pickaxe_level.mantissa = 4.0
-	pickaxe_level.exponent = 0
+	#pickaxe_level.mantissa = 1.0
+	#pickaxe_level.exponent = 0
+	
 	pickaxe_click_multiplier.mantissa = 1.0
 	pickaxe_click_multiplier.exponent = 0
+	
 	coin.mantissa = 0.0
 	coin.exponent = 0
 	
+	pickaxe_upgradecost1.mantissa = 0.0
+	pickaxe_upgradecost1.exponent = 0
+	
+	pickaxe_upgradecost2.mantissa = 0.0
+	pickaxe_upgradecost2.exponent = 0
+	
+	pickaxe_upgradecost3.mantissa = 0.0
+	pickaxe_upgradecost3.exponent = 0
 
 	
 	# ── IRON ──────────────────────────────────────
 	iron.mantissa = 1.0
-	iron.exponent = 2
+	iron.exponent = 3
 	
 	iron_per_sec.mantissa = 1.0
 	iron_per_sec.exponent = 0

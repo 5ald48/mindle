@@ -5,6 +5,7 @@
 
 [node name="Node2D" unique_id=402219238 instance=ExtResource("1_ls0pt")]
 resource_name = "gold"
+pickaxe_level_req = 4
 
 [node name="Sprite2D" parent="Sprite2D2/miner upgrade" parent_id_path=PackedInt32Array(270947365) index="1" unique_id=939404416]
 texture = ExtResource("6_hqwsd")

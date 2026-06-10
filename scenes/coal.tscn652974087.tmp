@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://chpel2js5ba3s"]
+
+[ext_resource type="PackedScene" uid="uid://ojoq1u3eyjir" path="res://scenes/free_resource.tscn" id="1_tqxuk"]
+[ext_resource type="Texture2D" uid="uid://cbegkp4oqc21" path="res://textures/items/item574.png" id="5_uhxyx"]
+
+[node name="Node2D" unique_id=402219238 instance=ExtResource("1_tqxuk")]
+resource_name = "coal"
+pickaxe_level_req = 2
+
+[node name="Sprite2D" parent="Sprite2D2/miner upgrade" parent_id_path=PackedInt32Array(270947365) index="1" unique_id=939404416]
+texture = ExtResource("5_uhxyx")
+
+[node name="resource" parent="Sprite2D2" parent_id_path=PackedInt32Array(793220251) index="3" unique_id=451976459]
+texture_normal = ExtResource("5_uhxyx")

@@ -4,21 +4,29 @@
 [ext_resource type="PackedScene" uid="uid://chpel2js5ba3s" path="res://scenes/coal.tscn" id="2_vx7ym"]
 [ext_resource type="PackedScene" uid="uid://o4wb0oy57grv" path="res://scenes/copper.tscn" id="3_4txet"]
 [ext_resource type="PackedScene" uid="uid://2ennxcacubyc" path="res://scenes/gold.tscn" id="4_2tv1d"]
+[ext_resource type="PackedScene" uid="uid://dchlak3lg7uxl" path="res://scenes/pickaxe.tscn" id="6_2tv1d"]
 [ext_resource type="PackedScene" uid="uid://e1yml3p661j7" path="res://scenes/iron.tscn" id="6_4txet"]
 
 [node name="tower & everything on tower" type="Node2D" unique_id=1992095660]
 
 [node name="iron" parent="." unique_id=402219238 instance=ExtResource("6_4txet")]
 position = Vector2(236, 161.68536)
+pickaxe_level_req = 0
 
 [node name="coal" parent="." unique_id=1988912566 instance=ExtResource("2_vx7ym")]
 position = Vector2(236, 130.00134)
+pickaxe_level_req = 0
 
 [node name="copper" parent="." unique_id=656443744 instance=ExtResource("3_4txet")]
 position = Vector2(236, 98.4569)
+pickaxe_level_req = 0
 
 [node name="gold" parent="." unique_id=1698544870 instance=ExtResource("4_2tv1d")]
 position = Vector2(236, 65.719406)
+pickaxe_level_req = 0
 
 [node name="iron ingot" parent="." unique_id=1765041984 instance=ExtResource("2_4txet")]
 position = Vector2(236, 34.34559)
+
+[node name="pickaxe" parent="." unique_id=1632089896 instance=ExtResource("6_2tv1d")]
+position = Vector2(0, 148.68536)
