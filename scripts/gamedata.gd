@@ -2,7 +2,8 @@ extends Node
 
 
 var pickaxe_level : int = 1
-var pickaxe_click_multiplier : int = 53535
+var pickaxe_click_multiplier : int = 1
+var pickaxe_click_multiplier_cost : BigNumber = BigNumber.new()
 var pickaxe_upgradecost1 : BigNumber = BigNumber.new()
 var pickaxe_upgradecost2 : BigNumber = BigNumber.new()
 var pickaxe_upgradecost3 : BigNumber = BigNumber.new()
@@ -71,6 +72,9 @@ func _ready():
 	
 	coin.mantissa = 0.0
 	coin.exponent = 0
+	
+	pickaxe_click_multiplier_cost.mantissa = 1.0
+	pickaxe_click_multiplier_cost.exponent = 3
 	
 	pickaxe_upgradecost1.mantissa = 0.0
 	pickaxe_upgradecost1.exponent = 0
@@ -152,8 +156,8 @@ func _ready():
 	
 
 	# ── IRON INGOT ────────────────────────────────
-	iron_ingot.mantissa = 1.0
-	iron_ingot.exponent = 12
+	iron_ingot.mantissa = 0.0
+	iron_ingot.exponent = 0
 	
 	iron_ingot_per_sec.mantissa = 1.0
 	iron_ingot_per_sec.exponent = 0

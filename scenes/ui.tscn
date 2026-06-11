@@ -2,19 +2,25 @@
 
 [ext_resource type="FontFile" uid="uid://c24bc2hmt208c" path="res://font/Jersey10-Regular.ttf" id="1_ktti3"]
 [ext_resource type="Script" uid="uid://d2flmddlousyx" path="res://scripts/coins.gd" id="1_p7vwb"]
+[ext_resource type="Texture2D" uid="uid://mpyqfjdnheft" path="res://textures/my art/MAIN SPRITE-32x0-16x16.png" id="3_yev5y"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1543564076]
 scale = Vector2(0.2, 0.2)
 transform = Transform2D(0.2, 0, 0, 0.2, 0, 0)
 
 [node name="coins2" type="RichTextLabel" parent="." unique_id=409305553]
-offset_left = 539.0
-offset_top = 5.0
-offset_right = 590.0
-offset_bottom = 31.0
+offset_left = 50.0
+offset_top = 4.9999995
+offset_right = 108.0
+offset_bottom = 40.0
 theme_override_fonts/normal_font = ExtResource("1_ktti3")
 theme_override_font_sizes/normal_font_size = 32
 text = "coins"
 fit_content = true
 autowrap_mode = 0
 script = ExtResource("1_p7vwb")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=356323573]
+position = Vector2(25, 25)
+scale = Vector2(3, 3)
+texture = ExtResource("3_yev5y")

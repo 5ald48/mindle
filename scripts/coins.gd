@@ -8,4 +8,4 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	text = "coins = " + Gamedata.coin.to_metric_name(true)
+	text =  Gamedata.coin.to_metric_name(true)
