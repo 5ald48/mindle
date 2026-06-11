@@ -9,8 +9,7 @@
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1012002039]
 anchor_mode = 0
-limit_bottom = 1000
-limit_smoothed = true
+limit_bottom = 500
 script = ExtResource("1_d2vo2")
 
 [node name="MAP" parent="." unique_id=209112516 instance=ExtResource("1_ijdfw")]

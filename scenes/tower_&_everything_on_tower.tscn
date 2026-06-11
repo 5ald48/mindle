@@ -10,23 +10,19 @@
 [node name="tower & everything on tower" type="Node2D" unique_id=1992095660]
 
 [node name="iron" parent="." unique_id=402219238 instance=ExtResource("6_4txet")]
-position = Vector2(236, 161.68536)
-pickaxe_level_req = 0
+position = Vector2(160, 160)
 
 [node name="coal" parent="." unique_id=1988912566 instance=ExtResource("2_vx7ym")]
-position = Vector2(236, 130.00134)
-pickaxe_level_req = 0
+position = Vector2(160, 128.00134)
 
 [node name="copper" parent="." unique_id=656443744 instance=ExtResource("3_4txet")]
-position = Vector2(236, 98.4569)
-pickaxe_level_req = 0
+position = Vector2(160, 95.7069)
 
 [node name="gold" parent="." unique_id=1698544870 instance=ExtResource("4_2tv1d")]
-position = Vector2(236, 65.719406)
-pickaxe_level_req = 0
+position = Vector2(160, 63.91648)
 
 [node name="iron ingot" parent="." unique_id=1765041984 instance=ExtResource("2_4txet")]
-position = Vector2(236, 34.34559)
+position = Vector2(160, 31.697937)
 
 [node name="pickaxe" parent="." unique_id=1632089896 instance=ExtResource("6_2tv1d")]
-position = Vector2(0, 148.68536)
+position = Vector2(27.421257, 166.43536)

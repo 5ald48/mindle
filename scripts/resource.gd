@@ -22,8 +22,8 @@ func _process(delta: float) -> void:
 		$"Sprite2D2/on off".texture_normal = texture_off
 	
 	
-	
-	if Gamedata.get(resource_name + "_miner_on_off") == true and Gamedata.get(resource_used1).is_greater_than_or_equal_to(Gamedata.get(resource_name + "_cost1")):
+	#if Gamedata.get(resource_name + "_miner_on_off") == true and Gamedata.get(resource_used1).is_greater_than_or_equal_to((Gamedata.get(resource_name + "_per_sec" ).multiply(delta).multiply(Gamedata.get(resource_name + "_cost1")))):
+	if Gamedata.get(resource_name + "_miner_on_off") == true and Gamedata.get(resource_used1).is_greater_than_or_equal_to(Gamedata.get(resource_name + "_cost1")): 
 		
 		Gamedata.get(resource_name).plus_equals(Gamedata.get(resource_name + "_per_sec").multiply(delta))
 		Gamedata.get(resource_used1).minus_equals((Gamedata.get(resource_name + "_per_sec" ).multiply(delta).multiply(Gamedata.get(resource_name + "_cost1"))))
@@ -62,7 +62,7 @@ func _on_on_off_pressed() -> void:
 
 
 func _on_resource_pressed() -> void:
-	if Gamedata.get(resource_used1).is_greater_than_or_equal_to(Gamedata.get(resource_name + "_cost1")):
+	if Gamedata.get(resource_used1).is_greater_than_or_equal_to((Gamedata.get(resource_name + "_cost1").multiply(Gamedata.pickaxe_click_multiplier))):
 		Gamedata.get(resource_name).plus_equals(Gamedata.pickaxe_click_multiplier)
 		Gamedata.get(resource_used1).minus_equals(Gamedata.get(resource_name + "_cost1").multiply(Gamedata.pickaxe_click_multiplier))
 

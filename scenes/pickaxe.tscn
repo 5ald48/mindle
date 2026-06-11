@@ -2,33 +2,87 @@
 
 [ext_resource type="Script" uid="uid://b37clcs2fj7vo" path="res://scripts/pickaxe.gd" id="1_40cab"]
 [ext_resource type="Texture2D" uid="uid://c0kb1s8kehegh" path="res://textures/my art/MAIN SPRITE-96x32-32x16.png" id="2_2ikqw"]
+[ext_resource type="Texture2D" uid="uid://dpbxbh3kws16f" path="res://textures/items/item585.png" id="3_khqrn"]
+[ext_resource type="Texture2D" uid="uid://cbegkp4oqc21" path="res://textures/items/item574.png" id="4_tnc31"]
+[ext_resource type="Texture2D" uid="uid://doantctnar2eu" path="res://textures/items/item577.png" id="5_h48u7"]
+[ext_resource type="Texture2D" uid="uid://bj00rn335ke7k" path="res://textures/items/item579.png" id="6_tnc31"]
+[ext_resource type="Texture2D" uid="uid://bkjpvwa3d8glw" path="res://textures/my art/MAIN SPRITE-144x0-16x16.png" id="7_h48u7"]
 
 [node name="pickaxe" type="Node2D" unique_id=1632089896]
 script = ExtResource("1_40cab")
 
 [node name="pickaxe level upgrade" type="TextureButton" parent="." unique_id=632866617]
+offset_top = -32.957245
 offset_right = 32.0
-offset_bottom = 16.0
+offset_bottom = -16.957245
 texture_normal = ExtResource("2_2ikqw")
 
 [node name="pickaxe level req" type="RichTextLabel" parent="pickaxe level upgrade" unique_id=368368048]
 layout_mode = 0
-offset_left = 12.003325
-offset_top = 5.7762966
-offset_right = 49.003326
-offset_bottom = 28.776297
+offset_left = 9.79
+offset_top = 1.45
+offset_right = 64.79
+offset_bottom = 47.45
 scale = Vector2(0.2, 0.2)
 mouse_filter = 2
-text = "1000"
+text = "10000"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="pickaxe level upgrade" unique_id=1390770943]
+position = Vector2(7.0152187, 3.9187489)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_khqrn")
+
+[node name="Sprite2D2" type="Sprite2D" parent="pickaxe level upgrade" unique_id=910481113]
+position = Vector2(6.955942, 8.150035)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("4_tnc31")
+
+[node name="Sprite2D3" type="Sprite2D" parent="pickaxe level upgrade" unique_id=1031064213]
+position = Vector2(7.2797527, 12.168864)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("5_h48u7")
+
+[node name="pickaxe level" type="RichTextLabel" parent="pickaxe level upgrade" unique_id=1363757905]
+layout_mode = 0
+offset_left = 3.1762009
+offset_top = -6.002323
+offset_right = 102.1762
+offset_bottom = 16.997677
+scale = Vector2(0.25, 0.25)
+text = "pickaxe level"
 fit_content = true
 scroll_active = false
 autowrap_mode = 0
 
 [node name="pickaxe click upgrade" type="TextureButton" parent="." unique_id=1035437831]
-offset_top = 16.0
+offset_top = -56.127342
 offset_right = 32.0
-offset_bottom = 32.0
+offset_bottom = -40.127342
 texture_normal = ExtResource("2_2ikqw")
+
+[node name="pickaxe multyplier" type="RichTextLabel" parent="pickaxe click upgrade" unique_id=189064336]
+layout_mode = 0
+offset_left = 4.2163467
+offset_top = -6.1022034
+offset_right = 63.216347
+offset_bottom = 16.897797
+scale = Vector2(0.25, 0.25)
+text = "pickaxe"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=141060577]
+scale = Vector2(2, 2)
+texture = ExtResource("6_tnc31")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D" unique_id=2132129791]
+position = Vector2(8, -3.5910416)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_h48u7")
 
 [connection signal="pressed" from="pickaxe level upgrade" to="." method="_on_pickaxe_level_upgrade_pressed"]
 [connection signal="pressed" from="pickaxe click upgrade" to="." method="_on_pickaxe_click_upgrade_pressed"]
