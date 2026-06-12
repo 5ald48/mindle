@@ -19,14 +19,14 @@ texture = ExtResource("4_o1pcp")
 
 [node name="resourceUI" type="RichTextLabel" parent="Sprite2D2" unique_id=113634182]
 offset_left = -28.0
-offset_top = 3.9999995
+offset_top = 4.0
 offset_right = 77.0
 offset_bottom = 39.0
 scale = Vector2(0.2, 0.2)
 theme_override_fonts/normal_font = ExtResource("2_oukxn")
 theme_override_font_sizes/normal_font_size = 32
 bbcode_enabled = true
-text = "resource"
+text = " resource"
 fit_content = true
 autowrap_mode = 0
 
@@ -66,9 +66,9 @@ offset_bottom = 1.0
 texture_normal = ExtResource("7_8e877")
 
 [node name="resource" type="TextureButton" parent="Sprite2D2" unique_id=451976459]
-offset_left = -36.0
+offset_left = -37.0
 offset_top = 3.0
-offset_right = -20.0
+offset_right = -21.0
 offset_bottom = 19.0
 scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("6_n42d4")
@@ -91,7 +91,7 @@ scale = Vector2(0.15, 0.15)
 mouse_filter = 2
 theme_override_fonts/normal_font = ExtResource("2_oukxn")
 theme_override_font_sizes/normal_font_size = 32
-text = "UPGRADE MAX"
+text = " UPGRADE MAX "
 fit_content = true
 autowrap_mode = 0
 

@@ -9,8 +9,8 @@ extends Node2D
 
 
 func _process(delta: float) -> void:
-	$Sprite2D2/resourceUI.text = Gamedata.get(resource_name).to_metric_name(true)
-	$"Sprite2D2/miner upgrade/upgrade cost".text = Gamedata.get(resource_name + "_miner_upgrade_cost").to_metric_name(true)
+	$Sprite2D2/resourceUI.text = " " + Gamedata.get(resource_name).to_metric_name(true)
+	$"Sprite2D2/miner upgrade/upgrade cost".text = " " + Gamedata.get(resource_name + "_miner_upgrade_cost").to_metric_name(true)
 	
 	if Gamedata.get(resource_name + "_miner_on_off") == true:
 		$"Sprite2D2/on off".texture_normal = texture_on

@@ -20,32 +20,33 @@ texture_normal = ExtResource("2_2ikqw")
 
 [node name="pickaxe level req" type="RichTextLabel" parent="pickaxe level upgrade" unique_id=368368048]
 layout_mode = 0
-offset_left = 9.79
-offset_top = 1.45
+offset_left = 9.790001
+offset_top = 1.9187481
 offset_right = 64.79
-offset_bottom = 47.45
+offset_bottom = 55.918747
 scale = Vector2(0.2, 0.2)
 mouse_filter = 2
-text = "100000
-10000
-1000"
+text = " 100000
+ 10000
+ 1000"
 fit_content = true
 scroll_active = false
 autowrap_mode = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="pickaxe level upgrade" unique_id=1390770943]
-position = Vector2(7.0152187, 3.9187489)
-scale = Vector2(0.25, 0.25)
+position = Vector2(8, 3.9187489)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("3_khqrn")
 
 [node name="Sprite2D2" type="Sprite2D" parent="pickaxe level upgrade" unique_id=910481113]
-position = Vector2(6.955942, 8.150035)
-scale = Vector2(0.25, 0.25)
+position = Vector2(7.9999995, 7.3041034)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("4_tnc31")
+offset = Vector2(0, 0.765)
 
 [node name="Sprite2D3" type="Sprite2D" parent="pickaxe level upgrade" unique_id=1031064213]
-position = Vector2(7.2797527, 12.168864)
-scale = Vector2(0.25, 0.25)
+position = Vector2(8, 10.681451)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("5_h48u7")
 
 [node name="pickaxe level" type="RichTextLabel" parent="pickaxe level upgrade" unique_id=1363757905]
@@ -55,7 +56,7 @@ offset_top = -6.002323
 offset_right = 102.1762
 offset_bottom = 16.997677
 scale = Vector2(0.25, 0.25)
-text = "pickaxe level"
+text = "  pickaxe level"
 fit_content = true
 scroll_active = false
 autowrap_mode = 0
@@ -74,20 +75,20 @@ offset_top = -6.1022034
 offset_right = 63.216347
 offset_bottom = 16.897797
 scale = Vector2(0.25, 0.25)
-text = "pickaxe"
+text = "  pickaxe"
 fit_content = true
 scroll_active = false
 autowrap_mode = 0
 
 [node name="pickaxe multyplier cost" type="RichTextLabel" parent="pickaxe click upgrade" unique_id=1738937960]
 layout_mode = 0
-offset_left = 8.523249
-offset_top = 5.200756
-offset_right = 67.523254
-offset_bottom = 28.200756
+offset_left = 8.847059
+offset_top = 6.034336
+offset_right = 67.84707
+offset_bottom = 29.034336
 scale = Vector2(0.25, 0.25)
 mouse_filter = 2
-text = "1000"
+text = " 1000"
 fit_content = true
 scroll_active = false
 autowrap_mode = 0

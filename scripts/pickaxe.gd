@@ -9,11 +9,11 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	
-	$"pickaxe level upgrade/pickaxe level".text = "pickaxe level = " + str(Gamedata.pickaxe_level)
+	$"pickaxe level upgrade/pickaxe level".text = " pickaxe level  =  " + str(Gamedata.pickaxe_level) + " " 
 	
-	$"pickaxe click upgrade/pickaxe multyplier".text = "pickaxe click power = " + str(Gamedata.pickaxe_click_multiplier)
+	$"pickaxe click upgrade/pickaxe multyplier".text = " pickaxe click power  =  " + str(Gamedata.pickaxe_click_multiplier) + " " 
 	
-	$"pickaxe click upgrade/pickaxe multyplier cost".text = Gamedata.pickaxe_click_multiplier_cost.to_metric_name(true)
+	$"pickaxe click upgrade/pickaxe multyplier cost".text =  "  "  + Gamedata.pickaxe_click_multiplier_cost.to_metric_name(true)
 	
 	if Gamedata.pickaxe_level == 1:
 		
@@ -34,7 +34,7 @@ func _process(_delta: float) -> void:
 		Gamedata.pickaxe_upgradecost2.mantissa = 1.0
 		Gamedata.pickaxe_upgradecost2.exponent = 3
 		
-		$"pickaxe level upgrade/pickaxe level req".text = Gamedata.pickaxe_upgradecost1.to_metric_name(true) + "\n" + Gamedata.pickaxe_upgradecost2.to_metric_name(true)
+		$"pickaxe level upgrade/pickaxe level req".text = Gamedata.pickaxe_upgradecost1.to_metric_name(true) + "  \n  " + Gamedata.pickaxe_upgradecost2.to_metric_name(true)
 		
 		$"pickaxe level upgrade/Sprite2D".show()
 		$"pickaxe level upgrade/Sprite2D2".show()
@@ -51,14 +51,14 @@ func _process(_delta: float) -> void:
 		Gamedata.pickaxe_upgradecost3.mantissa = 1.0
 		Gamedata.pickaxe_upgradecost3.exponent = 3
 		
-		$"pickaxe level upgrade/pickaxe level req".text = Gamedata.pickaxe_upgradecost1.to_metric_name(true) + "\n" + Gamedata.pickaxe_upgradecost2.to_metric_name(true) + "\n" + Gamedata.pickaxe_upgradecost3.to_metric_name(true)
+		$"pickaxe level upgrade/pickaxe level req".text = "  "  + Gamedata.pickaxe_upgradecost1.to_metric_name(true) + "  \n  " + Gamedata.pickaxe_upgradecost2.to_metric_name(true) + "  \n  " + Gamedata.pickaxe_upgradecost3.to_metric_name(true)
 		
 		$"pickaxe level upgrade/Sprite2D".show()
 		$"pickaxe level upgrade/Sprite2D2".show()
 		$"pickaxe level upgrade/Sprite2D3".show()
 		
 	elif Gamedata.pickaxe_level == 4:
-		$"pickaxe level upgrade/pickaxe level req".text = "\nmax level"
+		$"pickaxe level upgrade/pickaxe level req".text = "\n max level "
 		
 		$"pickaxe level upgrade/Sprite2D".hide()
 		$"pickaxe level upgrade/Sprite2D2".hide()

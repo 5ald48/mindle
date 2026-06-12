@@ -176,8 +176,8 @@ func _ready():
 	
 
 	# ── IRON INGOT ────────────────────────────────
-	iron_ingot.mantissa = 0.0
-	iron_ingot.exponent = 0
+	iron_ingot.mantissa = 1.0
+	iron_ingot.exponent = 11
 	
 	iron_ingot_per_sec.mantissa = 1.0
 	iron_ingot_per_sec.exponent = 0

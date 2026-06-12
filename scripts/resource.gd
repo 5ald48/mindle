@@ -9,9 +9,9 @@ func _ready() -> void:
 	pass
 
 func _process(delta: float) -> void:
-	$Sprite2D2/resourceUI.text = Gamedata.get(resource_name).to_metric_name(true)
+	$Sprite2D2/resourceUI.text = " " + Gamedata.get(resource_name).to_metric_name(true)
 
-	$"Sprite2D2/miner upgrade/upgrade cost".text = Gamedata.get(resource_name + "_miner_upgrade_cost").to_metric_name(true)
+	$"Sprite2D2/miner upgrade/upgrade cost".text = " " + Gamedata.get(resource_name + "_miner_upgrade_cost").to_metric_name(true)
 	
 	
 	
@@ -23,6 +23,7 @@ func _process(delta: float) -> void:
 	
 	
 	#if Gamedata.get(resource_name + "_miner_on_off") == true and Gamedata.get(resource_used1).is_greater_than_or_equal_to((Gamedata.get(resource_name + "_per_sec" ).multiply(delta).multiply(Gamedata.get(resource_name + "_cost1")))):
+	#if Gamedata.get(resource_name + "_miner_on_off") == true and Gamedata.get(resource_used1).is_greater_than_or_equal_to((Gamedata.get(resource_name + "_cost1").multiply(delta))): 
 	if Gamedata.get(resource_name + "_miner_on_off") == true and Gamedata.get(resource_used1).is_greater_than_or_equal_to(Gamedata.get(resource_name + "_cost1")): 
 		
 		Gamedata.get(resource_name).plus_equals(Gamedata.get(resource_name + "_per_sec").multiply(delta))
