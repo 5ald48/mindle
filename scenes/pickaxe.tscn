@@ -26,7 +26,9 @@ offset_right = 64.79
 offset_bottom = 47.45
 scale = Vector2(0.2, 0.2)
 mouse_filter = 2
-text = "10000"
+text = "100000
+10000
+1000"
 fit_content = true
 scroll_active = false
 autowrap_mode = 0

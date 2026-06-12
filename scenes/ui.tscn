@@ -10,12 +10,12 @@ transform = Transform2D(0.2, 0, 0, 0.2, 0, 0)
 
 [node name="coins2" type="RichTextLabel" parent="." unique_id=409305553]
 offset_left = 50.0
-offset_top = 4.9999995
-offset_right = 108.0
-offset_bottom = 40.0
+offset_top = 10.0
+offset_right = 119.0
+offset_bottom = 45.0
 theme_override_fonts/normal_font = ExtResource("1_ktti3")
 theme_override_font_sizes/normal_font_size = 32
-text = "coins"
+text = "121232"
 fit_content = true
 autowrap_mode = 0
 script = ExtResource("1_p7vwb")

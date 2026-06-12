@@ -1,7 +1,7 @@
 extends Node
 
 
-var pickaxe_level : int = 1
+var pickaxe_level : int = 4
 var pickaxe_click_multiplier : int = 1
 var pickaxe_click_multiplier_cost : BigNumber = BigNumber.new()
 var pickaxe_upgradecost1 : BigNumber = BigNumber.new()
@@ -61,6 +61,26 @@ var iron_ingot_miner_unlocked : bool = false
 var iron_ingot_miner_upgrade_cost : BigNumber = BigNumber.new()
 var iron_ingot_miner_upgrade_cost_multiplier : BigNumber = BigNumber.new()
 var iron_ingot_cost1 : BigNumber = BigNumber.new()
+
+# ── copper ingot ────────────────────────────────
+var copper_ingot : BigNumber = BigNumber.new()
+var copper_ingot_per_sec : BigNumber = BigNumber.new()
+var copper_ingot_per_sec_multiplier : BigNumber = BigNumber.new()
+var copper_ingot_miner_on_off : bool = false
+var copper_ingot_miner_unlocked : bool = false
+var copper_ingot_miner_upgrade_cost : BigNumber = BigNumber.new()
+var copper_ingot_miner_upgrade_cost_multiplier : BigNumber = BigNumber.new()
+var copper_ingot_cost1 : BigNumber = BigNumber.new()
+
+# ── gold INGOT ────────────────────────────────
+var gold_ingot : BigNumber = BigNumber.new()
+var gold_ingot_per_sec : BigNumber = BigNumber.new()
+var gold_ingot_per_sec_multiplier : BigNumber = BigNumber.new()
+var gold_ingot_miner_on_off : bool = false
+var gold_ingot_miner_unlocked : bool = false
+var gold_ingot_miner_upgrade_cost : BigNumber = BigNumber.new()
+var gold_ingot_miner_upgrade_cost_multiplier : BigNumber = BigNumber.new()
+var gold_ingot_cost1 : BigNumber = BigNumber.new()
 
 func _ready():
 	
@@ -173,3 +193,41 @@ func _ready():
 	
 	iron_ingot_cost1.mantissa = 1.0
 	iron_ingot_cost1.exponent = 0
+	
+	# ── copper INGOT ────────────────────────────────
+	copper_ingot.mantissa = 0.0
+	copper_ingot.exponent = 0
+	
+	copper_ingot_per_sec.mantissa = 1.0
+	copper_ingot_per_sec.exponent = 0
+	
+	copper_ingot_per_sec_multiplier.mantissa = 1.1
+	copper_ingot_per_sec_multiplier.exponent = 0
+	
+	copper_ingot_miner_upgrade_cost.mantissa = 1.0
+	copper_ingot_miner_upgrade_cost.exponent = 2
+	
+	copper_ingot_miner_upgrade_cost_multiplier.mantissa = 1.1
+	copper_ingot_miner_upgrade_cost_multiplier.exponent = 0
+	
+	copper_ingot_cost1.mantissa = 1.0
+	copper_ingot_cost1.exponent = 0
+	
+	# ── gold INGOT ────────────────────────────────
+	gold_ingot.mantissa = 0.0
+	gold_ingot.exponent = 0
+	
+	gold_ingot_per_sec.mantissa = 1.0
+	gold_ingot_per_sec.exponent = 0
+	
+	gold_ingot_per_sec_multiplier.mantissa = 1.1
+	gold_ingot_per_sec_multiplier.exponent = 0
+	
+	gold_ingot_miner_upgrade_cost.mantissa = 1.0
+	gold_ingot_miner_upgrade_cost.exponent = 2
+	
+	gold_ingot_miner_upgrade_cost_multiplier.mantissa = 1.1
+	gold_ingot_miner_upgrade_cost_multiplier.exponent = 0
+	
+	gold_ingot_cost1.mantissa = 1.0
+	gold_ingot_cost1.exponent = 0

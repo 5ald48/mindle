@@ -4,9 +4,9 @@ var target_y = position.y
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
-			target_y -= 10
+			target_y -= 8
 		if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
-			target_y += 10
+			target_y += 8
 	if event is InputEventScreenDrag:
 		target_y -= event.relative.y
 

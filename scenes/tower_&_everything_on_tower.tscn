@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://2ennxcacubyc" path="res://scenes/gold.tscn" id="4_2tv1d"]
 [ext_resource type="PackedScene" uid="uid://dchlak3lg7uxl" path="res://scenes/pickaxe.tscn" id="6_2tv1d"]
 [ext_resource type="PackedScene" uid="uid://e1yml3p661j7" path="res://scenes/iron.tscn" id="6_4txet"]
+[ext_resource type="PackedScene" uid="uid://go6pc5h6d4p0" path="res://scenes/copper_ingot.tscn" id="7_qy3gr"]
+[ext_resource type="PackedScene" uid="uid://b5s0gbgbr3w7r" path="res://scenes/gold_ingot.tscn" id="8_o1qpx"]
 
 [node name="tower & everything on tower" type="Node2D" unique_id=1992095660]
 
@@ -26,3 +28,9 @@ position = Vector2(160, 31.697937)
 
 [node name="pickaxe" parent="." unique_id=1632089896 instance=ExtResource("6_2tv1d")]
 position = Vector2(27.421257, 166.43536)
+
+[node name="copper_ingot" parent="." unique_id=1931176546 instance=ExtResource("7_qy3gr")]
+position = Vector2(160, -0.75)
+
+[node name="gold_ingot" parent="." unique_id=2097854766 instance=ExtResource("8_o1qpx")]
+position = Vector2(160, -33.455013)
