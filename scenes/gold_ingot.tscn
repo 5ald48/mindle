@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dp1rm1jf7fumv" path="res://scenes/resource.tscn" id="1_cis1a"]
 [ext_resource type="Texture2D" uid="uid://njll8e67tmfd" path="res://textures/items/item567.png" id="2_h505p"]
+[ext_resource type="Texture2D" uid="uid://bj00rn335ke7k" path="res://textures/items/item579.png" id="3_vnwht"]
 
 [node name="Node2D" unique_id=402219238 instance=ExtResource("1_cis1a")]
 resource_name = "gold_ingot"
@@ -12,3 +13,9 @@ texture = ExtResource("2_h505p")
 
 [node name="resource" parent="Sprite2D2" parent_id_path=PackedInt32Array(793220251) index="3" unique_id=451976459]
 texture_normal = ExtResource("2_h505p")
+
+[node name="Sprite2D" parent="cost" parent_id_path=PackedInt32Array(2045267571) index="2" unique_id=472337601]
+texture = ExtResource("2_h505p")
+
+[node name="Sprite2D2" parent="cost" parent_id_path=PackedInt32Array(2045267571) index="3" unique_id=1355008196]
+texture = ExtResource("3_vnwht")

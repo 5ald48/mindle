@@ -8,6 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://e1yml3p661j7" path="res://scenes/iron.tscn" id="6_4txet"]
 [ext_resource type="PackedScene" uid="uid://go6pc5h6d4p0" path="res://scenes/copper_ingot.tscn" id="7_qy3gr"]
 [ext_resource type="PackedScene" uid="uid://b5s0gbgbr3w7r" path="res://scenes/gold_ingot.tscn" id="8_o1qpx"]
+[ext_resource type="PackedScene" uid="uid://ckh1d885k4h54" path="res://scenes/iron_screw.tscn" id="9_owwnw"]
+[ext_resource type="PackedScene" uid="uid://6a82n04cadoa" path="res://scenes/iron_plate.tscn" id="10_st4r7"]
+[ext_resource type="PackedScene" uid="uid://bmmyje87hxs4n" path="res://scenes/copper_wire.tscn" id="11_w4dkq"]
 
 [node name="tower & everything on tower" type="Node2D" unique_id=1992095660]
 
@@ -34,3 +37,12 @@ position = Vector2(160, -0.75)
 
 [node name="gold_ingot" parent="." unique_id=2097854766 instance=ExtResource("8_o1qpx")]
 position = Vector2(160, -33.455013)
+
+[node name="iron screw" parent="." unique_id=2129017914 instance=ExtResource("9_owwnw")]
+position = Vector2(160, -65.112854)
+
+[node name="iron plate" parent="." unique_id=1808151251 instance=ExtResource("10_st4r7")]
+position = Vector2(160, -96.64255)
+
+[node name="copper wire" parent="." unique_id=2077882649 instance=ExtResource("11_w4dkq")]
+position = Vector2(160, -129.04684)

@@ -6,7 +6,7 @@ extends Node2D
 @export var resource_used1: String 
 
 func _ready() -> void:
-	pass
+	$"cost/cost label".text = " " + str(Gamedata.get(resource_name + "_cost1")) + " "
 
 func _process(delta: float) -> void:
 	$Sprite2D2/resourceUI.text = " " + Gamedata.get(resource_name).to_metric_name(true)

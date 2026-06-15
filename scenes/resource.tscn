@@ -7,11 +7,14 @@
 [ext_resource type="Texture2D" uid="uid://c0kb1s8kehegh" path="res://textures/my art/MAIN SPRITE-96x32-32x16.png" id="4_ofw20"]
 [ext_resource type="Texture2D" uid="uid://dpbxbh3kws16f" path="res://textures/items/item585.png" id="6_n42d4"]
 [ext_resource type="Texture2D" uid="uid://dd8oo6xymvmdy" path="res://textures/my art/MAIN SPRITE-64x16-16x16.png" id="7_8e877"]
+[ext_resource type="Texture2D" uid="uid://y13qr7xk208o" path="res://textures/my art/MAIN SPRITE-16x80-16x32.png" id="8_oukxn"]
 
 [node name="Node2D" type="Node2D" unique_id=402219238]
 script = ExtResource("1_3rbbe")
 texture_on = ExtResource("2_o1pcp")
 texture_off = ExtResource("7_8e877")
+resource_name = null
+resource_used1 = null
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=793220251]
 position = Vector2(0, 1)
@@ -49,7 +52,7 @@ scale = Vector2(0.2, 0.2)
 mouse_filter = 2
 theme_override_fonts/normal_font = ExtResource("2_oukxn")
 theme_override_font_sizes/normal_font_size = 32
-text = "100"
+text = " 100"
 fit_content = true
 autowrap_mode = 0
 
@@ -94,6 +97,42 @@ theme_override_font_sizes/normal_font_size = 32
 text = " UPGRADE MAX "
 fit_content = true
 autowrap_mode = 0
+
+[node name="cost" type="Sprite2D" parent="." unique_id=2045267571]
+position = Vector2(6, 1)
+texture = ExtResource("8_oukxn")
+
+[node name="cost label" type="RichTextLabel" parent="cost" unique_id=1304685655]
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 23.0
+offset_bottom = 47.0
+scale = Vector2(0.25, 0.25)
+text = "  1 
+  "
+fit_content = true
+autowrap_mode = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="cost" unique_id=1596234271]
+offset_left = -5.0
+offset_top = -10.0
+offset_right = 35.0
+offset_bottom = 28.0
+scale = Vector2(0.25, 0.25)
+text = "       1 
+ cost  : "
+fit_content = true
+autowrap_mode = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="cost" unique_id=472337601]
+position = Vector2(-3, -8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("6_n42d4")
+
+[node name="Sprite2D2" type="Sprite2D" parent="cost" unique_id=1355008196]
+position = Vector2(-3, 1)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("6_n42d4")
 
 [connection signal="pressed" from="Sprite2D2/miner upgrade" to="." method="_on_miner_upgrade_pressed"]
 [connection signal="pressed" from="Sprite2D2/on off" to="." method="_on_on_off_pressed"]

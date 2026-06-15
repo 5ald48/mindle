@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ckh1d885k4h54"]
+
+[ext_resource type="PackedScene" uid="uid://dp1rm1jf7fumv" path="res://scenes/resource.tscn" id="1_uedu7"]
+[ext_resource type="Texture2D" uid="uid://cppdj0imaono5" path="res://textures/my art/MAIN SPRITE-208x96-16x16.png" id="2_fa466"]
+[ext_resource type="Texture2D" uid="uid://pnndloda63hh" path="res://textures/items/item571.png" id="3_wkisi"]
+
+[node name="Node2D" unique_id=402219238 instance=ExtResource("1_uedu7")]
+resource_name = "iron_screw"
+resource_used1 = "iron_ingot"
+
+[node name="Sprite2D" parent="Sprite2D2/miner upgrade" parent_id_path=PackedInt32Array(270947365) index="1" unique_id=939404416]
+texture = ExtResource("2_fa466")
+
+[node name="resource" parent="Sprite2D2" parent_id_path=PackedInt32Array(793220251) index="3" unique_id=451976459]
+texture_normal = ExtResource("2_fa466")
+
+[node name="Sprite2D" parent="cost" parent_id_path=PackedInt32Array(2045267571) index="2" unique_id=472337601]
+texture = ExtResource("2_fa466")
+
+[node name="Sprite2D2" parent="cost" parent_id_path=PackedInt32Array(2045267571) index="3" unique_id=1355008196]
+texture = ExtResource("3_wkisi")

@@ -34,7 +34,7 @@ func _process(_delta: float) -> void:
 		Gamedata.pickaxe_upgradecost2.mantissa = 1.0
 		Gamedata.pickaxe_upgradecost2.exponent = 3
 		
-		$"pickaxe level upgrade/pickaxe level req".text = Gamedata.pickaxe_upgradecost1.to_metric_name(true) + "  \n  " + Gamedata.pickaxe_upgradecost2.to_metric_name(true)
+		$"pickaxe level upgrade/pickaxe level req".text = " " + Gamedata.pickaxe_upgradecost1.to_metric_name(true) + "  \n  " + Gamedata.pickaxe_upgradecost2.to_metric_name(true)
 		
 		$"pickaxe level upgrade/Sprite2D".show()
 		$"pickaxe level upgrade/Sprite2D2".show()
@@ -57,7 +57,7 @@ func _process(_delta: float) -> void:
 		$"pickaxe level upgrade/Sprite2D2".show()
 		$"pickaxe level upgrade/Sprite2D3".show()
 		
-	elif Gamedata.pickaxe_level == 4:
+	else :
 		$"pickaxe level upgrade/pickaxe level req".text = "\n max level "
 		
 		$"pickaxe level upgrade/Sprite2D".hide()

@@ -1,7 +1,7 @@
 extends Node
 
 
-var pickaxe_level : int = 4
+var pickaxe_level : int = 12
 var pickaxe_click_multiplier : int = 1
 var pickaxe_click_multiplier_cost : BigNumber = BigNumber.new()
 var pickaxe_upgradecost1 : BigNumber = BigNumber.new()
@@ -81,6 +81,36 @@ var gold_ingot_miner_unlocked : bool = false
 var gold_ingot_miner_upgrade_cost : BigNumber = BigNumber.new()
 var gold_ingot_miner_upgrade_cost_multiplier : BigNumber = BigNumber.new()
 var gold_ingot_cost1 : BigNumber = BigNumber.new()
+
+# ── iron_screw ────────────────────────────────
+var iron_screw : BigNumber = BigNumber.new()
+var iron_screw_per_sec : BigNumber = BigNumber.new()
+var iron_screw_per_sec_multiplier : BigNumber = BigNumber.new()
+var iron_screw_miner_on_off : bool = false
+var iron_screw_miner_unlocked : bool = false
+var iron_screw_miner_upgrade_cost : BigNumber = BigNumber.new()
+var iron_screw_miner_upgrade_cost_multiplier : BigNumber = BigNumber.new()
+var iron_screw_cost1 : BigNumber = BigNumber.new()
+
+# ── iron_plate ────────────────────────────────
+var iron_plate : BigNumber = BigNumber.new()
+var iron_plate_per_sec : BigNumber = BigNumber.new()
+var iron_plate_per_sec_multiplier : BigNumber = BigNumber.new()
+var iron_plate_miner_on_off : bool = false
+var iron_plate_miner_unlocked : bool = false
+var iron_plate_miner_upgrade_cost : BigNumber = BigNumber.new()
+var iron_plate_miner_upgrade_cost_multiplier : BigNumber = BigNumber.new()
+var iron_plate_cost1 : BigNumber = BigNumber.new()
+
+# ── copper_wire ────────────────────────────────
+var copper_wire : BigNumber = BigNumber.new()
+var copper_wire_per_sec : BigNumber = BigNumber.new()
+var copper_wire_per_sec_multiplier : BigNumber = BigNumber.new()
+var copper_wire_miner_on_off : bool = false
+var copper_wire_miner_unlocked : bool = false
+var copper_wire_miner_upgrade_cost : BigNumber = BigNumber.new()
+var copper_wire_miner_upgrade_cost_multiplier : BigNumber = BigNumber.new()
+var copper_wire_cost1 : BigNumber = BigNumber.new()
 
 func _ready():
 	
@@ -176,8 +206,8 @@ func _ready():
 	
 
 	# ── IRON INGOT ────────────────────────────────
-	iron_ingot.mantissa = 1.0
-	iron_ingot.exponent = 11
+	iron_ingot.mantissa = 0.0
+	iron_ingot.exponent = 0
 	
 	iron_ingot_per_sec.mantissa = 1.0
 	iron_ingot_per_sec.exponent = 0
@@ -213,7 +243,7 @@ func _ready():
 	copper_ingot_cost1.mantissa = 1.0
 	copper_ingot_cost1.exponent = 0
 	
-	# ── gold INGOT ────────────────────────────────
+	# ── gold_ingot ────────────────────────────────
 	gold_ingot.mantissa = 0.0
 	gold_ingot.exponent = 0
 	
@@ -231,3 +261,60 @@ func _ready():
 	
 	gold_ingot_cost1.mantissa = 1.0
 	gold_ingot_cost1.exponent = 0
+	
+	# ── iron_screw ────────────────────────────────
+	iron_screw.mantissa = 0.0
+	iron_screw.exponent = 0
+	
+	iron_screw_per_sec.mantissa = 1.0
+	iron_screw_per_sec.exponent = 0
+	
+	iron_screw_per_sec_multiplier.mantissa = 1.1
+	iron_screw_per_sec_multiplier.exponent = 0
+	
+	iron_screw_miner_upgrade_cost.mantissa = 1.0
+	iron_screw_miner_upgrade_cost.exponent = 2
+	
+	iron_screw_miner_upgrade_cost_multiplier.mantissa = 1.1
+	iron_screw_miner_upgrade_cost_multiplier.exponent = 0
+	
+	iron_screw_cost1.mantissa = 25.0
+	iron_screw_cost1.exponent = -1
+	
+	# ── iron_plate ────────────────────────────────
+	iron_plate.mantissa = 0.0
+	iron_plate.exponent = 0
+	
+	iron_plate_per_sec.mantissa = 1.0
+	iron_plate_per_sec.exponent = 0
+	
+	iron_plate_per_sec_multiplier.mantissa = 1.1
+	iron_plate_per_sec_multiplier.exponent = 0
+	
+	iron_plate_miner_upgrade_cost.mantissa = 1.0
+	iron_plate_miner_upgrade_cost.exponent = 2
+	
+	iron_plate_miner_upgrade_cost_multiplier.mantissa = 1.1
+	iron_plate_miner_upgrade_cost_multiplier.exponent = 0
+	
+	iron_plate_cost1.mantissa = 1.0
+	iron_plate_cost1.exponent = 0
+	
+	# ── copper_wire ────────────────────────────────
+	copper_wire.mantissa = 0.0
+	copper_wire.exponent = 0
+	
+	copper_wire_per_sec.mantissa = 1.0
+	copper_wire_per_sec.exponent = 0
+	
+	copper_wire_per_sec_multiplier.mantissa = 1.1
+	copper_wire_per_sec_multiplier.exponent = 0
+	
+	copper_wire_miner_upgrade_cost.mantissa = 1.0
+	copper_wire_miner_upgrade_cost.exponent = 2
+	
+	copper_wire_miner_upgrade_cost_multiplier.mantissa = 1.1
+	copper_wire_miner_upgrade_cost_multiplier.exponent = 0
+	
+	copper_wire_cost1.mantissa = 5.0
+	copper_wire_cost1.exponent = -1

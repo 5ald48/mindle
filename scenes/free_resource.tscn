@@ -9,5 +9,5 @@ script = ExtResource("2_7yq8k")
 [node name="Sprite2D2" parent="." index="0" unique_id=793220251]
 position = Vector2(0, 0)
 
-[node name="upgrade cost" parent="Sprite2D2/miner upgrade" parent_id_path=PackedInt32Array(270947365) index="0" unique_id=1082285736]
-text = " 100"
+[node name="cost" parent="." index="1" unique_id=2045267571]
+visible = false
