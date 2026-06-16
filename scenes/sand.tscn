@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cm8cshs0nmm8i"]
+
+[ext_resource type="PackedScene" uid="uid://ojoq1u3eyjir" path="res://scenes/free_resource.tscn" id="1_xjhim"]
+[ext_resource type="Texture2D" uid="uid://cvm2g8xq0l33o" path="res://textures/my art/MAIN SPRITE-112x128-16x16.png" id="2_6sy66"]
+
+[node name="Node2D" unique_id=402219238 instance=ExtResource("1_xjhim")]
+resource_name = "sand"
+
+[node name="Sprite2D" parent="Sprite2D2/miner upgrade" parent_id_path=PackedInt32Array(270947365) index="1" unique_id=939404416]
+texture = ExtResource("2_6sy66")
+
+[node name="resource" parent="Sprite2D2" parent_id_path=PackedInt32Array(793220251) index="3" unique_id=451976459]
+texture_normal = ExtResource("2_6sy66")

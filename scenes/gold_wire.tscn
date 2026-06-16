@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cyepxu1fbywtj"]
+
+[ext_resource type="PackedScene" uid="uid://dp1rm1jf7fumv" path="res://scenes/resource.tscn" id="1_voofg"]
+[ext_resource type="Texture2D" uid="uid://c183fm0j6mctq" path="res://textures/my art/MAIN SPRITE-192x112-16x16.png" id="2_kiupv"]
+[ext_resource type="Texture2D" uid="uid://njll8e67tmfd" path="res://textures/items/item567.png" id="2_mffg0"]
+
+[node name="Node2D" unique_id=402219238 instance=ExtResource("1_voofg")]
+resource_name = "gold_wire"
+resource_used1 = "gold"
+
+[node name="Sprite2D" parent="Sprite2D2/miner upgrade" parent_id_path=PackedInt32Array(270947365) index="1" unique_id=939404416]
+texture = ExtResource("2_kiupv")
+
+[node name="resource" parent="Sprite2D2" parent_id_path=PackedInt32Array(793220251) index="3" unique_id=451976459]
+texture_normal = ExtResource("2_kiupv")
+
+[node name="Sprite2D" parent="cost" parent_id_path=PackedInt32Array(2045267571) index="2" unique_id=472337601]
+texture = ExtResource("2_kiupv")
+
+[node name="Sprite2D2" parent="cost" parent_id_path=PackedInt32Array(2045267571) index="3" unique_id=1355008196]
+texture = ExtResource("2_mffg0")

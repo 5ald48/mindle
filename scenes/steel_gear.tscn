@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c67w6f7qcad33"]
+
+[ext_resource type="PackedScene" uid="uid://byyj4f8f8bxpy" path="res://scenes/2resource.tscn" id="1_n1del"]
+[ext_resource type="Texture2D" uid="uid://dscmltxhexckw" path="res://textures/my art/MAIN SPRITE-176x144-16x16.png" id="2_m4e6v"]
+[ext_resource type="Texture2D" uid="uid://d2uuc3nr1bauj" path="res://textures/items/item562.png" id="2_q2yvt"]
+[ext_resource type="Texture2D" uid="uid://cppdj0imaono5" path="res://textures/my art/MAIN SPRITE-208x96-16x16.png" id="3_m4e6v"]
+
+[node name="Node2D" unique_id=402219238 instance=ExtResource("1_n1del")]
+resource_name = "steel_gear"
+resource_used1 = "steel_ingot"
+resource_used2 = "iron_screw"
+
+[node name="Sprite2D" parent="Sprite2D2/miner upgrade" parent_id_path=PackedInt32Array(270947365) index="1" unique_id=939404416]
+texture = ExtResource("2_m4e6v")
+
+[node name="resource" parent="Sprite2D2" parent_id_path=PackedInt32Array(793220251) index="3" unique_id=451976459]
+texture_normal = ExtResource("2_m4e6v")
+
+[node name="Sprite2D" parent="cost" parent_id_path=PackedInt32Array(2045267571) index="2" unique_id=472337601]
+texture = ExtResource("2_m4e6v")
+
+[node name="Sprite2D2" parent="cost" parent_id_path=PackedInt32Array(2045267571) index="3" unique_id=1355008196]
+texture = ExtResource("2_q2yvt")
+
+[node name="Sprite2D3" parent="cost" parent_id_path=PackedInt32Array(2045267571) index="4" unique_id=537185794]
+texture = ExtResource("3_m4e6v")

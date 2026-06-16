@@ -123,6 +123,49 @@ var steel_ingot_miner_upgrade_cost_multiplier : BigNumber = BigNumber.new()
 var steel_ingot_cost1 : BigNumber = BigNumber.new()
 var steel_ingot_cost2 : BigNumber = BigNumber.new()
 
+# ── sand ──────────────────────────────────────
+var sand : BigNumber = BigNumber.new()
+var sand_per_sec : BigNumber = BigNumber.new()
+var sand_per_sec_multiplier : BigNumber = BigNumber.new()
+var sand_miner_on_off : bool = false
+var sand_miner_unlocked : bool = false
+var sand_miner_upgrade_cost : BigNumber = BigNumber.new()
+var sand_miner_upgrade_cost_multiplier : BigNumber = BigNumber.new()
+var sand_pickaxe_level_req : int = 1
+
+# ── glass ────────────────────────────────
+var glass : BigNumber = BigNumber.new()
+var glass_per_sec : BigNumber = BigNumber.new()
+var glass_per_sec_multiplier : BigNumber = BigNumber.new()
+var glass_miner_on_off : bool = false
+var glass_miner_unlocked : bool = false
+var glass_miner_upgrade_cost : BigNumber = BigNumber.new()
+var glass_miner_upgrade_cost_multiplier : BigNumber = BigNumber.new()
+var glass_cost1 : BigNumber = BigNumber.new()
+
+# ── steel_gear ────────────────────────────────
+var steel_gear : BigNumber = BigNumber.new()
+var steel_gear_per_sec : BigNumber = BigNumber.new()
+var steel_gear_per_sec_multiplier : BigNumber = BigNumber.new()
+var steel_gear_miner_on_off : bool = false
+var steel_gear_miner_unlocked : bool = false
+var steel_gear_miner_upgrade_cost : BigNumber = BigNumber.new()
+var steel_gear_miner_upgrade_cost_multiplier : BigNumber = BigNumber.new()
+var steel_gear_cost1 : BigNumber = BigNumber.new()
+var steel_gear_cost2 : BigNumber = BigNumber.new()
+
+# ── gold_wire ────────────────────────────────
+var gold_wire : BigNumber = BigNumber.new()
+var gold_wire_per_sec : BigNumber = BigNumber.new()
+var gold_wire_per_sec_multiplier : BigNumber = BigNumber.new()
+var gold_wire_miner_on_off : bool = false
+var gold_wire_miner_unlocked : bool = false
+var gold_wire_miner_upgrade_cost : BigNumber = BigNumber.new()
+var gold_wire_miner_upgrade_cost_multiplier : BigNumber = BigNumber.new()
+var gold_wire_cost1 : BigNumber = BigNumber.new()
+
+
+
 func _ready():
 	
 	#pickaxe_level.mantissa = 1.0
@@ -351,3 +394,83 @@ func _ready():
 	
 	steel_ingot_cost2.mantissa = 2.0
 	steel_ingot_cost2.exponent = 0
+	
+	
+	# ── sand ──────────────────────────────────────
+	sand.mantissa = 0.0
+	sand.exponent = 0
+	
+	sand_per_sec.mantissa = 1.0
+	sand_per_sec.exponent = 0
+	
+	sand_per_sec_multiplier.mantissa = 1.1
+	sand_per_sec_multiplier.exponent = 0
+	
+	sand_miner_upgrade_cost.mantissa = 1.0
+	sand_miner_upgrade_cost.exponent = 2
+	
+	sand_miner_upgrade_cost_multiplier.mantissa = 1.1
+	sand_miner_upgrade_cost_multiplier.exponent = 0
+	
+	# ── glass ────────────────────────────────
+	glass.mantissa = 0.0
+	glass.exponent = 0
+	
+	glass_per_sec.mantissa = 1.0
+	glass_per_sec.exponent = 0
+	
+	glass_per_sec_multiplier.mantissa = 1.1
+	glass_per_sec_multiplier.exponent = 0
+	
+	glass_miner_upgrade_cost.mantissa = 1.0
+	glass_miner_upgrade_cost.exponent = 2
+	
+	glass_miner_upgrade_cost_multiplier.mantissa = 1.1
+	glass_miner_upgrade_cost_multiplier.exponent = 0
+	
+	glass_cost1.mantissa = 3.0
+	glass_cost1.exponent = 0
+	
+	# ── steel_gear ────────────────────────────────
+	steel_gear.mantissa = 0.0
+	steel_gear.exponent = 0
+	
+	steel_gear_per_sec.mantissa = 1.0
+	steel_gear_per_sec.exponent = 0
+	
+	steel_gear_per_sec_multiplier.mantissa = 1.1
+	steel_gear_per_sec_multiplier.exponent = 0
+	
+	steel_gear_miner_upgrade_cost.mantissa = 1.0
+	steel_gear_miner_upgrade_cost.exponent = 2
+	
+	steel_gear_miner_upgrade_cost_multiplier.mantissa = 1.1
+	steel_gear_miner_upgrade_cost_multiplier.exponent = 0
+	
+	steel_gear_cost1.mantissa = 1.0
+	steel_gear_cost1.exponent = 0
+	
+	steel_gear_cost2.mantissa = 2.0
+	steel_gear_cost2.exponent = 0
+	
+	# ── gold_wire ────────────────────────────────
+	gold_wire.mantissa = 0.0
+	gold_wire.exponent = 0
+	
+	gold_wire_per_sec.mantissa = 1.0
+	gold_wire_per_sec.exponent = 0
+	
+	gold_wire_per_sec_multiplier.mantissa = 1.1
+	gold_wire_per_sec_multiplier.exponent = 0
+	
+	gold_wire_miner_upgrade_cost.mantissa = 1.0
+	gold_wire_miner_upgrade_cost.exponent = 2
+	
+	gold_wire_miner_upgrade_cost_multiplier.mantissa = 1.1
+	gold_wire_miner_upgrade_cost_multiplier.exponent = 0
+	
+	gold_wire_cost1.mantissa = 2.0
+	gold_wire_cost1.exponent = 0
+	
+	
+	

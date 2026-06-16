@@ -13,9 +13,10 @@
 script = ExtResource("1_40cab")
 
 [node name="pickaxe level upgrade" type="TextureButton" parent="." unique_id=632866617]
-offset_top = -32.957245
-offset_right = 32.0
-offset_bottom = -16.957245
+offset_left = -16.0
+offset_top = -33.209568
+offset_right = 16.0
+offset_bottom = -17.209568
 texture_normal = ExtResource("2_2ikqw")
 
 [node name="pickaxe level req" type="RichTextLabel" parent="pickaxe level upgrade" unique_id=368368048]
@@ -62,10 +63,10 @@ scroll_active = false
 autowrap_mode = 0
 
 [node name="pickaxe click upgrade" type="TextureButton" parent="." unique_id=1035437831]
-offset_left = 0.43269348
-offset_top = -56.420727
-offset_right = 32.432693
-offset_bottom = -40.420727
+offset_left = -16.0
+offset_top = -56.77293
+offset_right = 16.0
+offset_bottom = -40.77293
 texture_normal = ExtResource("2_2ikqw")
 
 [node name="pickaxe multyplier" type="RichTextLabel" parent="pickaxe click upgrade" unique_id=189064336]
