@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://ckvckoi16nmej" path="res://scenes/glass.tscn" id="14_w4o2p"]
 [ext_resource type="PackedScene" uid="uid://c67w6f7qcad33" path="res://scenes/steel_gear.tscn" id="15_3rh7w"]
 [ext_resource type="PackedScene" uid="uid://cyepxu1fbywtj" path="res://scenes/gold_wire.tscn" id="16_y2yhy"]
+[ext_resource type="PackedScene" uid="uid://b77h082dxfjxm" path="res://scenes/circuit_board.tscn" id="17_w4o2p"]
 
 [node name="tower & everything on tower" type="Node2D" unique_id=1992095660]
 
@@ -59,11 +60,14 @@ position = Vector2(80, 3.399994)
 position = Vector2(119.2, 131.53812)
 
 [node name="glass" parent="." unique_id=1617562335 instance=ExtResource("14_w4o2p")]
-position = Vector2(160.2, -28.805885)
+position = Vector2(160.2, -61.41324)
 
 [node name="steel gear" parent="." unique_id=1508004114 instance=ExtResource("15_3rh7w")]
-position = Vector2(80, -28.805885)
+position = Vector2(119.2, -28.805885)
 
 [node name="gold wire" parent="." unique_id=2106831370 instance=ExtResource("16_y2yhy")]
-position = Vector2(239.97632, -28.805885)
+position = Vector2(199.2, -28.805885)
 resource_used1 = "gold_ingot"
+
+[node name="circuit_board" parent="." unique_id=1446845327 instance=ExtResource("17_w4o2p")]
+position = Vector2(161, -93.22432)

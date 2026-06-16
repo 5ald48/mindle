@@ -164,7 +164,17 @@ var gold_wire_miner_upgrade_cost : BigNumber = BigNumber.new()
 var gold_wire_miner_upgrade_cost_multiplier : BigNumber = BigNumber.new()
 var gold_wire_cost1 : BigNumber = BigNumber.new()
 
-
+# ── circuit_board ────────────────────────────────
+var circuit_board : BigNumber = BigNumber.new()
+var circuit_board_per_sec : BigNumber = BigNumber.new()
+var circuit_board_per_sec_multiplier : BigNumber = BigNumber.new()
+var circuit_board_miner_on_off : bool = false
+var circuit_board_miner_unlocked : bool = false
+var circuit_board_miner_upgrade_cost : BigNumber = BigNumber.new()
+var circuit_board_miner_upgrade_cost_multiplier : BigNumber = BigNumber.new()
+var circuit_board_cost1 : BigNumber = BigNumber.new()
+var circuit_board_cost2 : BigNumber = BigNumber.new()
+var circuit_board_cost3 : BigNumber = BigNumber.new()
 
 func _ready():
 	
@@ -471,6 +481,31 @@ func _ready():
 	
 	gold_wire_cost1.mantissa = 2.0
 	gold_wire_cost1.exponent = 0
+	
+		# ── circuit_board ────────────────────────────────
+	circuit_board.mantissa = 0.0
+	circuit_board.exponent = 0
+	
+	circuit_board_per_sec.mantissa = 1.0
+	circuit_board_per_sec.exponent = 0
+	
+	circuit_board_per_sec_multiplier.mantissa = 1.1
+	circuit_board_per_sec_multiplier.exponent = 0
+	
+	circuit_board_miner_upgrade_cost.mantissa = 1.0
+	circuit_board_miner_upgrade_cost.exponent = 2
+	
+	circuit_board_miner_upgrade_cost_multiplier.mantissa = 1.1
+	circuit_board_miner_upgrade_cost_multiplier.exponent = 0
+	
+	circuit_board_cost1.mantissa = 2.0
+	circuit_board_cost1.exponent = 0
+	
+	circuit_board_cost2.mantissa = 1.0
+	circuit_board_cost2.exponent = 0
+	
+	circuit_board_cost3.mantissa = 1.0
+	circuit_board_cost3.exponent = 0
 	
 	
 	

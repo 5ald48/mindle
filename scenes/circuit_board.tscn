@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://b77h082dxfjxm"]
+
+[ext_resource type="PackedScene" uid="uid://cd8t1d23mkcrf" path="res://scenes/3resources.tscn" id="1_vfrq8"]
+[ext_resource type="Texture2D" uid="uid://vipyarcqh48o" path="res://textures/my art/MAIN SPRITE-208x144-16x16.png" id="2_8tabf"]
+[ext_resource type="Texture2D" uid="uid://wcj8x2ddb3dv" path="res://textures/my art/MAIN SPRITE-176x64-16x16.png" id="2_wo1iu"]
+[ext_resource type="Texture2D" uid="uid://fjgcfmv2bhh3" path="res://textures/my art/MAIN SPRITE-144x144-16x16.png" id="3_8tabf"]
+[ext_resource type="Texture2D" uid="uid://wwfpamqfqnv4" path="res://textures/my art/MAIN SPRITE-192x64-16x16.png" id="4_ldy8g"]
+
+[node name="Node2D" unique_id=402219238 instance=ExtResource("1_vfrq8")]
+resource_name = "circuit_board"
+resource_used1 = "copper_wire"
+resource_used2 = "glass"
+resource_used3 = "iron_plate"
+
+[node name="Sprite2D" parent="Sprite2D2/miner upgrade" parent_id_path=PackedInt32Array(270947365) index="1" unique_id=939404416]
+texture = ExtResource("2_8tabf")
+
+[node name="resource" parent="Sprite2D2" parent_id_path=PackedInt32Array(793220251) index="3" unique_id=451976459]
+texture_normal = ExtResource("2_8tabf")
+
+[node name="cost label" parent="cost" parent_id_path=PackedInt32Array(2045267571) index="0" unique_id=1304685655]
+text = "  1 
+  1
+  1"
+
+[node name="Sprite2D" parent="cost" parent_id_path=PackedInt32Array(2045267571) index="2" unique_id=472337601]
+texture = ExtResource("2_8tabf")
+
+[node name="Sprite2D2" parent="cost" parent_id_path=PackedInt32Array(2045267571) index="3" unique_id=1355008196]
+texture = ExtResource("2_wo1iu")
+
+[node name="Sprite2D3" parent="cost" parent_id_path=PackedInt32Array(2045267571) index="4" unique_id=537185794]
+texture = ExtResource("3_8tabf")
+
+[node name="Sprite2D4" type="Sprite2D" parent="cost" parent_id_path=PackedInt32Array(2045267571) index="5" unique_id=113810202]
+position = Vector2(-3, 9)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("4_ldy8g")
