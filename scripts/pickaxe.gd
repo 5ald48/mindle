@@ -9,12 +9,16 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	
+	#the pickaxe level text
 	$"pickaxe level upgrade/pickaxe level".text = " pickaxe level  =  " + str(Gamedata.pickaxe_level) + " " 
 	
+	#the pickaxe click multiplayer power text
 	$"pickaxe click upgrade/pickaxe multyplier".text = " pickaxe click power  =  " + str(Gamedata.pickaxe_click_multiplier) + " " 
 	
+	#the pickaxe multiplayer cost text
 	$"pickaxe click upgrade/pickaxe multyplier cost".text =  "  "  + Gamedata.pickaxe_click_multiplier_cost.to_metric_name(true)
 	
+	#the pickaxe upgrade variubles
 	if Gamedata.pickaxe_level == 1:
 		
 		Gamedata.pickaxe_upgradecost1.mantissa = 1.0
@@ -65,7 +69,7 @@ func _process(_delta: float) -> void:
 		$"pickaxe level upgrade/Sprite2D3".hide()
 		
 
-
+#the pickaxe level upgrade botton
 func _on_pickaxe_level_upgrade_pressed() -> void:
 	if Gamedata.pickaxe_level == 1 and Gamedata.iron.is_greater_than_or_equal_to(Gamedata.pickaxe_upgradecost1):
 		Gamedata.pickaxe_level += 1
@@ -83,6 +87,7 @@ func _on_pickaxe_level_upgrade_pressed() -> void:
 		Gamedata.copper.minus_equals(Gamedata.pickaxe_upgradecost3)
 
 
+#the pickaxe click multiplayer upgrade botton
 func _on_pickaxe_click_upgrade_pressed() -> void:
 	if Gamedata.coin.is_greater_than_or_equal_to(Gamedata.pickaxe_click_multiplier_cost):
 		Gamedata.pickaxe_click_multiplier += 1

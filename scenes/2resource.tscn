@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://byyj4f8f8bxpy"]
+
+[ext_resource type="PackedScene" uid="uid://dp1rm1jf7fumv" path="res://scenes/resource.tscn" id="1_jvdnd"]
+[ext_resource type="Script" uid="uid://ddliri4s04t15" path="res://scripts/2_resource.gd" id="2_7kt4s"]
+[ext_resource type="Texture2D" uid="uid://dpbxbh3kws16f" path="res://textures/items/item585.png" id="3_uuloq"]
+
+[node name="Node2D" unique_id=402219238 instance=ExtResource("1_jvdnd")]
+script = ExtResource("2_7kt4s")
+resource_name = ""
+resource_used1 = ""
+resource_used2 = ""
+
+[node name="cost label" parent="cost" parent_id_path=PackedInt32Array(2045267571) index="0" unique_id=1304685655]
+text = "  1 
+  1
+ "
+
+[node name="Sprite2D3" type="Sprite2D" parent="cost" parent_id_path=PackedInt32Array(2045267571) index="4" unique_id=537185794]
+position = Vector2(-3, 4)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_uuloq")

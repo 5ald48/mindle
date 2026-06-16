@@ -112,6 +112,17 @@ var copper_wire_miner_upgrade_cost : BigNumber = BigNumber.new()
 var copper_wire_miner_upgrade_cost_multiplier : BigNumber = BigNumber.new()
 var copper_wire_cost1 : BigNumber = BigNumber.new()
 
+# ── steel_ingot ────────────────────────────────
+var steel_ingot : BigNumber = BigNumber.new()
+var steel_ingot_per_sec : BigNumber = BigNumber.new()
+var steel_ingot_per_sec_multiplier : BigNumber = BigNumber.new()
+var steel_ingot_miner_on_off : bool = false
+var steel_ingot_miner_unlocked : bool = false
+var steel_ingot_miner_upgrade_cost : BigNumber = BigNumber.new()
+var steel_ingot_miner_upgrade_cost_multiplier : BigNumber = BigNumber.new()
+var steel_ingot_cost1 : BigNumber = BigNumber.new()
+var steel_ingot_cost2 : BigNumber = BigNumber.new()
+
 func _ready():
 	
 	#pickaxe_level.mantissa = 1.0
@@ -318,3 +329,25 @@ func _ready():
 	
 	copper_wire_cost1.mantissa = 5.0
 	copper_wire_cost1.exponent = -1
+	
+	# ── steel_ingot ────────────────────────────────
+	steel_ingot.mantissa = 0.0
+	steel_ingot.exponent = 0
+	
+	steel_ingot_per_sec.mantissa = 1.0
+	steel_ingot_per_sec.exponent = 0
+	
+	steel_ingot_per_sec_multiplier.mantissa = 1.1
+	steel_ingot_per_sec_multiplier.exponent = 0
+	
+	steel_ingot_miner_upgrade_cost.mantissa = 1.0
+	steel_ingot_miner_upgrade_cost.exponent = 2
+	
+	steel_ingot_miner_upgrade_cost_multiplier.mantissa = 1.1
+	steel_ingot_miner_upgrade_cost_multiplier.exponent = 0
+	
+	steel_ingot_cost1.mantissa = 1.0
+	steel_ingot_cost1.exponent = 0
+	
+	steel_ingot_cost2.mantissa = 2.0
+	steel_ingot_cost2.exponent = 0

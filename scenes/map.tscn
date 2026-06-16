@@ -27,21 +27,21 @@ tile_set = SubResource("TileSet_8yh2u")
 tile_set = SubResource("TileSet_d2vo2")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1409765295]
-position = Vector2(159.5, 88.00001)
-scale = Vector2(0.13932292, 0.13580248)
+position = Vector2(160, 90)
+scale = Vector2(0.139, 0.139)
 texture = ExtResource("2_paxxb")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=773377258]
-position = Vector2(159.9, -88.1)
-scale = Vector2(0.143, 0.14)
+position = Vector2(160, -90)
+scale = Vector2(0.139, 0.139)
 texture = ExtResource("3_gldc4")
 
 [node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1240253443]
-position = Vector2(161, -269)
-scale = Vector2(0.14, 0.14)
+position = Vector2(160, -270)
+scale = Vector2(0.139, 0.139)
 texture = ExtResource("4_2klcf")
 
 [node name="Sprite2D4" type="Sprite2D" parent="." unique_id=709814443]
-position = Vector2(161, -449)
-scale = Vector2(0.14, 0.14)
+position = Vector2(160, -450)
+scale = Vector2(0.139, 0.139)
 texture = ExtResource("4_0cso3")
