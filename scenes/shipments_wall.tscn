@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://ckeyh5teslk7t"]
+
+[ext_resource type="Texture2D" uid="uid://dgn705um8wmvf" path="res://textures/my art/MAIN SPRITE-64x80-80x32.png" id="1_1qdap"]
+[ext_resource type="PackedScene" uid="uid://cybnjpo8njoor" path="res://scenes/shipments.tscn" id="2_b72yj"]
+
+[node name="shipments wall" type="Node2D" unique_id=216082748]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1208424381]
+position = Vector2(-4.000013, -50)
+rotation = 1.5707964
+scale = Vector2(2.2457595, 1.2182055)
+texture = ExtResource("1_1qdap")
+
+[node name="shipment" parent="." unique_id=1860695734 instance=ExtResource("2_b72yj")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -20.0
+offset_top = 10.0
+offset_right = -20.0
+offset_bottom = 10.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="shipment2" parent="." unique_id=251803985 instance=ExtResource("2_b72yj")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -20.0
+offset_top = -7.0
+offset_right = -20.0
+offset_bottom = -7.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="shipment3" parent="." unique_id=805200141 instance=ExtResource("2_b72yj")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -20.0
+offset_top = -24.0
+offset_right = -20.0
+offset_bottom = -24.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="shipment4" parent="." unique_id=522762488 instance=ExtResource("2_b72yj")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -20.0
+offset_top = -41.0
+offset_right = -20.0
+offset_bottom = -41.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="shipment5" parent="." unique_id=1452722037 instance=ExtResource("2_b72yj")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -20.0
+offset_top = -58.0
+offset_right = -20.0
+offset_bottom = -58.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="shipment6" parent="." unique_id=973466264 instance=ExtResource("2_b72yj")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -20.0
+offset_top = -75.0
+offset_right = -20.0
+offset_bottom = -75.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="shipment7" parent="." unique_id=96448186 instance=ExtResource("2_b72yj")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -20.0
+offset_top = -92.0
+offset_right = -20.0
+offset_bottom = -92.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="shipment8" parent="." unique_id=1232926827 instance=ExtResource("2_b72yj")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -20.0
+offset_top = -109.0
+offset_right = -20.0
+offset_bottom = -109.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="shipment9" parent="." unique_id=1038794284 instance=ExtResource("2_b72yj")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -20.0
+offset_top = -126.0
+offset_right = -20.0
+offset_bottom = -126.0
+grow_horizontal = 1
+grow_vertical = 1

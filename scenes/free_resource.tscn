@@ -9,5 +9,8 @@ script = ExtResource("2_7yq8k")
 [node name="Sprite2D2" parent="." index="0" unique_id=793220251]
 position = Vector2(0, 0)
 
+[node name="resourceUI" parent="Sprite2D2" index="0" unique_id=113634182]
+text = " resource "
+
 [node name="cost" parent="." index="1" unique_id=2045267571]
 visible = false

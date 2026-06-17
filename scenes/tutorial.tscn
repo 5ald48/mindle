@@ -1,0 +1,229 @@
+[gd_scene format=3 uid="uid://bx1jsfmieltd3"]
+
+[ext_resource type="Texture2D" uid="uid://djajmihc2wk6" path="res://textures/my art/MAIN SPRITE-272x80-32x16.png" id="1_8ho6b"]
+[ext_resource type="Texture2D" uid="uid://c6evvfgp2ln8h" path="res://textures/my art/MAIN SPRITE-293x100-7x7.png" id="2_ph3nu"]
+
+[sub_resource type="GDScript" id="GDScript_d2vo2"]
+script/source = "extends TextureButton
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func _on_pressed() -> void:
+	$\"..\".hide()
+"
+
+[node name="tutorial" type="Node2D" unique_id=1544871758]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=45445713]
+position = Vector2(-182, 53)
+rotation = -1.3072516
+texture = ExtResource("1_8ho6b")
+
+[node name="TextureButton" type="TextureButton" parent="Sprite2D" unique_id=1125955267]
+offset_left = -18.129152
+offset_top = -9.609049
+offset_right = -11.129152
+offset_bottom = -2.6090488
+texture_normal = ExtResource("2_ph3nu")
+script = SubResource("GDScript_d2vo2")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D" unique_id=699552393]
+offset_left = 6.9422636
+offset_top = -4.980457
+offset_right = 58.942265
+offset_bottom = 90.01955
+rotation = 1.5707964
+scale = Vector2(0.25, 0.25)
+text = "click
+this to 
+collect
+"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1682088380]
+position = Vector2(-109, 53)
+rotation = 4.3703046
+texture = ExtResource("1_8ho6b")
+
+[node name="TextureButton" type="TextureButton" parent="Sprite2D2" unique_id=2030179893]
+offset_left = -18.129152
+offset_top = -9.609049
+offset_right = -11.129152
+offset_bottom = -2.6090488
+texture_normal = ExtResource("2_ph3nu")
+script = SubResource("GDScript_d2vo2")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D2" unique_id=1331830824]
+offset_left = 9.613459
+offset_top = -6.1303616
+offset_right = 61.613457
+offset_bottom = 88.86964
+rotation = 1.5707964
+scale = Vector2(0.25, 0.25)
+text = "click
+this to 
+upgrade
+max
+"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=103769055]
+position = Vector2(-107, -6)
+rotation = 1.7819811
+texture = ExtResource("1_8ho6b")
+
+[node name="TextureButton" type="TextureButton" parent="Sprite2D3" unique_id=1439235230]
+offset_left = -18.129152
+offset_top = -9.609049
+offset_right = -11.129152
+offset_bottom = -2.6090488
+texture_normal = ExtResource("2_ph3nu")
+script = SubResource("GDScript_d2vo2")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D3" unique_id=716214721]
+offset_left = -13.060107
+offset_top = 5.868005
+offset_right = 40.93989
+offset_bottom = 101.868004
+rotation = -1.5289084
+scale = Vector2(0.25, 0.25)
+text = "click
+this to 
+upgrade
+auto
+collection
+"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=1354739406]
+position = Vector2(-181.00002, -1.9999995)
+rotation = 1.0192723
+texture = ExtResource("1_8ho6b")
+
+[node name="TextureButton" type="TextureButton" parent="Sprite2D4" unique_id=864851811]
+offset_left = -18.129152
+offset_top = -9.609049
+offset_right = -11.129152
+offset_bottom = -2.6090488
+texture_normal = ExtResource("2_ph3nu")
+script = SubResource("GDScript_d2vo2")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D4" unique_id=1104603161]
+offset_left = -12.577657
+offset_top = 5.177096
+offset_right = 41.422344
+offset_bottom = 101.17709
+rotation = -1.5289084
+scale = Vector2(0.25, 0.25)
+text = "click
+this to 
+turn 
+on \\ off
+"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=970464471]
+position = Vector2(-10, 45)
+rotation = -1.3072516
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("1_8ho6b")
+
+[node name="TextureButton" type="TextureButton" parent="Sprite2D5" unique_id=1150098776]
+offset_left = -18.129152
+offset_top = -9.609049
+offset_right = -11.129152
+offset_bottom = -2.6090488
+texture_normal = ExtResource("2_ph3nu")
+script = SubResource("GDScript_d2vo2")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D5" unique_id=1026568932]
+offset_left = 7.6472316
+offset_top = -6.2064342
+offset_right = 64.64723
+offset_bottom = 88.793564
+rotation = 1.5707964
+scale = Vector2(0.25, 0.25)
+text = "click
+this to 
+deliver 
+shipments
+"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Sprite2D6" type="Sprite2D" parent="." unique_id=1202223286]
+position = Vector2(-250.29541, -5.021237)
+rotation = 2.799508
+texture = ExtResource("1_8ho6b")
+
+[node name="TextureButton" type="TextureButton" parent="Sprite2D6" unique_id=852078056]
+offset_left = -18.129152
+offset_top = -9.609049
+offset_right = -11.129152
+offset_bottom = -2.6090488
+texture_normal = ExtResource("2_ph3nu")
+script = SubResource("GDScript_d2vo2")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D6" unique_id=1469314692]
+offset_left = 8.078755
+offset_top = 7.305163
+offset_right = 101.07876
+offset_bottom = 84.30516
+rotation = -3.1677725
+scale = Vector2(0.2, 0.2)
+text = "click this to 
+upgrade pickaxe
+level to unlock
+ more ores
+"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Sprite2D7" type="Sprite2D" parent="." unique_id=2008481352]
+position = Vector2(-253, -31.999992)
+rotation = 2.799508
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("1_8ho6b")
+
+[node name="TextureButton" type="TextureButton" parent="Sprite2D7" unique_id=1768142691]
+offset_left = -18.129152
+offset_top = -9.609049
+offset_right = -11.129152
+offset_bottom = -2.6090488
+texture_normal = ExtResource("2_ph3nu")
+script = SubResource("GDScript_d2vo2")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D7" unique_id=102965161]
+offset_left = 9.020816
+offset_top = 7.458179
+offset_right = 102.02081
+offset_bottom = 102.458176
+rotation = -3.1677725
+scale = Vector2(0.25, 0.25)
+text = "click this to 
+upgrade click
+power
+"
+fit_content = true
+autowrap_mode = 0
+
+[connection signal="pressed" from="Sprite2D/TextureButton" to="Sprite2D/TextureButton" method="_on_pressed"]
+[connection signal="pressed" from="Sprite2D2/TextureButton" to="Sprite2D2/TextureButton" method="_on_pressed"]
+[connection signal="pressed" from="Sprite2D3/TextureButton" to="Sprite2D3/TextureButton" method="_on_pressed"]
+[connection signal="pressed" from="Sprite2D4/TextureButton" to="Sprite2D4/TextureButton" method="_on_pressed"]
+[connection signal="pressed" from="Sprite2D5/TextureButton" to="Sprite2D5/TextureButton" method="_on_pressed"]
+[connection signal="pressed" from="Sprite2D6/TextureButton" to="Sprite2D6/TextureButton" method="_on_pressed"]
+[connection signal="pressed" from="Sprite2D7/TextureButton" to="Sprite2D7/TextureButton" method="_on_pressed"]

@@ -1,7 +1,7 @@
 extends Node
 
 
-var pickaxe_level : int = 12
+var pickaxe_level : int = 1
 var pickaxe_click_multiplier : int = 1
 var pickaxe_click_multiplier_cost : BigNumber = BigNumber.new()
 var pickaxe_upgradecost1 : BigNumber = BigNumber.new()
@@ -201,8 +201,8 @@ func _ready():
 
 	
 	# ── IRON ──────────────────────────────────────
-	iron.mantissa = 140.0
-	iron.exponent = 4
+	iron.mantissa = 0.0
+	iron.exponent = 0
 	
 	iron_per_sec.mantissa = 1.0
 	iron_per_sec.exponent = 0

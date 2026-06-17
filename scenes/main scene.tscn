@@ -4,14 +4,15 @@
 [ext_resource type="PackedScene" uid="uid://cbr62t5plspwe" path="res://scenes/map.tscn" id="1_ijdfw"]
 [ext_resource type="PackedScene" uid="uid://db40xavlkt8ln" path="res://scenes/ui.tscn" id="2_k0ot2"]
 [ext_resource type="PackedScene" uid="uid://ce13aky1v6trk" path="res://scenes/tower_&_everything_on_tower.tscn" id="3_ijdfw"]
-[ext_resource type="PackedScene" uid="uid://cybnjpo8njoor" path="res://scenes/shipments.tscn" id="5_jb6a7"]
+[ext_resource type="PackedScene" uid="uid://ckeyh5teslk7t" path="res://scenes/shipments_wall.tscn" id="5_jb6a7"]
+[ext_resource type="PackedScene" uid="uid://bx1jsfmieltd3" path="res://scenes/tutorial.tscn" id="6_esn7u"]
 
 [node name="MainScene" type="Node2D" unique_id=579106627]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1012002039]
 anchor_mode = 0
-limit_top = -600
-limit_bottom = 300
+limit_top = -540
+limit_bottom = 200
 script = ExtResource("1_d2vo2")
 
 [node name="MAP" parent="." unique_id=209112516 instance=ExtResource("1_ijdfw")]
@@ -20,8 +21,8 @@ script = ExtResource("1_d2vo2")
 
 [node name="CanvasLayer" parent="." unique_id=1543564076 instance=ExtResource("2_k0ot2")]
 
-[node name="Control" parent="." unique_id=1860695734 instance=ExtResource("5_jb6a7")]
-offset_left = 280.0
-offset_top = 84.0
-offset_right = 280.0
-offset_bottom = 84.0
+[node name="shipments wall" parent="." unique_id=216082748 instance=ExtResource("5_jb6a7")]
+position = Vector2(304, 140)
+
+[node name="tutorial" parent="." unique_id=1544871758 instance=ExtResource("6_esn7u")]
+position = Vector2(304, 140)
