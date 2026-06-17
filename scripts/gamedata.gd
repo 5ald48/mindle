@@ -201,8 +201,8 @@ func _ready():
 
 	
 	# ── IRON ──────────────────────────────────────
-	iron.mantissa = 0.0
-	iron.exponent = 0
+	iron.mantissa = 140.0
+	iron.exponent = 4
 	
 	iron_per_sec.mantissa = 1.0
 	iron_per_sec.exponent = 0

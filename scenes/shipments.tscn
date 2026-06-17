@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://cybnjpo8njoor"]
+
+[ext_resource type="Script" uid="uid://d2pb0inxfi5bk" path="res://scripts/shipments.gd" id="1_0rhww"]
+[ext_resource type="Texture2D" uid="uid://c0kb1s8kehegh" path="res://textures/my art/MAIN SPRITE-96x32-32x16.png" id="2_be1j3"]
+[ext_resource type="Texture2D" uid="uid://dpbxbh3kws16f" path="res://textures/items/item585.png" id="3_14cef"]
+[ext_resource type="Texture2D" uid="uid://mpyqfjdnheft" path="res://textures/my art/MAIN SPRITE-32x0-16x16.png" id="3_xwchj"]
+[ext_resource type="Texture2D" uid="uid://bj00rn335ke7k" path="res://textures/items/item579.png" id="4_pclap"]
+[ext_resource type="Texture2D" uid="uid://doantctnar2eu" path="res://textures/items/item577.png" id="5_4kkhg"]
+[ext_resource type="Texture2D" uid="uid://cbegkp4oqc21" path="res://textures/items/item574.png" id="6_cbgcp"]
+[ext_resource type="Texture2D" uid="uid://pnndloda63hh" path="res://textures/items/item571.png" id="7_psyg5"]
+[ext_resource type="Texture2D" uid="uid://cbdfmp347tu3c" path="res://textures/items/item565.png" id="8_30g1i"]
+[ext_resource type="Texture2D" uid="uid://njll8e67tmfd" path="res://textures/items/item567.png" id="9_wrx3d"]
+[ext_resource type="Texture2D" uid="uid://cppdj0imaono5" path="res://textures/my art/MAIN SPRITE-208x96-16x16.png" id="10_iime8"]
+[ext_resource type="Texture2D" uid="uid://wwfpamqfqnv4" path="res://textures/my art/MAIN SPRITE-192x64-16x16.png" id="11_eax86"]
+[ext_resource type="Texture2D" uid="uid://wcj8x2ddb3dv" path="res://textures/my art/MAIN SPRITE-176x64-16x16.png" id="12_0qy1c"]
+[ext_resource type="Texture2D" uid="uid://d2uuc3nr1bauj" path="res://textures/items/item562.png" id="13_soqw0"]
+[ext_resource type="Texture2D" uid="uid://cvm2g8xq0l33o" path="res://textures/my art/MAIN SPRITE-112x128-16x16.png" id="14_8aqq5"]
+[ext_resource type="Texture2D" uid="uid://fjgcfmv2bhh3" path="res://textures/my art/MAIN SPRITE-144x144-16x16.png" id="15_ud00u"]
+[ext_resource type="Texture2D" uid="uid://dscmltxhexckw" path="res://textures/my art/MAIN SPRITE-176x144-16x16.png" id="16_2f5qp"]
+[ext_resource type="Texture2D" uid="uid://c183fm0j6mctq" path="res://textures/my art/MAIN SPRITE-192x112-16x16.png" id="17_bcvbw"]
+[ext_resource type="Texture2D" uid="uid://vipyarcqh48o" path="res://textures/my art/MAIN SPRITE-208x144-16x16.png" id="18_n2tv0"]
+
+[node name="Control" type="Control" unique_id=1860695734]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0rhww")
+coin_texture = ExtResource("3_xwchj")
+iron_texture = ExtResource("3_14cef")
+gold_texture = ExtResource("4_pclap")
+copper_texture = ExtResource("5_4kkhg")
+coal_texture = ExtResource("6_cbgcp")
+iron_ingot_texture = ExtResource("7_psyg5")
+copper_ingot_texture = ExtResource("8_30g1i")
+gold_ingot_texture = ExtResource("9_wrx3d")
+iron_screw_texture = ExtResource("10_iime8")
+iron_plate_texture = ExtResource("11_eax86")
+copper_wire_texture = ExtResource("12_0qy1c")
+steel_ingot_texture = ExtResource("13_soqw0")
+sand_texture = ExtResource("14_8aqq5")
+glass_texture = ExtResource("15_ud00u")
+steel_gear_texture = ExtResource("16_2f5qp")
+gold_wire_texture = ExtResource("17_bcvbw")
+circuit_board_texture = ExtResource("18_n2tv0")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=101344401]
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 16.0
+texture_normal = ExtResource("2_be1j3")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=385571656]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 2.0
+offset_right = 50.0
+offset_bottom = 21.0
+scale = Vector2(0.25, 0.25)
+text = " 100kilo
+"
+fit_content = true
+autowrap_mode = 0
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=418280124]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 6.0
+offset_right = 50.0
+offset_bottom = 25.0
+scale = Vector2(0.25, 0.25)
+text = " 100kilo"
+fit_content = true
+autowrap_mode = 0
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="." unique_id=1301183808]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 50.0
+offset_bottom = 29.0
+scale = Vector2(0.25, 0.25)
+text = " 100kilo"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2017918445]
+position = Vector2(6, 4)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_xwchj")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=2104258941]
+position = Vector2(6, 8)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_xwchj")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=962125786]
+position = Vector2(6, 12)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_xwchj")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

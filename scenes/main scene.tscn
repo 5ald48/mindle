@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cbr62t5plspwe" path="res://scenes/map.tscn" id="1_ijdfw"]
 [ext_resource type="PackedScene" uid="uid://db40xavlkt8ln" path="res://scenes/ui.tscn" id="2_k0ot2"]
 [ext_resource type="PackedScene" uid="uid://ce13aky1v6trk" path="res://scenes/tower_&_everything_on_tower.tscn" id="3_ijdfw"]
+[ext_resource type="PackedScene" uid="uid://cybnjpo8njoor" path="res://scenes/shipments.tscn" id="5_jb6a7"]
 
 [node name="MainScene" type="Node2D" unique_id=579106627]
 
@@ -18,3 +19,9 @@ script = ExtResource("1_d2vo2")
 [node name="tower & everything on tower" parent="." unique_id=1992095660 instance=ExtResource("3_ijdfw")]
 
 [node name="CanvasLayer" parent="." unique_id=1543564076 instance=ExtResource("2_k0ot2")]
+
+[node name="Control" parent="." unique_id=1860695734 instance=ExtResource("5_jb6a7")]
+offset_left = 280.0
+offset_top = 84.0
+offset_right = 280.0
+offset_bottom = 84.0
