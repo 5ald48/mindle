@@ -33,6 +33,7 @@ var resource_shipment_cost3 :BigNumber
 #how many resources on the shipment 1-2-3
 var how_many_resources : int
 
+var full_coin_gain : BigNumber
 
 #just the first random resoures shipment
 func _ready() -> void:
@@ -49,14 +50,14 @@ func _ready() -> void:
 	
 	how_many_resources = randi_range(1 , 3)
 	shipment_choice()
+	
+	
 
 
 
 #shipment resourses icon
 func _process(_delta: float) -> void:
-	$Sprite2D.texture = get(resource_name1 + "_texture")
-	$Sprite2D2.texture = get(resource_name2 + "_texture")
-	$Sprite2D3.texture = get(resource_name3 + "_texture")
+	pass
 
 #the botton on click comands
 func _on_texture_button_pressed() -> void:
@@ -118,7 +119,8 @@ func shipment_procces_1_resource() -> void:
 		
 		Gamedata.set(resource_name1,Gamedata.get(resource_name1).minus_equals(resource_shipment_cost1))
 		
-		Gamedata.coin.plus_equals(resource_shipment_cost1)
+		full_coin_gain = (resource_shipment_cost1.multiply(Gamedata.get(resource_name1 + "_value")))
+		Gamedata.coin.plus_equals(full_coin_gain)
 		
 		resource_name1  = random_resource_pick()
 		resource_shipment_cost1  =  shipment_cost(resource_name1)
@@ -135,8 +137,8 @@ func shipment_procces_2_resource() -> void:
 		Gamedata.set(resource_name1,Gamedata.get(resource_name1).minus_equals(resource_shipment_cost1))
 		Gamedata.set(resource_name2,Gamedata.get(resource_name2).minus_equals(resource_shipment_cost2))
 		
-		Gamedata.coin.plus_equals(resource_shipment_cost1)
-		Gamedata.coin.plus_equals(resource_shipment_cost2)
+		full_coin_gain = (resource_shipment_cost1.multiply(Gamedata.get(resource_name1 + "_value"))).plus((resource_shipment_cost2.multiply(Gamedata.get(resource_name2 + "_value"))))
+		Gamedata.coin.plus_equals(full_coin_gain)
 		
 		
 		resource_name1  = random_resource_pick()
@@ -158,9 +160,8 @@ func shipment_procces_3_resource() -> void:
 		Gamedata.set(resource_name2,Gamedata.get(resource_name2).minus_equals(resource_shipment_cost2))
 		Gamedata.set(resource_name3,Gamedata.get(resource_name3).minus_equals(resource_shipment_cost3))
 		
-		Gamedata.coin.plus_equals(resource_shipment_cost1)
-		Gamedata.coin.plus_equals(resource_shipment_cost2)
-		Gamedata.coin.plus_equals(resource_shipment_cost3)
+		full_coin_gain = (resource_shipment_cost1.multiply(Gamedata.get(resource_name1 + "_value"))).plus((resource_shipment_cost2.multiply(Gamedata.get(resource_name2 + "_value")))).plus((resource_shipment_cost3.multiply(Gamedata.get(resource_name3 + "_value"))))
+		Gamedata.coin.plus_equals(full_coin_gain)
 		
 		
 		resource_name1  = random_resource_pick()
@@ -178,6 +179,10 @@ func shipment_procces_3_resource() -> void:
 #what happens for every shipment count 1-2-3
 func shipment_choice() -> void:
 	
+	
+	
+	
+	
 	if how_many_resources == 1:
 		
 		
@@ -190,6 +195,8 @@ func shipment_choice() -> void:
 		$Sprite2D3.hide()
 		
 		$RichTextLabel.text = " " + resource_shipment_cost1.to_metric_name(true) + " "
+		
+		full_coin_gain = (resource_shipment_cost1.multiply(Gamedata.get(resource_name1 + "_value")))
 		
 	elif how_many_resources == 2:
 		
@@ -205,6 +212,8 @@ func shipment_choice() -> void:
 		$RichTextLabel.text = " " + resource_shipment_cost1.to_metric_name(true) + " " 
 		$RichTextLabel2.text = " " + resource_shipment_cost2.to_metric_name(true) + " "
 		
+		full_coin_gain = (resource_shipment_cost1.multiply(Gamedata.get(resource_name1 + "_value"))).plus((resource_shipment_cost2.multiply(Gamedata.get(resource_name2 + "_value"))))
+		
 	elif how_many_resources == 3:
 		
 		
@@ -219,9 +228,15 @@ func shipment_choice() -> void:
 		$RichTextLabel.text = " " + resource_shipment_cost1.to_metric_name(true) + " " 
 		$RichTextLabel2.text = " " + resource_shipment_cost2.to_metric_name(true) + " " 
 		$RichTextLabel3.text = " " + resource_shipment_cost3.to_metric_name(true) + " "
+		
+		full_coin_gain = (resource_shipment_cost1.multiply(Gamedata.get(resource_name1 + "_value"))).plus((resource_shipment_cost2.multiply(Gamedata.get(resource_name2 + "_value")))).plus((resource_shipment_cost3.multiply(Gamedata.get(resource_name3 + "_value"))))
 	
 	
+	$Sprite2D.texture = get(resource_name1 + "_texture")
+	$Sprite2D2.texture = get(resource_name2 + "_texture")
+	$Sprite2D3.texture = get(resource_name3 + "_texture")
 	
+	$RichTextLabel4.text = " =  " + full_coin_gain.to_metric_name(true) + " "
 	
 	
 	
