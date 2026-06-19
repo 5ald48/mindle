@@ -19,6 +19,7 @@ func _process(delta: float) -> void:
 
 func _on_pressed() -> void:
 	$\"..\".hide()
+	$\".\".disabled
 "
 
 [node name="tutorial" type="Node2D" unique_id=1544871758]
@@ -45,7 +46,7 @@ rotation = 1.5707964
 scale = Vector2(0.25, 0.25)
 text = "click
 this to 
-collect
+mine
 "
 fit_content = true
 autowrap_mode = 0

@@ -119,7 +119,7 @@ func shipment_procces_1_resource() -> void:
 		
 		Gamedata.set(resource_name1,Gamedata.get(resource_name1).minus_equals(resource_shipment_cost1))
 		
-		full_coin_gain = (resource_shipment_cost1.multiply(Gamedata.get(resource_name1 + "_value")))
+		full_coin_gain1()
 		Gamedata.coin.plus_equals(full_coin_gain)
 		
 		resource_name1  = random_resource_pick()
@@ -137,7 +137,7 @@ func shipment_procces_2_resource() -> void:
 		Gamedata.set(resource_name1,Gamedata.get(resource_name1).minus_equals(resource_shipment_cost1))
 		Gamedata.set(resource_name2,Gamedata.get(resource_name2).minus_equals(resource_shipment_cost2))
 		
-		full_coin_gain = (resource_shipment_cost1.multiply(Gamedata.get(resource_name1 + "_value"))).plus((resource_shipment_cost2.multiply(Gamedata.get(resource_name2 + "_value"))))
+		full_coin_gain2()
 		Gamedata.coin.plus_equals(full_coin_gain)
 		
 		
@@ -160,7 +160,7 @@ func shipment_procces_3_resource() -> void:
 		Gamedata.set(resource_name2,Gamedata.get(resource_name2).minus_equals(resource_shipment_cost2))
 		Gamedata.set(resource_name3,Gamedata.get(resource_name3).minus_equals(resource_shipment_cost3))
 		
-		full_coin_gain = (resource_shipment_cost1.multiply(Gamedata.get(resource_name1 + "_value"))).plus((resource_shipment_cost2.multiply(Gamedata.get(resource_name2 + "_value")))).plus((resource_shipment_cost3.multiply(Gamedata.get(resource_name3 + "_value"))))
+		full_coin_gain3()
 		Gamedata.coin.plus_equals(full_coin_gain)
 		
 		
@@ -179,6 +179,21 @@ func shipment_procces_3_resource() -> void:
 #what happens for every shipment count 1-2-3
 func shipment_choice() -> void:
 	
+	while true :
+		
+		if resource_name1 == resource_name2 :
+			resource_name1  = random_resource_pick()
+			resource_shipment_cost1  =  shipment_cost(resource_name1)
+		
+		elif resource_name1 == resource_name3 :
+			resource_name3  = random_resource_pick()
+			resource_shipment_cost3  =  shipment_cost(resource_name3)
+			
+		elif resource_name2 == resource_name3 :
+			resource_name2  = random_resource_pick()
+			resource_shipment_cost2  =  shipment_cost(resource_name2)
+			
+		else : break
 	
 	
 	
@@ -196,7 +211,7 @@ func shipment_choice() -> void:
 		
 		$RichTextLabel.text = " " + resource_shipment_cost1.to_metric_name(true) + " "
 		
-		full_coin_gain = (resource_shipment_cost1.multiply(Gamedata.get(resource_name1 + "_value")))
+		full_coin_gain1()
 		
 	elif how_many_resources == 2:
 		
@@ -212,7 +227,7 @@ func shipment_choice() -> void:
 		$RichTextLabel.text = " " + resource_shipment_cost1.to_metric_name(true) + " " 
 		$RichTextLabel2.text = " " + resource_shipment_cost2.to_metric_name(true) + " "
 		
-		full_coin_gain = (resource_shipment_cost1.multiply(Gamedata.get(resource_name1 + "_value"))).plus((resource_shipment_cost2.multiply(Gamedata.get(resource_name2 + "_value"))))
+		full_coin_gain2()
 		
 	elif how_many_resources == 3:
 		
@@ -229,7 +244,7 @@ func shipment_choice() -> void:
 		$RichTextLabel2.text = " " + resource_shipment_cost2.to_metric_name(true) + " " 
 		$RichTextLabel3.text = " " + resource_shipment_cost3.to_metric_name(true) + " "
 		
-		full_coin_gain = (resource_shipment_cost1.multiply(Gamedata.get(resource_name1 + "_value"))).plus((resource_shipment_cost2.multiply(Gamedata.get(resource_name2 + "_value")))).plus((resource_shipment_cost3.multiply(Gamedata.get(resource_name3 + "_value"))))
+		full_coin_gain3()
 	
 	
 	$Sprite2D.texture = get(resource_name1 + "_texture")
@@ -238,7 +253,13 @@ func shipment_choice() -> void:
 	
 	$RichTextLabel4.text = " =  " + full_coin_gain.to_metric_name(true) + " "
 	
+func full_coin_gain1 () -> void:
+	full_coin_gain = (resource_shipment_cost1.multiply(Gamedata.get(resource_name1 + "_value")))
+
+func full_coin_gain2 () -> void:
+	full_coin_gain = (resource_shipment_cost1.multiply(Gamedata.get(resource_name1 + "_value"))).plus((resource_shipment_cost2.multiply(Gamedata.get(resource_name2 + "_value"))))
 	
-	
+func full_coin_gain3 () -> void:
+	full_coin_gain = (resource_shipment_cost1.multiply(Gamedata.get(resource_name1 + "_value"))).plus((resource_shipment_cost2.multiply(Gamedata.get(resource_name2 + "_value")))).plus((resource_shipment_cost3.multiply(Gamedata.get(resource_name3 + "_value"))))
 	
 	
