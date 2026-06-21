@@ -53,7 +53,7 @@ func _on_miner_upgrade_pressed() -> void:
 		Gamedata.set(resource_name + "_miner_unlocked", true)
 		Gamedata.get(resource_name).minus_equals(Gamedata.get(resource_name + "_miner_upgrade_cost"))
 		Gamedata.get(resource_name + "_miner_upgrade_cost").multiply_equals(Gamedata.get(resource_name + "_miner_upgrade_cost_multiplier"))
-		Gamedata.get(resource_name + "_per_sec").multiply_equals(Gamedata.get(resource_name + "_per_sec_multiplier"))
+		Gamedata.get(resource_name + "_per_sec").multiply_equals(Gamedata.per_sec_multiplier)
 
 
 
@@ -87,6 +87,6 @@ func _on_max_upgrade_pressed() -> void:
 				Gamedata.set(resource_name + "_miner_unlocked", true)
 				Gamedata.get(resource_name).minus_equals(Gamedata.get(resource_name + "_miner_upgrade_cost"))
 				Gamedata.get(resource_name + "_miner_upgrade_cost").multiply_equals(Gamedata.get(resource_name + "_miner_upgrade_cost_multiplier"))
-				Gamedata.get(resource_name + "_per_sec").multiply_equals(Gamedata.get(resource_name + "_per_sec_multiplier"))
+				Gamedata.get(resource_name + "_per_sec").multiply_equals(Gamedata.per_sec_multiplier)
 			
 			else : break
