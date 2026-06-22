@@ -11,6 +11,9 @@ var pickaxe_upgradecost3 : BigNumber = BigNumber.new()
 var per_sec_multiplier : BigNumber = BigNumber.new()
 
 var coin : BigNumber = BigNumber.new()
+var pristage_coin : BigNumber = BigNumber.new()
+var pristage_cost : BigNumber = BigNumber.new()
+var pristage_lvl: BigNumber = BigNumber.new()
 
 
 # ── IRON ──────────────────────────────────────
@@ -177,9 +180,29 @@ var circuit_board_cost2 : BigNumber = BigNumber.new()
 var circuit_board_cost3 : BigNumber = BigNumber.new()
 var circuit_board_value : BigNumber = BigNumber.new()
 
-func _ready():
+
+func _ready() -> void:
+	reset()
+	
+	pristage_coin.mantissa = 0.0
+	pristage_coin.exponent = 0
+	
+	pristage_lvl.mantissa = 0.0
+	pristage_lvl.exponent = 0
+
+	coin.mantissa = 111.0
+	coin.exponent = 9
+
+func reset():
+	
 	coin.mantissa = 0.0
 	coin.exponent = 0
+	
+
+	pristage_cost.mantissa = 1.0
+	pristage_cost.exponent = 6
+	
+
 
 	pickaxe_click_multiplier_cost.mantissa = 1.0
 	pickaxe_click_multiplier_cost.exponent = 3

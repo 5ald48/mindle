@@ -1,7 +1,8 @@
 extends Node
 
 func _ready() -> void:
-	load_game()
+	pass
+	#load_game()
 	
 	
 
@@ -25,6 +26,9 @@ func get_save_data() -> Dictionary:
 		
 		# COIN
 		"coin": {"m": Gamedata.coin.mantissa, "e": Gamedata.coin.exponent},
+		"pristage_coin": {"m": Gamedata.pristage_coin.mantissa, "e": Gamedata.pristage_coin.exponent},
+		"pristage_cost": {"m": Gamedata.pristage_cost.mantissa, "e": Gamedata.pristage_cost.exponent},
+		"pristage_lvl": {"m": Gamedata.pristage_lvl.mantissa, "e": Gamedata.pristage_lvl.exponent},
 		
 		# IRON
 		"iron": {"m": Gamedata.iron.mantissa, "e": Gamedata.iron.exponent},
@@ -162,6 +166,17 @@ func load_game():
 	
 	# COIN
 	Gamedata.coin.mantissa = data["coin"]["m"]; Gamedata.coin.exponent = data["coin"]["e"]
+	if data.has("pristage_coin"):
+		Gamedata.pristage_coin.mantissa = data["pristage_coin"]["m"]
+		Gamedata.pristage_coin.exponent = data["pristage_coin"]["e"]
+
+	if data.has("pristage_cost"):
+		Gamedata.pristage_cost.mantissa = data["pristage_cost"]["m"]
+		Gamedata.pristage_cost.exponent = data["pristage_cost"]["e"]
+
+	if data.has("pristage_lvl"):
+		Gamedata.pristage_lvl.mantissa = data["pristage_lvl"]["m"]
+		Gamedata.pristage_lvl.exponent = data["pristage_lvl"]["e"]
 	
 	# IRON
 	Gamedata.iron.mantissa = data["iron"]["m"]; Gamedata.iron.exponent = data["iron"]["e"]

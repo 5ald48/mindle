@@ -3,24 +3,113 @@
 [ext_resource type="FontFile" uid="uid://c24bc2hmt208c" path="res://font/Jersey10-Regular.ttf" id="1_ktti3"]
 [ext_resource type="Script" uid="uid://d2flmddlousyx" path="res://scripts/coins.gd" id="1_p7vwb"]
 [ext_resource type="Texture2D" uid="uid://mpyqfjdnheft" path="res://textures/my art/MAIN SPRITE-32x0-16x16.png" id="3_yev5y"]
+[ext_resource type="Texture2D" uid="uid://c0kb1s8kehegh" path="res://textures/my art/MAIN SPRITE-96x32-32x16.png" id="4_wm3ai"]
+[ext_resource type="Script" uid="uid://cff4tani5ckwo" path="res://scripts/pristage.gd" id="5_8dubc"]
+[ext_resource type="Texture2D" uid="uid://cclicdqt7npqb" path="res://textures/my art/MAIN SPRITE-16x0-16x16.png" id="6_8dubc"]
+
+[sub_resource type="GDScript" id="GDScript_bhunq"]
+script/source = "extends RichTextLabel
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta: float) -> void:
+	$\".\".text = \" pristage  lvl  \" + Gamedata.pristage_lvl.to_metric_name(true)
+"
+
+[sub_resource type="GDScript" id="GDScript_8dubc"]
+script/source = "extends RichTextLabel
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta: float) -> void:
+	$\".\".text = \" \" + Gamedata.pristage_coin.to_metric_name(true)
+"
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1543564076]
 scale = Vector2(0.2, 0.2)
 transform = Transform2D(0.2, 0, 0, 0.2, 0, 0)
 
-[node name="coins2" type="RichTextLabel" parent="." unique_id=409305553]
-offset_left = 50.0
-offset_top = 10.0
-offset_right = 125.0
-offset_bottom = 46.0
-theme_override_fonts/normal_font = ExtResource("1_ktti3")
-theme_override_font_sizes/normal_font_size = 32
-text = " 121232 "
-fit_content = true
-autowrap_mode = 0
-script = ExtResource("1_p7vwb")
-
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=356323573]
 position = Vector2(25, 25)
 scale = Vector2(3, 3)
 texture = ExtResource("3_yev5y")
+
+[node name="coins2" type="RichTextLabel" parent="Sprite2D" unique_id=409305553]
+offset_left = 8.333334
+offset_top = -8.333333
+offset_right = 90.333336
+offset_bottom = 27.666668
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/normal_font = ExtResource("1_ktti3")
+theme_override_font_sizes/normal_font_size = 32
+text = " 1000"
+fit_content = true
+autowrap_mode = 0
+script = ExtResource("1_p7vwb")
+
+[node name="pristage cost" type="TextureButton" parent="." unique_id=1670620651]
+offset_top = 150.0
+offset_right = 32.0
+offset_bottom = 166.0
+scale = Vector2(5, 5)
+texture_normal = ExtResource("4_wm3ai")
+script = ExtResource("5_8dubc")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="pristage cost" unique_id=128122432]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 0.9999993
+offset_right = 100.0
+offset_bottom = 57.0
+scale = Vector2(0.25, 0.25)
+mouse_filter = 2
+text = "   cost : 100000 
+        1"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="pristage cost" unique_id=943754408]
+position = Vector2(5, 7.999998)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_yev5y")
+
+[node name="pristage lvl" type="RichTextLabel" parent="." unique_id=1188439450]
+offset_left = 5.0
+offset_top = 110.0
+offset_right = 144.99998
+offset_bottom = 150.0
+scale = Vector2(2, 2)
+text = " lvl "
+fit_content = true
+autowrap_mode = 0
+script = SubResource("GDScript_bhunq")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1912809903]
+position = Vector2(25, 75)
+scale = Vector2(3, 3)
+texture = ExtResource("6_8dubc")
+
+[node name="pristage coin" type="RichTextLabel" parent="Sprite2D2" unique_id=1501325536]
+offset_left = 8.333333
+offset_top = -8.333333
+offset_right = 90.333336
+offset_bottom = 27.666668
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/normal_font = ExtResource("1_ktti3")
+theme_override_font_sizes/normal_font_size = 32
+text = " 1000"
+fit_content = true
+autowrap_mode = 0
+script = SubResource("GDScript_8dubc")
+
+[connection signal="pressed" from="pristage cost" to="pristage cost" method="_on_pressed"]
