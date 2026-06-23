@@ -9,6 +9,9 @@ var pickaxe_upgradecost2 : BigNumber = BigNumber.new()
 var pickaxe_upgradecost3 : BigNumber = BigNumber.new()
 
 var per_sec_multiplier : BigNumber = BigNumber.new()
+var per_sec_multiplier_cost : BigNumber = BigNumber.new()
+var per_sec_multiplier_multiplier : BigNumber = BigNumber.new()
+
 
 var coin : BigNumber = BigNumber.new()
 var pristage_coin : BigNumber = BigNumber.new()
@@ -192,6 +195,9 @@ func _ready() -> void:
 
 	coin.mantissa = 111.0
 	coin.exponent = 9
+	
+	per_sec_multiplier.mantissa = 1.1
+	per_sec_multiplier.exponent = 0
 
 func reset():
 	
@@ -215,6 +221,12 @@ func reset():
 
 	pickaxe_upgradecost3.mantissa = 0.0
 	pickaxe_upgradecost3.exponent = 0
+	
+	per_sec_multiplier_cost.mantissa = 1.0
+	per_sec_multiplier_cost.exponent = 2
+
+	per_sec_multiplier_multiplier.mantissa = 1.1
+	per_sec_multiplier_multiplier.exponent = 0
 
 	# ── IRON ──────────────────────────────────────
 	iron.mantissa = 0.0

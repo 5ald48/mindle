@@ -9,6 +9,30 @@
 [ext_resource type="Texture2D" uid="uid://bj00rn335ke7k" path="res://textures/items/item579.png" id="6_tnc31"]
 [ext_resource type="Texture2D" uid="uid://bkjpvwa3d8glw" path="res://textures/my art/MAIN SPRITE-144x0-16x16.png" id="7_h48u7"]
 
+[sub_resource type="GDScript" id="GDScript_bhunq"]
+script/source = "extends TextureButton
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	$RichTextLabel.text = \" upgrade multiplyer = \" + Gamedata.per_sec_multiplier.to_metric_name(false) + \" \"
+	$RichTextLabel2.text = \" cost = \" + Gamedata.per_sec_multiplier_cost.to_metric_name(true) + \" \"
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta: float) -> void:
+	pass
+
+
+func _on_pressed() -> void:
+	if Gamedata.pristage_coin.is_greater_than_or_equal_to(Gamedata.per_sec_multiplier_cost):
+		Gamedata.pristage_coin.minus_equals(Gamedata.per_sec_multiplier_cost)
+		Gamedata.per_sec_multiplier.multiply_equals(Gamedata.per_sec_multiplier_multiplier)
+		Gamedata.per_sec_multiplier_cost.multiply_equals(Gamedata.per_sec_multiplier_multiplier)
+		$RichTextLabel.text = \" upgrade multiplyer = \" + Gamedata.per_sec_multiplier.to_metric_name(false) + \" \"
+		$RichTextLabel2.text = \" cost = \" + Gamedata.per_sec_multiplier_cost.to_metric_name(true) + \" \"
+"
+
 [node name="pickaxe" type="Node2D" unique_id=1632089896]
 script = ExtResource("1_40cab")
 
@@ -108,5 +132,36 @@ position = Vector2(8, -3.5910416)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("7_h48u7")
 
+[node name="upgrade multiplayer" type="TextureButton" parent="." unique_id=224246895]
+offset_left = -16.0
+offset_top = -81.308044
+offset_right = 16.0
+offset_bottom = -65.308044
+texture_normal = ExtResource("2_2ikqw")
+script = SubResource("GDScript_bhunq")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="upgrade multiplayer" unique_id=654946701]
+layout_mode = 0
+offset_left = 0.5232487
+offset_top = -7.75795
+offset_right = 134.52325
+offset_bottom = 11.24205
+scale = Vector2(0.25, 0.25)
+text = " upgrade mumltiplayer =  "
+fit_content = true
+autowrap_mode = 0
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="upgrade multiplayer" unique_id=859636225]
+layout_mode = 0
+offset_left = 9.6
+offset_top = 4.831215
+offset_right = 44.988235
+offset_bottom = 23.831215
+scale = Vector2(0.25, 0.25)
+text = " cost"
+fit_content = true
+autowrap_mode = 0
+
 [connection signal="pressed" from="pickaxe level upgrade" to="." method="_on_pickaxe_level_upgrade_pressed"]
 [connection signal="pressed" from="pickaxe click upgrade" to="." method="_on_pickaxe_click_upgrade_pressed"]
+[connection signal="pressed" from="upgrade multiplayer" to="upgrade multiplayer" method="_on_pressed"]
