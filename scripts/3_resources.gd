@@ -11,7 +11,7 @@ extends Node2D
 func _ready() -> void:
 	
 	#cost of item text
-	$"cost/cost label".text = " " + str(Gamedata.get(resource_name + "_cost1")) + " \n " + str(Gamedata.get(resource_name + "_cost2")) + " \n " + str(Gamedata.get(resource_name + "_cost3")) + " "
+	$"cost/cost label".text = " " + str(Gamedata.get(resource_name + "_cost1")) + "  " + str(Gamedata.get(resource_name + "_cost2")) + "  " + str(Gamedata.get(resource_name + "_cost3")) + " "
 
 func _process(delta: float) -> void:
 	

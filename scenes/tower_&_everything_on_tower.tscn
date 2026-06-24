@@ -21,53 +21,53 @@
 [node name="tower & everything on tower" type="Node2D" unique_id=1992095660]
 
 [node name="iron" parent="." unique_id=402219238 instance=ExtResource("6_4txet")]
-position = Vector2(160, 164)
+position = Vector2(160, 171.97047)
 
 [node name="coal" parent="." unique_id=1988912566 instance=ExtResource("2_vx7ym")]
-position = Vector2(160.2, 100.078094)
+position = Vector2(160, 139.6805)
 
 [node name="copper" parent="." unique_id=656443744 instance=ExtResource("3_4txet")]
-position = Vector2(161.2, 4.450001)
+position = Vector2(160, 92.19064)
 
 [node name="gold" parent="." unique_id=1698544870 instance=ExtResource("4_2tv1d")]
-position = Vector2(161, -219.72421)
+position = Vector2(160, -20.255775)
 
 [node name="iron ingot" parent="." unique_id=1765041984 instance=ExtResource("2_4txet")]
-position = Vector2(160.2, 68.26637)
+position = Vector2(160, 123.54703)
 
 [node name="pickaxe" parent="." unique_id=1632089896 instance=ExtResource("6_2tv1d")]
-position = Vector2(17.158121, 166)
+position = Vector2(19, 272.1225)
 
 [node name="copper_ingot" parent="." unique_id=1931176546 instance=ExtResource("7_qy3gr")]
-position = Vector2(161.2, -28.599998)
+position = Vector2(160, 74.86371)
 
 [node name="gold_ingot" parent="." unique_id=2097854766 instance=ExtResource("8_o1qpx")]
-position = Vector2(161, -252.72552)
+position = Vector2(160, -37.011623)
 
 [node name="iron screw" parent="." unique_id=2129017914 instance=ExtResource("9_owwnw")]
-position = Vector2(161, -93.48765)
+position = Vector2(160, 42.628807)
 
 [node name="iron plate" parent="." unique_id=1808151251 instance=ExtResource("10_st4r7")]
-position = Vector2(161.2, -125.194046)
+position = Vector2(160, 26.628807)
 
 [node name="copper wire" parent="." unique_id=2077882649 instance=ExtResource("11_w4dkq")]
-position = Vector2(161.2, -156.89386)
+position = Vector2(160, 10.696167)
 
 [node name="steel_ingot" parent="." unique_id=808150511 instance=ExtResource("12_st4r7")]
-position = Vector2(161.2, -61.436096)
+position = Vector2(160, 58.628807)
 
 [node name="sand" parent="." unique_id=1173812099 instance=ExtResource("13_e0plp")]
-position = Vector2(160, 131.78812)
+position = Vector2(160, 155.5)
 
 [node name="glass" parent="." unique_id=1617562335 instance=ExtResource("14_w4o2p")]
-position = Vector2(160.2, 35.266373)
+position = Vector2(160, 107.19064)
 
 [node name="steel gear" parent="." unique_id=1508004114 instance=ExtResource("15_3rh7w")]
-position = Vector2(161.2, -189.30182)
+position = Vector2(160, -5.077917)
 
 [node name="gold wire" parent="." unique_id=2106831370 instance=ExtResource("16_y2yhy")]
-position = Vector2(162, -284.81534)
+position = Vector2(160, -52.5916)
 resource_used1 = "gold_ingot"
 
 [node name="circuit_board" parent="." unique_id=1446845327 instance=ExtResource("17_w4o2p")]
-position = Vector2(162.2, -316.9242)
+position = Vector2(160, -68.769554)

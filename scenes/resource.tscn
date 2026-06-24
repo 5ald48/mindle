@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://cgarfyu0xif6p" path="res://scripts/resource.gd" id="1_3rbbe"]
 [ext_resource type="Texture2D" uid="uid://cxsb8xaj6gp0i" path="res://textures/my art/MAIN SPRITE-80x0-16x16.png" id="2_o1pcp"]
 [ext_resource type="FontFile" uid="uid://c24bc2hmt208c" path="res://font/Jersey10-Regular.ttf" id="2_oukxn"]
-[ext_resource type="Texture2D" uid="uid://dgn705um8wmvf" path="res://textures/my art/MAIN SPRITE-64x80-80x32.png" id="4_o1pcp"]
 [ext_resource type="Texture2D" uid="uid://c0kb1s8kehegh" path="res://textures/my art/MAIN SPRITE-96x32-32x16.png" id="4_ofw20"]
+[ext_resource type="Texture2D" uid="uid://cuxbaedllnyvw" path="res://textures/my art/MAIN SPRITE-64x192-288x16.png" id="4_oukxn"]
 [ext_resource type="Texture2D" uid="uid://dpbxbh3kws16f" path="res://textures/items/item585.png" id="6_n42d4"]
 [ext_resource type="Texture2D" uid="uid://dd8oo6xymvmdy" path="res://textures/my art/MAIN SPRITE-64x16-16x16.png" id="7_8e877"]
 [ext_resource type="Texture2D" uid="uid://y13qr7xk208o" path="res://textures/my art/MAIN SPRITE-16x80-16x32.png" id="8_oukxn"]
@@ -18,13 +18,13 @@ resource_used1 = null
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=793220251]
 position = Vector2(0, 1)
-texture = ExtResource("4_o1pcp")
+texture = ExtResource("4_oukxn")
 
 [node name="resourceUI" type="RichTextLabel" parent="Sprite2D2" unique_id=113634182]
-offset_left = -28.0
-offset_top = 4.0
-offset_right = 77.0
-offset_bottom = 39.0
+offset_left = -134.0
+offset_top = -2.9999995
+offset_right = -16.0
+offset_bottom = 33.0
 scale = Vector2(0.2, 0.2)
 theme_override_fonts/normal_font = ExtResource("2_oukxn")
 theme_override_font_sizes/normal_font_size = 32
@@ -34,10 +34,10 @@ fit_content = true
 autowrap_mode = 0
 
 [node name="miner upgrade" type="TextureButton" parent="Sprite2D2" unique_id=270947365]
-offset_left = 13.0
-offset_top = -13.0
-offset_right = 45.0
-offset_bottom = 3.0
+offset_left = 102.0
+offset_top = -6.0
+offset_right = 134.0
+offset_bottom = 10.0
 scale = Vector2(0.75, 0.75)
 texture_normal = ExtResource("4_ofw20")
 stretch_mode = 0
@@ -62,25 +62,25 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("6_n42d4")
 
 [node name="on off" type="TextureButton" parent="Sprite2D2" unique_id=727703705]
-offset_left = -30.0
-offset_top = -15.0
-offset_right = -14.0
-offset_bottom = 1.0
+offset_left = 127.0
+offset_top = -8.0
+offset_right = 143.0
+offset_bottom = 8.0
 texture_normal = ExtResource("7_8e877")
 
 [node name="resource" type="TextureButton" parent="Sprite2D2" unique_id=451976459]
-offset_left = -37.0
-offset_top = 3.0
-offset_right = -21.0
-offset_bottom = 19.0
+offset_left = -142.0
+offset_top = -4.0
+offset_right = -126.0
+offset_bottom = 12.0
 scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("6_n42d4")
 
 [node name="max_upgrade" type="TextureButton" parent="Sprite2D2" unique_id=442341910]
-offset_left = 13.0
-offset_top = 1.0
-offset_right = 45.0
-offset_bottom = 17.0
+offset_left = 77.0
+offset_top = -6.0
+offset_right = 109.0
+offset_bottom = 10.0
 scale = Vector2(0.75, 0.75)
 texture_normal = ExtResource("4_ofw20")
 
@@ -99,14 +99,15 @@ fit_content = true
 autowrap_mode = 0
 
 [node name="cost" type="Sprite2D" parent="." unique_id=2045267571]
-position = Vector2(6, 1)
+position = Vector2(62, 1)
+rotation = -1.5707964
 texture = ExtResource("8_oukxn")
 
 [node name="cost label" type="RichTextLabel" parent="cost" unique_id=1304685655]
-offset_left = -1.0
-offset_top = -3.0
-offset_right = 23.0
-offset_bottom = 45.0
+offset_top = -0.99999994
+offset_right = 24.0
+offset_bottom = 47.0
+rotation = 1.5707964
 scale = Vector2(0.25, 0.25)
 text = "  1 
   "
@@ -114,10 +115,11 @@ fit_content = true
 autowrap_mode = 0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="cost" unique_id=1596234271]
-offset_left = -5.0
+offset_left = 4.0000005
 offset_top = -12.0
-offset_right = 35.0
+offset_right = 44.0
 offset_bottom = 26.0
+rotation = 1.5707964
 scale = Vector2(0.25, 0.25)
 text = "       1 
  cost  : "
@@ -125,12 +127,14 @@ fit_content = true
 autowrap_mode = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="cost" unique_id=472337601]
-position = Vector2(-3, -9)
+position = Vector2(2.0000005, -10)
+rotation = 1.5707964
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("6_n42d4")
 
 [node name="Sprite2D2" type="Sprite2D" parent="cost" unique_id=1355008196]
-position = Vector2(-3, -1)
+position = Vector2(2, 1.0000001)
+rotation = 1.5707964
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("6_n42d4")
 

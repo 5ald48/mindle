@@ -22,14 +22,14 @@ func _on_pressed() -> void:
 	$\".\".disabled = true
 "
 
-[node name="tutorial" type="Node2D" unique_id=1544871758]
+[node name="tutorial" type="Node2D" unique_id=1468054677]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=45445713]
-position = Vector2(-182, 53)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1564903304]
+position = Vector2(-286, 52)
 rotation = -1.3072516
 texture = ExtResource("1_8ho6b")
 
-[node name="TextureButton" type="TextureButton" parent="Sprite2D" unique_id=1125955267]
+[node name="TextureButton" type="TextureButton" parent="Sprite2D" unique_id=980720010]
 offset_left = -18.129152
 offset_top = -9.609049
 offset_right = -11.129152
@@ -37,7 +37,7 @@ offset_bottom = -2.6090488
 texture_normal = ExtResource("2_ph3nu")
 script = SubResource("GDScript_d2vo2")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D" unique_id=699552393]
+[node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D" unique_id=582729437]
 offset_left = 6.9422636
 offset_top = -4.980457
 offset_right = 58.942265
@@ -51,12 +51,12 @@ mine
 fit_content = true
 autowrap_mode = 0
 
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1682088380]
-position = Vector2(-109, 53)
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1613409599]
+position = Vector2(-53, 54)
 rotation = 4.3703046
 texture = ExtResource("1_8ho6b")
 
-[node name="TextureButton" type="TextureButton" parent="Sprite2D2" unique_id=2030179893]
+[node name="TextureButton" type="TextureButton" parent="Sprite2D2" unique_id=1879679913]
 offset_left = -18.129152
 offset_top = -9.609049
 offset_right = -11.129152
@@ -64,7 +64,7 @@ offset_bottom = -2.6090488
 texture_normal = ExtResource("2_ph3nu")
 script = SubResource("GDScript_d2vo2")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D2" unique_id=1331830824]
+[node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D2" unique_id=1933343232]
 offset_left = 9.613459
 offset_top = -6.1303616
 offset_right = 61.613457
@@ -79,12 +79,12 @@ max
 fit_content = true
 autowrap_mode = 0
 
-[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=103769055]
-position = Vector2(-107, -6)
-rotation = 1.7819811
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1257616765]
+position = Vector2(-31, 9)
+rotation = 1.6580628
 texture = ExtResource("1_8ho6b")
 
-[node name="TextureButton" type="TextureButton" parent="Sprite2D3" unique_id=1439235230]
+[node name="TextureButton" type="TextureButton" parent="Sprite2D3" unique_id=781466792]
 offset_left = -18.129152
 offset_top = -9.609049
 offset_right = -11.129152
@@ -92,7 +92,7 @@ offset_bottom = -2.6090488
 texture_normal = ExtResource("2_ph3nu")
 script = SubResource("GDScript_d2vo2")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D3" unique_id=716214721]
+[node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D3" unique_id=274170128]
 offset_left = -13.060107
 offset_top = 5.868005
 offset_right = 40.93989
@@ -108,12 +108,12 @@ collection
 fit_content = true
 autowrap_mode = 0
 
-[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=1354739406]
-position = Vector2(-181.00002, -1.9999995)
-rotation = 1.0192723
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=857918106]
+position = Vector2(-5, -7)
+rotation = 1.7034414
 texture = ExtResource("1_8ho6b")
 
-[node name="TextureButton" type="TextureButton" parent="Sprite2D4" unique_id=864851811]
+[node name="TextureButton" type="TextureButton" parent="Sprite2D4" unique_id=1294512944]
 offset_left = -18.129152
 offset_top = -9.609049
 offset_right = -11.129152
@@ -121,7 +121,7 @@ offset_bottom = -2.6090488
 texture_normal = ExtResource("2_ph3nu")
 script = SubResource("GDScript_d2vo2")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D4" unique_id=1104603161]
+[node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D4" unique_id=375173432]
 offset_left = -12.577657
 offset_top = 5.177096
 offset_right = 41.422344
@@ -136,13 +136,14 @@ on \\ off
 fit_content = true
 autowrap_mode = 0
 
-[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=970464471]
-position = Vector2(-10, 45)
+[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=306017480]
+visible = false
+position = Vector2(-164, 90)
 rotation = -1.3072516
 scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("1_8ho6b")
 
-[node name="TextureButton" type="TextureButton" parent="Sprite2D5" unique_id=1150098776]
+[node name="TextureButton" type="TextureButton" parent="Sprite2D5" unique_id=890520937]
 offset_left = -18.129152
 offset_top = -9.609049
 offset_right = -11.129152
@@ -150,7 +151,7 @@ offset_bottom = -2.6090488
 texture_normal = ExtResource("2_ph3nu")
 script = SubResource("GDScript_d2vo2")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D5" unique_id=1026568932]
+[node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D5" unique_id=170436443]
 offset_left = 7.6472316
 offset_top = -6.2064342
 offset_right = 64.64723
@@ -165,12 +166,12 @@ shipments
 fit_content = true
 autowrap_mode = 0
 
-[node name="Sprite2D6" type="Sprite2D" parent="." unique_id=1202223286]
-position = Vector2(-250.29541, -5.021237)
+[node name="Sprite2D6" type="Sprite2D" parent="." unique_id=470947024]
+position = Vector2(-246, 102)
 rotation = 2.799508
 texture = ExtResource("1_8ho6b")
 
-[node name="TextureButton" type="TextureButton" parent="Sprite2D6" unique_id=852078056]
+[node name="TextureButton" type="TextureButton" parent="Sprite2D6" unique_id=1817218859]
 offset_left = -18.129152
 offset_top = -9.609049
 offset_right = -11.129152
@@ -178,7 +179,7 @@ offset_bottom = -2.6090488
 texture_normal = ExtResource("2_ph3nu")
 script = SubResource("GDScript_d2vo2")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D6" unique_id=1469314692]
+[node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D6" unique_id=1312335466]
 offset_left = 8.078755
 offset_top = 7.305163
 offset_right = 101.07876
@@ -193,13 +194,13 @@ level to unlock
 fit_content = true
 autowrap_mode = 0
 
-[node name="Sprite2D7" type="Sprite2D" parent="." unique_id=2008481352]
-position = Vector2(-253, -31.999992)
+[node name="Sprite2D7" type="Sprite2D" parent="." unique_id=781305249]
+position = Vector2(-248, 78.99999)
 rotation = 2.799508
 scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("1_8ho6b")
 
-[node name="TextureButton" type="TextureButton" parent="Sprite2D7" unique_id=1768142691]
+[node name="TextureButton" type="TextureButton" parent="Sprite2D7" unique_id=1466000693]
 offset_left = -18.129152
 offset_top = -9.609049
 offset_right = -11.129152
@@ -207,11 +208,11 @@ offset_bottom = -2.6090488
 texture_normal = ExtResource("2_ph3nu")
 script = SubResource("GDScript_d2vo2")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D7" unique_id=102965161]
-offset_left = 9.020816
-offset_top = 7.458179
-offset_right = 102.02081
-offset_bottom = 102.458176
+[node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D7" unique_id=1597241036]
+offset_left = 8.414217
+offset_top = 6.1806965
+offset_right = 101.414215
+offset_bottom = 101.180695
 rotation = -3.1677725
 scale = Vector2(0.25, 0.25)
 text = "click this to 

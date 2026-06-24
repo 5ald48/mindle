@@ -11,11 +11,11 @@ resource_used1 = ""
 resource_used2 = ""
 
 [node name="cost label" parent="cost" parent_id_path=PackedInt32Array(2045267571) index="0" unique_id=1304685655]
-text = "  1 
-  1
+text = "  1      1  
  "
 
 [node name="Sprite2D3" type="Sprite2D" parent="cost" parent_id_path=PackedInt32Array(2045267571) index="4" unique_id=537185794]
-position = Vector2(-3, 4)
+position = Vector2(1.9999998, 6)
+rotation = 1.5707964
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("3_uuloq")
