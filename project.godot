@@ -18,6 +18,7 @@ config/icon="res://textures/icon.svg"
 [autoload]
 
 Gamedata="*uid://0hk4lxk7edvu"
+SaveAndLoad="*uid://c2m4mrxcpq3sq"
 
 [display]
 

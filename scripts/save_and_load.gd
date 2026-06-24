@@ -289,11 +289,3 @@ func load_game():
 	Gamedata.circuit_board_miner_on_off = data["circuit_board_miner_on_off"]
 	Gamedata.circuit_board_miner_unlocked = data["circuit_board_miner_unlocked"]
 	Gamedata.circuit_board_miner_upgrade_cost.mantissa = data["circuit_board_miner_upgrade_cost"]["m"]; Gamedata.circuit_board_miner_upgrade_cost.exponent = data["circuit_board_miner_upgrade_cost"]["e"]
-
-
-func _on_save_pressed() -> void:
-	save()
-
-
-func _on_load_pressed() -> void:
-	load_game()

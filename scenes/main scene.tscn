@@ -3,54 +3,14 @@
 [ext_resource type="Script" uid="uid://dks538ukg7ae3" path="res://scripts/camera_2d.gd" id="1_d2vo2"]
 [ext_resource type="PackedScene" uid="uid://cbr62t5plspwe" path="res://scenes/map.tscn" id="1_ijdfw"]
 [ext_resource type="Script" uid="uid://c2m4mrxcpq3sq" path="res://scripts/save_and_load.gd" id="1_sneai"]
-[ext_resource type="Texture2D" uid="uid://c0kb1s8kehegh" path="res://textures/my art/MAIN SPRITE-96x32-32x16.png" id="2_8yh2u"]
 [ext_resource type="PackedScene" uid="uid://db40xavlkt8ln" path="res://scenes/ui.tscn" id="2_k0ot2"]
 [ext_resource type="PackedScene" uid="uid://ce13aky1v6trk" path="res://scenes/tower_&_everything_on_tower.tscn" id="3_ijdfw"]
-[ext_resource type="PackedScene" uid="uid://ckeyh5teslk7t" path="res://scenes/shipments_wall.tscn" id="5_jb6a7"]
 [ext_resource type="PackedScene" uid="uid://bx1jsfmieltd3" path="res://scenes/tutorial.tscn" id="6_esn7u"]
 
 [node name="MainScene" type="Node2D" unique_id=579106627]
 
 [node name="SAVE AND LOAD" type="Node" parent="." unique_id=151636982]
 script = ExtResource("1_sneai")
-
-[node name="load" type="TextureButton" parent="SAVE AND LOAD" unique_id=2139320863]
-visible = false
-offset_left = -1.0
-offset_top = 28.0
-offset_right = 31.0
-offset_bottom = 44.0
-texture_normal = ExtResource("2_8yh2u")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="SAVE AND LOAD/load" unique_id=1679367956]
-layout_mode = 0
-offset_left = 7.0
-offset_top = 3.0
-offset_right = 47.0
-offset_bottom = 43.0
-scale = Vector2(0.5, 0.5)
-mouse_filter = 2
-text = " load "
-fit_content = true
-autowrap_mode = 0
-
-[node name="save" type="TextureButton" parent="SAVE AND LOAD" unique_id=796289796]
-offset_top = 47.0
-offset_right = 32.0
-offset_bottom = 63.0
-texture_normal = ExtResource("2_8yh2u")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="SAVE AND LOAD/save" unique_id=1190449983]
-layout_mode = 0
-offset_left = 2.9999998
-offset_top = 4.0
-offset_right = 69.0
-offset_bottom = 44.0
-scale = Vector2(0.4, 0.4)
-mouse_filter = 2
-text = " save game "
-fit_content = true
-autowrap_mode = 0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1012002039]
 anchor_mode = 0
@@ -64,11 +24,5 @@ script = ExtResource("1_d2vo2")
 
 [node name="CanvasLayer" parent="." unique_id=1543564076 instance=ExtResource("2_k0ot2")]
 
-[node name="shipments wall" parent="." unique_id=216082748 instance=ExtResource("5_jb6a7")]
-position = Vector2(304, 140)
-
 [node name="tutorial" parent="." unique_id=1544871758 instance=ExtResource("6_esn7u")]
 position = Vector2(304, 140)
-
-[connection signal="pressed" from="SAVE AND LOAD/load" to="SAVE AND LOAD" method="_on_load_pressed"]
-[connection signal="pressed" from="SAVE AND LOAD/save" to="SAVE AND LOAD" method="_on_save_pressed"]
