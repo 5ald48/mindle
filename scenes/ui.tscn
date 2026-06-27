@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://mpyqfjdnheft" path="res://textures/my art/MAIN SPRITE-32x0-16x16.png" id="3_yev5y"]
 [ext_resource type="Texture2D" uid="uid://c0kb1s8kehegh" path="res://textures/my art/MAIN SPRITE-96x32-32x16.png" id="4_wm3ai"]
 [ext_resource type="Script" uid="uid://cff4tani5ckwo" path="res://scripts/pristage.gd" id="5_8dubc"]
-[ext_resource type="Texture2D" uid="uid://cclicdqt7npqb" path="res://textures/my art/MAIN SPRITE-16x0-16x16.png" id="6_8dubc"]
 [ext_resource type="PackedScene" uid="uid://ckeyh5teslk7t" path="res://scenes/shipments_wall.tscn" id="7_p7vwb"]
+[ext_resource type="Texture2D" uid="uid://bqqmbexurhmlp" path="res://textures/my art/MAIN SPRITE-0x0-16x16.png" id="8_ktti3"]
 
 [sub_resource type="GDScript" id="GDScript_8dubc"]
 script/source = "extends RichTextLabel
@@ -22,20 +22,6 @@ func _process(_delta: float) -> void:
 	$\".\".text = \" \" + Gamedata.pristage_coin.to_metric_name(true)
 "
 
-[sub_resource type="GDScript" id="GDScript_bhunq"]
-script/source = "extends RichTextLabel
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	$\".\".text = \" pristage  lvl  \" + Gamedata.pristage_lvl.to_metric_name(true)
-"
-
 [sub_resource type="GDScript" id="GDScript_riqys"]
 script/source = "extends Button
 
@@ -46,7 +32,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 
@@ -68,10 +54,24 @@ border_width_top = 10
 border_width_right = 10
 border_color = Color(0.52156866, 0.3647059, 0, 1)
 border_blend = true
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="GDScript" id="GDScript_bhunq"]
+script/source = "extends RichTextLabel
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta: float) -> void:
+	$\".\".text = \" pristage  lvl  \" + Gamedata.pristage_lvl.to_metric_name(true)
+"
 
 [sub_resource type="GDScript" id="GDScript_p7vwb"]
 script/source = "extends TextureButton
@@ -83,7 +83,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 
@@ -102,7 +102,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 
@@ -110,6 +110,25 @@ func _process(delta: float) -> void:
 
 func _on_pressed() -> void:
 	SaveAndLoad.save()
+"
+
+[sub_resource type="GDScript" id="GDScript_6f8o3"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta: float) -> void:
+	pass
+
+
+func _on_pressed() -> void:
+	SaveAndLoad.save()
+	get_tree().quit()
 "
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1543564076]
@@ -138,7 +157,7 @@ script = ExtResource("1_p7vwb")
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1912809903]
 position = Vector2(25, 75)
 scale = Vector2(3, 3)
-texture = ExtResource("6_8dubc")
+texture = ExtResource("8_ktti3")
 
 [node name="pristage coin" type="RichTextLabel" parent="Sprite2D2" unique_id=1501325536]
 offset_left = 8.333333
@@ -152,17 +171,6 @@ text = " 1000"
 fit_content = true
 autowrap_mode = 0
 script = SubResource("GDScript_8dubc")
-
-[node name="pristage lvl" type="RichTextLabel" parent="." unique_id=1188439450]
-offset_left = 5.0
-offset_top = 110.0
-offset_right = 144.99998
-offset_bottom = 150.0
-scale = Vector2(2, 2)
-text = " lvl "
-fit_content = true
-autowrap_mode = 0
-script = SubResource("GDScript_bhunq")
 
 [node name="Control" type="Control" parent="." unique_id=837957993]
 layout_mode = 3
@@ -217,31 +225,50 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_8dubc")
 
 [node name="pristage cost" type="TextureButton" parent="Control/HBoxContainer/Button2/Panel" unique_id=1555537736]
 layout_mode = 0
-offset_left = 155.99998
-offset_top = 225.0
-offset_right = 187.99998
-offset_bottom = 241.0
+offset_left = 185.99998
+offset_top = 320.0
+offset_right = 217.99998
+offset_bottom = 336.0
 scale = Vector2(5, 5)
 texture_normal = ExtResource("4_wm3ai")
 script = ExtResource("5_8dubc")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Control/HBoxContainer/Button2/Panel/pristage cost" unique_id=378522052]
+[node name="Sprite2D" type="Sprite2D" parent="Control/HBoxContainer/Button2/Panel/pristage cost" unique_id=1424964419]
+position = Vector2(16, 8.199995)
+texture = ExtResource("8_ktti3")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/HBoxContainer/Button2/Panel" unique_id=1229879051]
 layout_mode = 0
-offset_left = 7.199997
-offset_top = 0.9999993
-offset_right = 103.2
-offset_bottom = 57.0
-scale = Vector2(0.25, 0.25)
-mouse_filter = 2
-text = "   cost : 100000 
-        1"
+offset_left = 1.0000153
+offset_top = 34.999954
+offset_right = 442.66663
+offset_bottom = 205.99995
+scale = Vector2(1.2, 1.2)
+text = "You're about to reset your progress. Here's what happens:
+
+All resources, buildings, and production are wiped.
+
+You earn Prestige Points based on how far you got.
+
+Use those points to unlock permanent upgrades that carry over forever.
+
+you can only prestage if you have more than  1 000 000 ( 1.00 mega )"
 fit_content = true
 autowrap_mode = 0
+horizontal_alignment = 1
 
-[node name="Sprite2D" type="Sprite2D" parent="Control/HBoxContainer/Button2/Panel/pristage cost" unique_id=1424964419]
-position = Vector2(5, 7.999998)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("3_yev5y")
+[node name="pristage lvl" type="RichTextLabel" parent="Control/HBoxContainer/Button2/Panel" unique_id=292147228]
+layout_mode = 0
+offset_left = 0.9999695
+offset_top = 269.99994
+offset_right = 265.99994
+offset_bottom = 288.99994
+scale = Vector2(2, 2)
+text = " lvl "
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+script = SubResource("GDScript_bhunq")
 
 [node name="Button3" type="Button" parent="Control/HBoxContainer" unique_id=92520544]
 layout_mode = 2
@@ -258,10 +285,10 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_8dubc")
 
 [node name="load" type="TextureButton" parent="Control/HBoxContainer/Button3/Panel" unique_id=1604111801]
 layout_mode = 0
-offset_left = 160.99997
-offset_top = 174.99997
-offset_right = 192.99997
-offset_bottom = 190.99997
+offset_left = 175.99997
+offset_top = 74.99997
+offset_right = 207.99997
+offset_bottom = 90.99997
 scale = Vector2(5, 5)
 texture_normal = ExtResource("4_wm3ai")
 script = SubResource("GDScript_p7vwb")
@@ -280,10 +307,10 @@ autowrap_mode = 0
 
 [node name="save" type="TextureButton" parent="Control/HBoxContainer/Button3/Panel" unique_id=1327907128]
 layout_mode = 0
-offset_left = 160.99998
-offset_top = 294.99994
-offset_right = 192.99998
-offset_bottom = 310.99994
+offset_left = 175.99998
+offset_top = 169.99994
+offset_right = 207.99998
+offset_bottom = 185.99994
 scale = Vector2(5, 5)
 texture_normal = ExtResource("4_wm3ai")
 script = SubResource("GDScript_sn0t7")
@@ -300,9 +327,19 @@ text = " save game "
 fit_content = true
 autowrap_mode = 0
 
+[node name="exit" type="Button" parent="Control/HBoxContainer/Button3/Panel" unique_id=2141502903]
+layout_mode = 0
+offset_left = 170.99997
+offset_top = 274.99994
+offset_right = 335.99997
+offset_bottom = 348.99994
+text = "  save and exit  "
+script = SubResource("GDScript_6f8o3")
+
 [connection signal="pressed" from="Control/HBoxContainer/Button" to="Control/HBoxContainer/Button" method="_on_pressed"]
 [connection signal="pressed" from="Control/HBoxContainer/Button2" to="Control/HBoxContainer/Button2" method="_on_pressed"]
 [connection signal="pressed" from="Control/HBoxContainer/Button2/Panel/pristage cost" to="Control/HBoxContainer/Button2/Panel/pristage cost" method="_on_pressed"]
 [connection signal="pressed" from="Control/HBoxContainer/Button3" to="Control/HBoxContainer/Button3" method="_on_pressed"]
 [connection signal="pressed" from="Control/HBoxContainer/Button3/Panel/load" to="Control/HBoxContainer/Button3/Panel/load" method="_on_pressed"]
 [connection signal="pressed" from="Control/HBoxContainer/Button3/Panel/save" to="Control/HBoxContainer/Button3/Panel/save" method="_on_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer/Button3/Panel/exit" to="Control/HBoxContainer/Button3/Panel/exit" method="_on_pressed"]

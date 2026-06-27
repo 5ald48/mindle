@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://mpyqfjdnheft" path="res://textures/my art/MAIN SPRITE-32x0-16x16.png" id="6_nsjyk"]
 [ext_resource type="Texture2D" uid="uid://bj00rn335ke7k" path="res://textures/items/item579.png" id="6_tnc31"]
 [ext_resource type="Texture2D" uid="uid://bkjpvwa3d8glw" path="res://textures/my art/MAIN SPRITE-144x0-16x16.png" id="7_h48u7"]
+[ext_resource type="Texture2D" uid="uid://bqqmbexurhmlp" path="res://textures/my art/MAIN SPRITE-0x0-16x16.png" id="9_202q2"]
 
 [sub_resource type="GDScript" id="GDScript_bhunq"]
 script/source = "extends TextureButton
@@ -16,7 +17,7 @@ script/source = "extends TextureButton
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$RichTextLabel.text = \" upgrade multiplyer = \" + Gamedata.per_sec_multiplier.to_metric_name(false) + \" \"
-	$RichTextLabel2.text = \" cost = \" + Gamedata.per_sec_multiplier_cost.to_metric_name(true) + \" \"
+	$RichTextLabel2.text = \"  \" + Gamedata.per_sec_multiplier_cost.to_metric_name(true) + \" \"
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -153,14 +154,19 @@ autowrap_mode = 0
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="upgrade multiplayer" unique_id=859636225]
 layout_mode = 0
-offset_left = 9.6
-offset_top = 4.831215
-offset_right = 44.988235
-offset_bottom = 23.831215
+offset_left = 9.790001
+offset_top = 6.3567657
+offset_right = 45.178238
+offset_bottom = 25.356766
 scale = Vector2(0.25, 0.25)
 text = " cost"
 fit_content = true
 autowrap_mode = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="upgrade multiplayer" unique_id=1584246115]
+position = Vector2(4.9927177, 7.9051437)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_202q2")
 
 [connection signal="pressed" from="pickaxe level upgrade" to="." method="_on_pickaxe_level_upgrade_pressed"]
 [connection signal="pressed" from="pickaxe click upgrade" to="." method="_on_pickaxe_click_upgrade_pressed"]
