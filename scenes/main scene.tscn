@@ -25,4 +25,5 @@ script = ExtResource("1_d2vo2")
 [node name="CanvasLayer" parent="." unique_id=1543564076 instance=ExtResource("2_k0ot2")]
 
 [node name="tutorial" parent="." unique_id=1468054677 instance=ExtResource("6_esn7u")]
+visible = false
 position = Vector2(304, 140)

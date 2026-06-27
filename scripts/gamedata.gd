@@ -10,6 +10,7 @@ var pickaxe_upgradecost3 : BigNumber = BigNumber.new()
 
 var per_sec_multiplier : BigNumber = BigNumber.new()
 var per_sec_multiplier_cost : BigNumber = BigNumber.new()
+var per_sec_multiplier_cost_multiplier : BigNumber = BigNumber.new()
 var per_sec_multiplier_multiplier : BigNumber = BigNumber.new()
 
 
@@ -193,11 +194,15 @@ func _ready() -> void:
 	pristage_lvl.mantissa = 0.0
 	pristage_lvl.exponent = 0
 
-	coin.mantissa = 111.0
-	coin.exponent = 9
+
 	
 	per_sec_multiplier.mantissa = 1.1
 	per_sec_multiplier.exponent = 0
+	
+	per_sec_multiplier_cost.mantissa = 1.0
+	per_sec_multiplier_cost.exponent = 6
+
+
 
 func reset():
 	
@@ -222,11 +227,13 @@ func reset():
 	pickaxe_upgradecost3.mantissa = 0.0
 	pickaxe_upgradecost3.exponent = 0
 	
-	per_sec_multiplier_cost.mantissa = 1.0
-	per_sec_multiplier_cost.exponent = 2
-
-	per_sec_multiplier_multiplier.mantissa = 1.1
+	per_sec_multiplier_cost_multiplier.mantissa = 1.1
+	per_sec_multiplier_cost_multiplier.exponent = 0
+	
+	per_sec_multiplier_multiplier.mantissa = 1.01
 	per_sec_multiplier_multiplier.exponent = 0
+
+
 
 	# ── IRON ──────────────────────────────────────
 	iron.mantissa = 0.0
@@ -528,3 +535,23 @@ func reset():
 
 	circuit_board_value.mantissa = 1.5
 	circuit_board_value.exponent = 1
+	
+	
+
+var resource_array = [
+	"iron",
+	"gold",
+	"copper",
+	"coal",
+	"iron_ingot",
+	"copper_ingot",
+	"gold_ingot",
+	"iron_screw",
+	"iron_plate",
+	"copper_wire",
+	"steel_ingot",
+	"sand",
+	"glass",
+	"steel_gear",
+	"gold_wire",
+	"circuit_board"]

@@ -19,7 +19,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	$\".\".text = \" \" + Gamedata.pristage_coin.to_metric_name(true)
+	$\".\".text = \" \" + Gamedata.pristage_coin.to_metric_name(true) + \" \"
 "
 
 [sub_resource type="GDScript" id="GDScript_riqys"]
@@ -244,6 +244,7 @@ offset_top = 34.999954
 offset_right = 442.66663
 offset_bottom = 205.99995
 scale = Vector2(1.2, 1.2)
+bbcode_enabled = true
 text = "You're about to reset your progress. Here's what happens:
 
 All resources, buildings, and production are wiped.
@@ -252,7 +253,8 @@ You earn Prestige Points based on how far you got.
 
 Use those points to unlock permanent upgrades that carry over forever.
 
-you can only prestage if you have more than  1 000 000 ( 1.00 mega )"
+you can only prestage if you have more than  1 000 000 ( 1.00 mega ) 
+"
 fit_content = true
 autowrap_mode = 0
 horizontal_alignment = 1

@@ -78,25 +78,9 @@ func _on_texture_button_pressed() -> void:
 #the random resoures random choice
 func random_resource_pick() -> String:
 	
-	var random_resource_array = [
-	"iron",
-	"gold",
-	"copper",
-	"coal",
-	"iron_ingot",
-	"copper_ingot",
-	"gold_ingot",
-	"iron_screw",
-	"iron_plate",
-	"copper_wire",
-	"steel_ingot",
-	"sand",
-	"glass",
-	"steel_gear",
-	"gold_wire",
-	"circuit_board"]
 	
-	var resource_name : String = random_resource_array.pick_random()
+	
+	var resource_name : String = Gamedata.resource_array.pick_random()
 	
 	
 	return resource_name

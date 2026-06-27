@@ -17,7 +17,7 @@ script/source = "extends TextureButton
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$RichTextLabel.text = \" upgrade multiplyer = \" + Gamedata.per_sec_multiplier.to_metric_name(false) + \" \"
-	$RichTextLabel2.text = \"  \" + Gamedata.per_sec_multiplier_cost.to_metric_name(true) + \" \"
+	$RichTextLabel2.text = \"  \" + Gamedata.per_sec_multiplier_cost.to_metric_name(true) + \"  \"
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -29,9 +29,9 @@ func _on_pressed() -> void:
 	if Gamedata.pristage_coin.is_greater_than_or_equal_to(Gamedata.per_sec_multiplier_cost):
 		Gamedata.pristage_coin.minus_equals(Gamedata.per_sec_multiplier_cost)
 		Gamedata.per_sec_multiplier.multiply_equals(Gamedata.per_sec_multiplier_multiplier)
-		Gamedata.per_sec_multiplier_cost.multiply_equals(Gamedata.per_sec_multiplier_multiplier)
+		Gamedata.per_sec_multiplier_cost.multiply_equals(Gamedata.per_sec_multiplier_cost_multiplier)
 		$RichTextLabel.text = \" upgrade multiplyer = \" + Gamedata.per_sec_multiplier.to_metric_name(false) + \" \"
-		$RichTextLabel2.text = \" cost = \" + Gamedata.per_sec_multiplier_cost.to_metric_name(true) + \" \"
+		$RichTextLabel2.text = \" \" + Gamedata.per_sec_multiplier_cost.to_metric_name(true) + \" \"
 "
 
 [node name="pickaxe" type="Node2D" unique_id=1632089896]
@@ -159,6 +159,7 @@ offset_top = 6.3567657
 offset_right = 45.178238
 offset_bottom = 25.356766
 scale = Vector2(0.25, 0.25)
+mouse_filter = 2
 text = " cost"
 fit_content = true
 autowrap_mode = 0
