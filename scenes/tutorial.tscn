@@ -25,8 +25,8 @@ func _on_pressed() -> void:
 [node name="tutorial" type="Node2D" unique_id=1468054677]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1564903304]
-position = Vector2(-286, 52)
-rotation = -1.3072516
+position = Vector2(-294, 16.000008)
+rotation = -5.225516
 texture = ExtResource("1_8ho6b")
 
 [node name="TextureButton" type="TextureButton" parent="Sprite2D" unique_id=980720010]
@@ -38,22 +38,21 @@ texture_normal = ExtResource("2_ph3nu")
 script = SubResource("GDScript_d2vo2")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D" unique_id=582729437]
-offset_left = 6.9422636
-offset_top = -4.980457
-offset_right = 58.942265
-offset_bottom = 90.01955
-rotation = 1.5707964
+offset_left = -7.903003
+offset_top = 5.8773375
+offset_right = 44.096996
+offset_bottom = 100.877335
+rotation = 4.694936
 scale = Vector2(0.25, 0.25)
-text = "click
-this to 
-mine
+text = "click this
+ to mine
 "
 fit_content = true
 autowrap_mode = 0
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1613409599]
 position = Vector2(-53, 54)
-rotation = 4.3703046
+rotation = 4.743805
 texture = ExtResource("1_8ho6b")
 
 [node name="TextureButton" type="TextureButton" parent="Sprite2D2" unique_id=1879679913]
@@ -80,8 +79,8 @@ fit_content = true
 autowrap_mode = 0
 
 [node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1257616765]
-position = Vector2(-31, 9)
-rotation = 1.6580628
+position = Vector2(-31, 54.000004)
+rotation = -1.5550884
 texture = ExtResource("1_8ho6b")
 
 [node name="TextureButton" type="TextureButton" parent="Sprite2D3" unique_id=781466792]
@@ -93,11 +92,11 @@ texture_normal = ExtResource("2_ph3nu")
 script = SubResource("GDScript_d2vo2")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D3" unique_id=274170128]
-offset_left = -13.060107
-offset_top = 5.868005
-offset_right = 40.93989
-offset_bottom = 101.868004
-rotation = -1.5289084
+offset_left = 9.888822
+offset_top = -7.15621
+offset_right = 63.88882
+offset_bottom = 88.84379
+rotation = 1.5289084
 scale = Vector2(0.25, 0.25)
 text = "click
 this to 
@@ -109,8 +108,8 @@ fit_content = true
 autowrap_mode = 0
 
 [node name="Sprite2D4" type="Sprite2D" parent="." unique_id=857918106]
-position = Vector2(-5, -7)
-rotation = 1.7034414
+position = Vector2(-10, 55)
+rotation = 4.6896996
 texture = ExtResource("1_8ho6b")
 
 [node name="TextureButton" type="TextureButton" parent="Sprite2D4" unique_id=1294512944]
@@ -122,11 +121,11 @@ texture_normal = ExtResource("2_ph3nu")
 script = SubResource("GDScript_d2vo2")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D4" unique_id=375173432]
-offset_left = -12.577657
-offset_top = 5.177096
-offset_right = 41.422344
-offset_bottom = 101.17709
-rotation = -1.5289084
+offset_left = 9.111118
+offset_top = -4.7945256
+offset_right = 63.11112
+offset_bottom = 91.205475
+rotation = 1.5952309
 scale = Vector2(0.25, 0.25)
 text = "click
 this to 
@@ -137,9 +136,8 @@ fit_content = true
 autowrap_mode = 0
 
 [node name="Sprite2D5" type="Sprite2D" parent="." unique_id=306017480]
-visible = false
-position = Vector2(-164, 90)
-rotation = -1.3072516
+position = Vector2(-212.99998, 15.999998)
+rotation = 1.5550884
 scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("1_8ho6b")
 
@@ -152,11 +150,11 @@ texture_normal = ExtResource("2_ph3nu")
 script = SubResource("GDScript_d2vo2")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D5" unique_id=170436443]
-offset_left = 7.6472316
-offset_top = -6.2064342
-offset_right = 64.64723
-offset_bottom = 88.793564
-rotation = 1.5707964
+offset_left = -14.0925045
+offset_top = 5.7793803
+offset_right = 42.907494
+offset_bottom = 100.77938
+rotation = 4.694936
 scale = Vector2(0.25, 0.25)
 text = "click
 this to 
@@ -222,6 +220,61 @@ power
 fit_content = true
 autowrap_mode = 0
 
+[node name="Sprite2D8" type="Sprite2D" parent="." unique_id=452093272]
+position = Vector2(-252, 55.999992)
+rotation = 2.799508
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("1_8ho6b")
+
+[node name="TextureButton" type="TextureButton" parent="Sprite2D8" unique_id=1031720414]
+offset_left = -18.129152
+offset_top = -9.609049
+offset_right = -11.129152
+offset_bottom = -2.6090488
+texture_normal = ExtResource("2_ph3nu")
+script = SubResource("GDScript_d2vo2")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D8" unique_id=442077683]
+offset_left = 8.414217
+offset_top = 6.1806965
+offset_right = 101.414215
+offset_bottom = 101.180695
+rotation = -3.1677725
+scale = Vector2(0.195, 0.195)
+text = "click this to 
+upgrade the factory 
+upgrade botton
+"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Sprite2D9" type="Sprite2D" parent="." unique_id=1406120497]
+position = Vector2(-141, -20)
+rotation = 3.1660273
+scale = Vector2(2.49, 2.49)
+texture = ExtResource("1_8ho6b")
+
+[node name="TextureButton" type="TextureButton" parent="Sprite2D9" unique_id=2002156539]
+offset_left = -18.129152
+offset_top = -9.609049
+offset_right = -11.129152
+offset_bottom = -2.6090488
+texture_normal = ExtResource("2_ph3nu")
+script = SubResource("GDScript_d2vo2")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D9" unique_id=513583682]
+offset_left = 7.7558074
+offset_top = 5.032893
+offset_right = 105.755806
+offset_bottom = 100.03289
+rotation = -3.1677725
+scale = Vector2(0.195, 0.195)
+text = " scroll the mouse 
+ wheel to move 
+"
+fit_content = true
+autowrap_mode = 0
+
 [connection signal="pressed" from="Sprite2D/TextureButton" to="Sprite2D/TextureButton" method="_on_pressed"]
 [connection signal="pressed" from="Sprite2D2/TextureButton" to="Sprite2D2/TextureButton" method="_on_pressed"]
 [connection signal="pressed" from="Sprite2D3/TextureButton" to="Sprite2D3/TextureButton" method="_on_pressed"]
@@ -229,3 +282,5 @@ autowrap_mode = 0
 [connection signal="pressed" from="Sprite2D5/TextureButton" to="Sprite2D5/TextureButton" method="_on_pressed"]
 [connection signal="pressed" from="Sprite2D6/TextureButton" to="Sprite2D6/TextureButton" method="_on_pressed"]
 [connection signal="pressed" from="Sprite2D7/TextureButton" to="Sprite2D7/TextureButton" method="_on_pressed"]
+[connection signal="pressed" from="Sprite2D8/TextureButton" to="Sprite2D8/TextureButton" method="_on_pressed"]
+[connection signal="pressed" from="Sprite2D9/TextureButton" to="Sprite2D9/TextureButton" method="_on_pressed"]

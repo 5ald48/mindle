@@ -202,7 +202,7 @@ func _ready() -> void:
 	per_sec_multiplier_cost.mantissa = 1.0
 	per_sec_multiplier_cost.exponent = 6
 
-
+ 
 
 func reset():
 	
@@ -227,6 +227,9 @@ func reset():
 	pickaxe_upgradecost3.mantissa = 0.0
 	pickaxe_upgradecost3.exponent = 0
 	
+	pickaxe_level  = 1
+	pickaxe_click_multiplier  = 1
+	
 	per_sec_multiplier_cost_multiplier.mantissa = 1.1
 	per_sec_multiplier_cost_multiplier.exponent = 0
 	
@@ -250,6 +253,9 @@ func reset():
 
 	iron_value.mantissa = 1.0
 	iron_value.exponent = 0
+	
+	iron_miner_on_off = false
+	iron_miner_unlocked = false
 
 	# ── GOLD ──────────────────────────────────────
 	gold.mantissa = 0.0
@@ -267,6 +273,9 @@ func reset():
 	gold_value.mantissa = 4.0
 	gold_value.exponent = 0
 
+	gold_miner_on_off = false
+	gold_miner_unlocked = false
+
 	# ── COPPER ────────────────────────────────────
 	copper.mantissa = 0.0
 	copper.exponent = 0
@@ -282,6 +291,10 @@ func reset():
 
 	copper_value.mantissa = 3.0
 	copper_value.exponent = 0
+	
+	copper_miner_on_off = false
+	copper_miner_unlocked = false
+
 
 	# ── COAL ──────────────────────────────────────
 	coal.mantissa = 0.0
@@ -298,6 +311,9 @@ func reset():
 
 	coal_value.mantissa = 2.0
 	coal_value.exponent = 0
+	
+	coal_miner_on_off = false
+	coal_miner_unlocked = false
 
 	# ── IRON INGOT ────────────────────────────────
 	iron_ingot.mantissa = 0.0
@@ -317,6 +333,9 @@ func reset():
 
 	iron_ingot_value.mantissa = 2.0
 	iron_ingot_value.exponent = 0
+	
+	iron_ingot_miner_on_off = false
+	iron_ingot_miner_unlocked = false
 
 	# ── COPPER INGOT ────────────────────────────────
 	copper_ingot.mantissa = 0.0
@@ -336,6 +355,9 @@ func reset():
 
 	copper_ingot_value.mantissa = 5.0
 	copper_ingot_value.exponent = 0
+	
+	copper_ingot_miner_on_off = false
+	copper_ingot_miner_unlocked = false
 
 	# ── GOLD INGOT ────────────────────────────────
 	gold_ingot.mantissa = 0.0
@@ -355,6 +377,10 @@ func reset():
 
 	gold_ingot_value.mantissa = 6.0
 	gold_ingot_value.exponent = 0
+	
+	gold_ingot_miner_on_off = false
+	gold_ingot_miner_unlocked = false
+
 
 	# ── IRON SCREW ────────────────────────────────
 	iron_screw.mantissa = 0.0
@@ -374,6 +400,10 @@ func reset():
 
 	iron_screw_value.mantissa = 1.0
 	iron_screw_value.exponent = 0
+	
+	iron_screw_miner_on_off = false
+	iron_screw_miner_unlocked = false
+
 
 	# ── IRON PLATE ────────────────────────────────
 	iron_plate.mantissa = 0.0
@@ -393,6 +423,10 @@ func reset():
 
 	iron_plate_value.mantissa = 3.0
 	iron_plate_value.exponent = 0
+	
+	iron_plate_miner_on_off = false
+	iron_plate_miner_unlocked = false
+
 
 	# ── COPPER WIRE ────────────────────────────────
 	copper_wire.mantissa = 0.0
@@ -412,6 +446,9 @@ func reset():
 
 	copper_wire_value.mantissa = 1.0
 	copper_wire_value.exponent = 0
+	
+	copper_wire_miner_on_off = false
+	copper_wire_miner_unlocked = false
 
 	# ── STEEL INGOT ────────────────────────────────
 	steel_ingot.mantissa = 0.0
@@ -434,6 +471,9 @@ func reset():
 
 	steel_ingot_value.mantissa = 9.0
 	steel_ingot_value.exponent = 0
+	
+	steel_ingot_miner_on_off = false
+	steel_ingot_miner_unlocked = false
 
 	# ── SAND ──────────────────────────────────────
 	sand.mantissa = 0.0
@@ -450,6 +490,9 @@ func reset():
 
 	sand_value.mantissa = 1.0
 	sand_value.exponent = 0
+	
+	sand_miner_on_off = false
+	sand_miner_unlocked = false
 
 	# ── GLASS ────────────────────────────────
 	glass.mantissa = 0.0
@@ -469,6 +512,9 @@ func reset():
 
 	glass_value.mantissa = 5.0
 	glass_value.exponent = 0
+	
+	glass_miner_on_off = false
+	glass_miner_unlocked = false
 
 	# ── STEEL GEAR ────────────────────────────────
 	steel_gear.mantissa = 0.0
@@ -491,6 +537,10 @@ func reset():
 
 	steel_gear_value.mantissa = 1.5
 	steel_gear_value.exponent = 1
+	
+	steel_gear_miner_on_off = false
+	steel_gear_miner_unlocked = false
+
 
 	# ── GOLD WIRE ────────────────────────────────
 	gold_wire.mantissa = 0.0
@@ -510,6 +560,9 @@ func reset():
 
 	gold_wire_value.mantissa = 8.0
 	gold_wire_value.exponent = 0
+	
+	gold_wire_miner_on_off = false
+	gold_wire_miner_unlocked = false
 
 	# ── CIRCUIT BOARD ────────────────────────────────
 	circuit_board.mantissa = 0.0
@@ -535,6 +588,9 @@ func reset():
 
 	circuit_board_value.mantissa = 1.5
 	circuit_board_value.exponent = 1
+	
+	circuit_board_miner_on_off = false
+	circuit_board_miner_unlocked = false
 	
 	
 
