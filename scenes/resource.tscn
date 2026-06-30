@@ -3,11 +3,12 @@
 [ext_resource type="Script" uid="uid://cgarfyu0xif6p" path="res://scripts/resource.gd" id="1_3rbbe"]
 [ext_resource type="Texture2D" uid="uid://cxsb8xaj6gp0i" path="res://textures/my art/MAIN SPRITE-80x0-16x16.png" id="2_o1pcp"]
 [ext_resource type="FontFile" uid="uid://c24bc2hmt208c" path="res://font/Jersey10-Regular.ttf" id="2_oukxn"]
-[ext_resource type="Texture2D" uid="uid://c0kb1s8kehegh" path="res://textures/my art/MAIN SPRITE-96x32-32x16.png" id="4_ofw20"]
-[ext_resource type="Texture2D" uid="uid://cuxbaedllnyvw" path="res://textures/my art/MAIN SPRITE-64x192-288x16.png" id="4_oukxn"]
+[ext_resource type="Texture2D" uid="uid://clkmwc3ynindm" path="res://textures/my art/MAIN SPRITEd-64x192-288x16.png" id="4_oukxn"]
 [ext_resource type="Texture2D" uid="uid://dpbxbh3kws16f" path="res://textures/items/item585.png" id="6_n42d4"]
+[ext_resource type="Texture2D" uid="uid://ceck3dlnrpjlf" path="res://textures/my art/MAIN SPRITE-304x224-32x16.png" id="6_oukxn"]
+[ext_resource type="Texture2D" uid="uid://cp0lltgtcfiky" path="res://textures/my art/MAIN SPRITE-304x240-48x16.png" id="6_qn0gw"]
 [ext_resource type="Texture2D" uid="uid://dd8oo6xymvmdy" path="res://textures/my art/MAIN SPRITE-64x16-16x16.png" id="7_8e877"]
-[ext_resource type="Texture2D" uid="uid://y13qr7xk208o" path="res://textures/my art/MAIN SPRITE-16x80-16x32.png" id="8_oukxn"]
+[ext_resource type="Texture2D" uid="uid://bk1chogld7afj" path="res://textures/my art/MAIN SPRITE-352x240-48x16.png" id="9_ofw20"]
 
 [node name="Node2D" type="Node2D" unique_id=402219238]
 script = ExtResource("1_3rbbe")
@@ -21,11 +22,11 @@ position = Vector2(0, 1)
 texture = ExtResource("4_oukxn")
 
 [node name="resourceUI" type="RichTextLabel" parent="Sprite2D2" unique_id=113634182]
-offset_left = -134.0
-offset_top = -2.9999995
-offset_right = -16.0
+offset_left = -135.0
+offset_top = -3.0
+offset_right = -17.0
 offset_bottom = 33.0
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.18, 0.18)
 theme_override_fonts/normal_font = ExtResource("2_oukxn")
 theme_override_font_sizes/normal_font_size = 32
 bbcode_enabled = true
@@ -34,20 +35,20 @@ fit_content = true
 autowrap_mode = 0
 
 [node name="miner upgrade" type="TextureButton" parent="Sprite2D2" unique_id=270947365]
-offset_left = 102.0
-offset_top = -6.0
-offset_right = 134.0
+offset_left = 93.0
+offset_top = -6.0000005
+offset_right = 141.0
 offset_bottom = 10.0
 scale = Vector2(0.75, 0.75)
-texture_normal = ExtResource("4_ofw20")
+texture_normal = ExtResource("6_qn0gw")
 stretch_mode = 0
 
 [node name="upgrade cost" type="RichTextLabel" parent="Sprite2D2/miner upgrade" unique_id=1082285736]
 layout_mode = 0
-offset_left = 12.0
-offset_top = 5.333334
-offset_right = 62.0
-offset_bottom = 40.333336
+offset_left = 13.333328
+offset_top = 5.3333344
+offset_right = 63.33333
+offset_bottom = 41.333336
 scale = Vector2(0.2, 0.2)
 mouse_filter = 2
 theme_override_fonts/normal_font = ExtResource("2_oukxn")
@@ -57,15 +58,16 @@ fit_content = true
 autowrap_mode = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="Sprite2D2/miner upgrade" unique_id=939404416]
-position = Vector2(6.666667, 8)
+position = Vector2(9.333333, 8)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("6_n42d4")
 
 [node name="on off" type="TextureButton" parent="Sprite2D2" unique_id=727703705]
-offset_left = 127.0
-offset_top = -8.0
-offset_right = 143.0
-offset_bottom = 8.0
+offset_left = 129.0
+offset_top = -6.0
+offset_right = 145.0
+offset_bottom = 10.0
+scale = Vector2(0.75, 0.75)
 texture_normal = ExtResource("7_8e877")
 
 [node name="resource" type="TextureButton" parent="Sprite2D2" unique_id=451976459]
@@ -77,17 +79,17 @@ scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("6_n42d4")
 
 [node name="max_upgrade" type="TextureButton" parent="Sprite2D2" unique_id=442341910]
-offset_left = 77.0
-offset_top = -6.0
-offset_right = 109.0
+offset_left = 70.0
+offset_top = -6.0000005
+offset_right = 102.0
 offset_bottom = 10.0
 scale = Vector2(0.75, 0.75)
-texture_normal = ExtResource("4_ofw20")
+texture_normal = ExtResource("6_oukxn")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D2/max_upgrade" unique_id=1434344579]
 layout_mode = 0
 offset_left = 4.0
-offset_top = 5.3333335
+offset_top = 5.333333
 offset_right = 163.0
 offset_bottom = 41.333332
 scale = Vector2(0.15, 0.15)
@@ -99,15 +101,14 @@ fit_content = true
 autowrap_mode = 0
 
 [node name="cost" type="Sprite2D" parent="." unique_id=2045267571]
-position = Vector2(62, 1)
-rotation = -1.5707964
-texture = ExtResource("8_oukxn")
+position = Vector2(-76, 1)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("9_ofw20")
 
 [node name="cost label" type="RichTextLabel" parent="cost" unique_id=1304685655]
-offset_top = -0.99999994
-offset_right = 24.0
-offset_bottom = 47.0
-rotation = 1.5707964
+offset_left = -5.3333335
+offset_right = 18.666666
+offset_bottom = 48.0
 scale = Vector2(0.25, 0.25)
 text = "  1 
   "
@@ -115,11 +116,10 @@ fit_content = true
 autowrap_mode = 0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="cost" unique_id=1596234271]
-offset_left = 4.0000005
-offset_top = -12.0
-offset_right = 44.0
-offset_bottom = 26.0
-rotation = 1.5707964
+offset_left = -17.333334
+offset_top = -4.0
+offset_right = 22.666666
+offset_bottom = 34.0
 scale = Vector2(0.25, 0.25)
 text = "       1 
  cost  : "
@@ -127,14 +127,12 @@ fit_content = true
 autowrap_mode = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="cost" unique_id=472337601]
-position = Vector2(2.0000005, -10)
-rotation = 1.5707964
+position = Vector2(-16, -1.3333334)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("6_n42d4")
 
 [node name="Sprite2D2" type="Sprite2D" parent="cost" unique_id=1355008196]
-position = Vector2(2, 1.0000001)
-rotation = 1.5707964
+position = Vector2(-2.6666665, -2.6666667)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("6_n42d4")
 

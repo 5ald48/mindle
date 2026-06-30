@@ -239,8 +239,8 @@ func reset():
 
 
 	# ── IRON ──────────────────────────────────────
-	iron.mantissa = 0.0
-	iron.exponent = 0
+	iron.mantissa = 10.0
+	iron.exponent = 40
 
 	iron_per_sec.mantissa = 1.0
 	iron_per_sec.exponent = 0

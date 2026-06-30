@@ -1,7 +1,7 @@
 extends Camera2D
 
 @export var min_y : float = -540
-@export var max_y : float = 200
+@export var max_y : float = 280
 
 var target_y = position.y
 

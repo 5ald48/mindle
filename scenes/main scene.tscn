@@ -14,8 +14,6 @@ script = ExtResource("1_sneai")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1012002039]
 anchor_mode = 0
-limit_top = -540
-limit_bottom = 200
 script = ExtResource("1_d2vo2")
 
 [node name="MAP" parent="." unique_id=209112516 instance=ExtResource("1_ijdfw")]

@@ -1,14 +1,15 @@
 [gd_scene format=3 uid="uid://dchlak3lg7uxl"]
 
 [ext_resource type="Script" uid="uid://b37clcs2fj7vo" path="res://scripts/pickaxe.gd" id="1_40cab"]
-[ext_resource type="Texture2D" uid="uid://c0kb1s8kehegh" path="res://textures/my art/MAIN SPRITE-96x32-32x16.png" id="2_2ikqw"]
+[ext_resource type="Texture2D" uid="uid://clkmwc3ynindm" path="res://textures/my art/MAIN SPRITEd-64x192-288x16.png" id="2_jlbau"]
+[ext_resource type="Texture2D" uid="uid://ceck3dlnrpjlf" path="res://textures/my art/MAIN SPRITE-304x224-32x16.png" id="3_jlbau"]
 [ext_resource type="Texture2D" uid="uid://dpbxbh3kws16f" path="res://textures/items/item585.png" id="3_khqrn"]
 [ext_resource type="Texture2D" uid="uid://cbegkp4oqc21" path="res://textures/items/item574.png" id="4_tnc31"]
 [ext_resource type="Texture2D" uid="uid://doantctnar2eu" path="res://textures/items/item577.png" id="5_h48u7"]
 [ext_resource type="Texture2D" uid="uid://mpyqfjdnheft" path="res://textures/my art/MAIN SPRITE-32x0-16x16.png" id="6_nsjyk"]
-[ext_resource type="Texture2D" uid="uid://bj00rn335ke7k" path="res://textures/items/item579.png" id="6_tnc31"]
 [ext_resource type="Texture2D" uid="uid://bkjpvwa3d8glw" path="res://textures/my art/MAIN SPRITE-144x0-16x16.png" id="7_h48u7"]
 [ext_resource type="Texture2D" uid="uid://bqqmbexurhmlp" path="res://textures/my art/MAIN SPRITE-0x0-16x16.png" id="9_202q2"]
+[ext_resource type="Texture2D" uid="uid://cr6mg3puxl506" path="res://textures/my art/MAIN SPRITE-352x224-32x16.png" id="9_r3td7"]
 
 [sub_resource type="GDScript" id="GDScript_bhunq"]
 script/source = "extends TextureButton
@@ -16,7 +17,7 @@ script/source = "extends TextureButton
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$RichTextLabel.text = \" upgrade multiplyer = \" + Gamedata.per_sec_multiplier.to_metric_name(false) + \" \"
+	$RichTextLabel.text = \" upgrade  multiplyer  \\n     =          \" + Gamedata.per_sec_multiplier.to_metric_name(false) + \" \"
 	$RichTextLabel2.text = \"  \" + Gamedata.per_sec_multiplier_cost.to_metric_name(true) + \"  \"
 
 
@@ -37,20 +38,27 @@ func _on_pressed() -> void:
 [node name="pickaxe" type="Node2D" unique_id=1632089896]
 script = ExtResource("1_40cab")
 
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=2143373389]
+texture = ExtResource("2_jlbau")
+
 [node name="pickaxe level upgrade" type="TextureButton" parent="." unique_id=632866617]
-offset_left = -16.0
-offset_top = -33.209568
-offset_right = 16.0
-offset_bottom = -17.209568
-texture_normal = ExtResource("2_2ikqw")
+offset_left = -62.619133
+offset_top = -8.0
+offset_right = -30.619133
+offset_bottom = 8.0
+texture_normal = ExtResource("3_jlbau")
+
+[node name="MainSprite352x22432x16" type="Sprite2D" parent="pickaxe level upgrade" unique_id=1406379043]
+position = Vector2(-15.272827, 8)
+texture = ExtResource("9_r3td7")
 
 [node name="pickaxe level req" type="RichTextLabel" parent="pickaxe level upgrade" unique_id=368368048]
 layout_mode = 0
-offset_left = 9.790001
-offset_top = 1.9187481
-offset_right = 64.79
-offset_bottom = 55.918747
-scale = Vector2(0.2, 0.2)
+offset_left = 13.950886
+offset_top = 3.9641318
+offset_right = 68.95088
+offset_bottom = 60.96413
+scale = Vector2(0.135, 0.135)
 mouse_filter = 2
 text = " 100000
  10000
@@ -60,104 +68,108 @@ scroll_active = false
 autowrap_mode = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="pickaxe level upgrade" unique_id=1390770943]
-position = Vector2(8, 3.9187489)
-scale = Vector2(0.2, 0.2)
+position = Vector2(12.306301, 5.404132)
+scale = Vector2(0.18, 0.18)
 texture = ExtResource("3_khqrn")
 
 [node name="Sprite2D2" type="Sprite2D" parent="pickaxe level upgrade" unique_id=910481113]
-position = Vector2(7.9999995, 7.3041034)
-scale = Vector2(0.2, 0.2)
+position = Vector2(12.359917, 7.817397)
+scale = Vector2(0.18, 0.18)
 texture = ExtResource("4_tnc31")
 offset = Vector2(0, 0.765)
 
 [node name="Sprite2D3" type="Sprite2D" parent="pickaxe level upgrade" unique_id=1031064213]
-position = Vector2(8, 10.681451)
-scale = Vector2(0.2, 0.2)
+position = Vector2(12.487976, 10.607103)
+scale = Vector2(0.18, 0.18)
 texture = ExtResource("5_h48u7")
 
 [node name="pickaxe level" type="RichTextLabel" parent="pickaxe level upgrade" unique_id=1363757905]
 layout_mode = 0
-offset_left = 3.1762009
-offset_top = -6.002323
-offset_right = 102.1762
-offset_bottom = 16.997677
-scale = Vector2(0.25, 0.25)
+offset_left = -27.824005
+offset_top = 5.8571033
+offset_right = 71.175995
+offset_bottom = 28.857103
+scale = Vector2(0.2, 0.2)
 text = "  pickaxe level"
 fit_content = true
 scroll_active = false
 autowrap_mode = 0
 
 [node name="pickaxe click upgrade" type="TextureButton" parent="." unique_id=1035437831]
-offset_left = -16.0
-offset_top = -56.77293
-offset_right = 16.0
-offset_bottom = -40.77293
-texture_normal = ExtResource("2_2ikqw")
+offset_left = 28.369171
+offset_top = -8.0
+offset_right = 60.36917
+offset_bottom = 8.0
+texture_normal = ExtResource("3_jlbau")
+
+[node name="MainSprite352x22432x16" type="Sprite2D" parent="pickaxe click upgrade" unique_id=139860507]
+position = Vector2(-15.429543, 8)
+texture = ExtResource("9_r3td7")
 
 [node name="pickaxe multyplier" type="RichTextLabel" parent="pickaxe click upgrade" unique_id=189064336]
 layout_mode = 0
-offset_left = 4.2163467
-offset_top = -6.1022034
-offset_right = 63.216347
-offset_bottom = 16.897797
-scale = Vector2(0.25, 0.25)
-text = "  pickaxe"
+offset_left = -28.369171
+offset_top = 5.8571033
+offset_right = 59.63083
+offset_bottom = 28.857103
+scale = Vector2(0.2, 0.2)
+text = "  pickaxe power"
 fit_content = true
 scroll_active = false
 autowrap_mode = 0
 
 [node name="pickaxe multyplier cost" type="RichTextLabel" parent="pickaxe click upgrade" unique_id=1738937960]
 layout_mode = 0
-offset_left = 8.847059
-offset_top = 6.034336
-offset_right = 67.84707
-offset_bottom = 29.034336
+offset_left = 13.213514
+offset_top = 5.8571033
+offset_right = 72.213524
+offset_bottom = 28.857103
 scale = Vector2(0.25, 0.25)
 mouse_filter = 2
-text = " 1000"
+text = " 10000000"
 fit_content = true
 scroll_active = false
 autowrap_mode = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="pickaxe click upgrade" unique_id=739394950]
-position = Vector2(4.5232487, 7.9156647)
+position = Vector2(9.213514, 8)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("6_nsjyk")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=141060577]
-scale = Vector2(2, 2)
-texture = ExtResource("6_tnc31")
-
-[node name="Sprite2D" type="Sprite2D" parent="Sprite2D" unique_id=2132129791]
-position = Vector2(8, -3.5910416)
-scale = Vector2(0.5, 0.5)
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=2132129791]
+position = Vector2(-129.43314, 0)
+scale = Vector2(0.9, 0.9)
 texture = ExtResource("7_h48u7")
 
 [node name="upgrade multiplayer" type="TextureButton" parent="." unique_id=224246895]
-offset_left = -16.0
-offset_top = -81.308044
-offset_right = 16.0
-offset_bottom = -65.308044
-texture_normal = ExtResource("2_2ikqw")
+offset_left = 109.97254
+offset_top = -8.0
+offset_right = 141.97253
+offset_bottom = 8.0
+texture_normal = ExtResource("3_jlbau")
 script = SubResource("GDScript_bhunq")
+
+[node name="MainSprite352x22432x16" type="Sprite2D" parent="upgrade multiplayer" unique_id=1093994274]
+position = Vector2(-15.219383, 8)
+texture = ExtResource("9_r3td7")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="upgrade multiplayer" unique_id=654946701]
 layout_mode = 0
-offset_left = 0.5232487
-offset_top = -7.75795
-offset_right = 134.52325
-offset_bottom = 11.24205
-scale = Vector2(0.25, 0.25)
+offset_left = -27.343254
+offset_top = 5.4041324
+offset_right = 113.656746
+offset_bottom = 24.404133
+scale = Vector2(0.2, 0.2)
 text = " upgrade mumltiplayer =  "
 fit_content = true
 autowrap_mode = 0
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="upgrade multiplayer" unique_id=859636225]
 layout_mode = 0
-offset_left = 9.790001
-offset_top = 6.3567657
-offset_right = 45.178238
-offset_bottom = 25.356766
+offset_left = 11.628899
+offset_top = 5.8571033
+offset_right = 47.017136
+offset_bottom = 24.857103
 scale = Vector2(0.25, 0.25)
 mouse_filter = 2
 text = " cost"
@@ -165,7 +177,7 @@ fit_content = true
 autowrap_mode = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="upgrade multiplayer" unique_id=1584246115]
-position = Vector2(4.9927177, 7.9051437)
+position = Vector2(8.431225, 8)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("9_202q2")
 

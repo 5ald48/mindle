@@ -14,8 +14,10 @@ resource_used2 = ""
 text = "  1      1  
  "
 
+[node name="Sprite2D2" parent="cost" parent_id_path=PackedInt32Array(2045267571) index="3" unique_id=1355008196]
+position = Vector2(-2.6666665, -1.3333334)
+
 [node name="Sprite2D3" type="Sprite2D" parent="cost" parent_id_path=PackedInt32Array(2045267571) index="4" unique_id=537185794]
-position = Vector2(1.9999998, 6)
-rotation = 1.5707964
+position = Vector2(4.0000005, -1.3333334)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("3_uuloq")

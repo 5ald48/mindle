@@ -13,7 +13,7 @@ func _process(_delta: float) -> void:
 	$"pickaxe level upgrade/pickaxe level".text = " pickaxe level  =  " + str(Gamedata.pickaxe_level) + " " 
 	
 	#the pickaxe click multiplayer power text
-	$"pickaxe click upgrade/pickaxe multyplier".text = " pickaxe click power  =  " + str(Gamedata.pickaxe_click_multiplier) + " " 
+	$"pickaxe click upgrade/pickaxe multyplier".text = " click power  =  " + str(Gamedata.pickaxe_click_multiplier) + " " 
 	
 	#the pickaxe multiplayer cost text
 	$"pickaxe click upgrade/pickaxe multyplier cost".text =  "  "  + Gamedata.pickaxe_click_multiplier_cost.to_metric_name(true)
