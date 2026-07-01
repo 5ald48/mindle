@@ -27,6 +27,8 @@ func _process(delta: float) -> void:
 	#the autominer colloection
 	if Gamedata.get(resource_name + "_miner_on_off") == true:
 		Gamedata.get(resource_name).plus_equals(Gamedata.get(resource_name + "_per_sec").multiply(delta))
+		
+	$"Sprite2D/per sec".text = " " + Gamedata.get(resource_name + "_per_sec").to_metric_name(false) + "/s "
 
 
 #miner upgrade func

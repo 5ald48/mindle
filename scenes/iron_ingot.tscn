@@ -10,11 +10,20 @@ resource_used1 = "iron"
 [node name="Sprite2D2" parent="." index="0" unique_id=793220251]
 position = Vector2(0, 0)
 
+[node name="resource" parent="Sprite2D2" index="2" unique_id=451976459]
+texture_normal = ExtResource("2_h4q65")
+
 [node name="Sprite2D" parent="Sprite2D2/miner upgrade" parent_id_path=PackedInt32Array(270947365) index="1" unique_id=939404416]
 texture = ExtResource("2_h4q65")
 
-[node name="resource" parent="Sprite2D2" index="3" unique_id=451976459]
-texture_normal = ExtResource("2_h4q65")
+[node name="cost" parent="." index="1" unique_id=2045267571]
+position = Vector2(-53.000004, 0)
 
-[node name="Sprite2D" parent="cost" parent_id_path=PackedInt32Array(2045267571) index="2" unique_id=472337601]
+[node name="Sprite2D" parent="cost" index="2" unique_id=472337601]
+texture = ExtResource("2_h4q65")
+
+[node name="Sprite2D" parent="." index="2" unique_id=1782240966]
+position = Vector2(-82, 0)
+
+[node name="Sprite2D" parent="Sprite2D" index="1" unique_id=1493321838]
 texture = ExtResource("2_h4q65")

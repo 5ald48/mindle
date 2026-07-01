@@ -8,14 +8,17 @@
 resource_name = "copper_ingot"
 resource_used1 = "copper"
 
+[node name="resource" parent="Sprite2D2" parent_id_path=PackedInt32Array(793220251) index="2" unique_id=451976459]
+texture_normal = ExtResource("2_q60s8")
+
 [node name="Sprite2D" parent="Sprite2D2/miner upgrade" parent_id_path=PackedInt32Array(270947365) index="1" unique_id=939404416]
 texture = ExtResource("2_q60s8")
-
-[node name="resource" parent="Sprite2D2" parent_id_path=PackedInt32Array(793220251) index="3" unique_id=451976459]
-texture_normal = ExtResource("2_q60s8")
 
 [node name="Sprite2D" parent="cost" parent_id_path=PackedInt32Array(2045267571) index="2" unique_id=472337601]
 texture = ExtResource("2_q60s8")
 
 [node name="Sprite2D2" parent="cost" parent_id_path=PackedInt32Array(2045267571) index="3" unique_id=1355008196]
 texture = ExtResource("3_ebyfa")
+
+[node name="Sprite2D" parent="Sprite2D" parent_id_path=PackedInt32Array(1782240966) index="1" unique_id=1493321838]
+texture = ExtResource("2_q60s8")

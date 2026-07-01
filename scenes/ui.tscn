@@ -6,9 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://mpyqfjdnheft" path="res://textures/my art/MAIN SPRITE-32x0-16x16.png" id="3_yev5y"]
 [ext_resource type="Script" uid="uid://cff4tani5ckwo" path="res://scripts/pristage.gd" id="5_8dubc"]
 [ext_resource type="Texture2D" uid="uid://ceck3dlnrpjlf" path="res://textures/my art/MAIN SPRITE-304x224-32x16.png" id="6_ktti3"]
+[ext_resource type="Texture2D" uid="uid://dxdgciaufeoxw" path="res://textures/my art/MAIN SPRITE-175x360-177x221.png" id="7_7dvkv"]
 [ext_resource type="PackedScene" uid="uid://ckeyh5teslk7t" path="res://scenes/shipments_wall.tscn" id="7_p7vwb"]
 [ext_resource type="Texture2D" uid="uid://cr6mg3puxl506" path="res://textures/my art/MAIN SPRITE-352x224-32x16.png" id="8_cgfq5"]
 [ext_resource type="Texture2D" uid="uid://bqqmbexurhmlp" path="res://textures/my art/MAIN SPRITE-0x0-16x16.png" id="8_ktti3"]
+[ext_resource type="Texture2D" uid="uid://5i0l0p3hwb3t" path="res://textures/my art/MAIN SPRITE-352x256-48x32.png" id="8_vdcm2"]
 
 [sub_resource type="GDScript" id="GDScript_8dubc"]
 script/source = "extends RichTextLabel
@@ -45,16 +47,32 @@ func _on_pressed() -> void:
 		$Panel.show()
 "
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7dvkv"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.27767017, 0.47787732, 0.99448675, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_color = Color(0.6817826, 0.78342146, 0.99913734, 1)
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8dubc"]
 content_margin_left = 0.0
 content_margin_top = 0.0
 content_margin_right = 0.0
 content_margin_bottom = 0.0
-bg_color = Color(0.32737535, 0.22334543, 0, 1)
+bg_color = Color(0.17581788, 0.044374198, 0.07861891, 1)
 border_width_left = 10
 border_width_top = 10
 border_width_right = 10
-border_color = Color(0.52156866, 0.3647059, 0, 1)
+border_color = Color(0.48887223, 0.18384653, 0.26234475, 1)
 border_blend = true
 corner_radius_top_left = 20
 corner_radius_top_right = 20
@@ -214,12 +232,17 @@ script = SubResource("GDScript_riqys")
 [node name="Panel" type="Panel" parent="Control/HBoxContainer/Button" unique_id=1357841421]
 layout_mode = 0
 offset_left = -5.722046e-05
-offset_top = -484.99997
+offset_top = -680.0
 offset_right = 529.9999
-theme_override_styles/panel = SubResource("StyleBoxFlat_8dubc")
+theme_override_styles/panel = SubResource("StyleBoxFlat_7dvkv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Control/HBoxContainer/Button/Panel" unique_id=2061769406]
+position = Vector2(267.64, 360)
+scale = Vector2(3, 3)
+texture = ExtResource("7_7dvkv")
 
 [node name="shipments wall" parent="Control/HBoxContainer/Button/Panel" unique_id=216082748 instance=ExtResource("7_p7vwb")]
-position = Vector2(110, 229.99994)
+position = Vector2(140, 370)
 scale = Vector2(5.5, 5.5)
 
 [node name="Button2" type="Button" parent="Control/HBoxContainer" unique_id=836041338]
@@ -235,12 +258,17 @@ offset_top = -484.99997
 offset_right = 529.9999
 theme_override_styles/panel = SubResource("StyleBoxFlat_8dubc")
 
+[node name="ColorRect" type="Sprite2D" parent="Control/HBoxContainer/Button2/Panel" unique_id=1979342573]
+position = Vector2(261, 164.99994)
+scale = Vector2(10, 10)
+texture = ExtResource("8_vdcm2")
+
 [node name="pristage cost" type="TextureButton" parent="Control/HBoxContainer/Button2/Panel" unique_id=1555537736]
 layout_mode = 0
 offset_left = 185.99998
-offset_top = 320.0
+offset_top = 390.0
 offset_right = 217.99998
-offset_bottom = 336.0
+offset_bottom = 406.0
 scale = Vector2(5, 5)
 texture_normal = ExtResource("6_ktti3")
 script = ExtResource("5_8dubc")
@@ -251,33 +279,38 @@ texture = ExtResource("8_ktti3")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control/HBoxContainer/Button2/Panel" unique_id=1229879051]
 layout_mode = 0
-offset_left = 1.0000153
-offset_top = 34.999954
-offset_right = 442.66663
-offset_bottom = 205.99995
-scale = Vector2(1.2, 1.2)
+offset_left = -28.999989
+offset_top = 39.999954
+offset_right = 412.66663
+offset_bottom = 230.99995
+scale = Vector2(1.3, 1.3)
 bbcode_enabled = true
-text = "You're about to reset your progress. Here's what happens:
+text = "You're about to reset your progress
 
-All resources, buildings, and production are wiped.
+All resources, buildings, and production are wiped
 
-You earn Prestige Points based on how far you got.
+You earn Prestige Points based on how far you got
 
-Use those points to unlock permanent upgrades that carry over forever.
+Use those points to unlock permanent upgrades
 
-you can only prestage if you have more than  1 000 000 ( 1.00 mega ) 
+you can only prestage if you have more than
+  1 000 000 ( 1.00 mega ) 
 "
 fit_content = true
 autowrap_mode = 0
 horizontal_alignment = 1
 
-[node name="pristage lvl" type="RichTextLabel" parent="Control/HBoxContainer/Button2/Panel" unique_id=292147228]
-layout_mode = 0
-offset_left = 0.9999695
-offset_top = 269.99994
-offset_right = 265.99994
-offset_bottom = 288.99994
-scale = Vector2(2, 2)
+[node name="Sprite2D" type="Sprite2D" parent="Control/HBoxContainer/Button2/Panel" unique_id=229239235]
+position = Vector2(265.99997, 354.99994)
+scale = Vector2(5, 5)
+texture = ExtResource("8_cgfq5")
+
+[node name="pristage lvl" type="RichTextLabel" parent="Control/HBoxContainer/Button2/Panel/Sprite2D" unique_id=292147228]
+offset_left = -12.0
+offset_top = -3.0
+offset_right = 84.0
+offset_bottom = 16.0
+scale = Vector2(0.25, 0.25)
 text = " lvl "
 fit_content = true
 autowrap_mode = 0

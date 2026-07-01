@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://cybnjpo8njoor"]
 
 [ext_resource type="Script" uid="uid://d2pb0inxfi5bk" path="res://scripts/shipments.gd" id="1_0rhww"]
-[ext_resource type="Texture2D" uid="uid://c0kb1s8kehegh" path="res://textures/my art/MAIN SPRITE-96x32-32x16.png" id="2_be1j3"]
 [ext_resource type="Texture2D" uid="uid://dpbxbh3kws16f" path="res://textures/items/item585.png" id="3_14cef"]
 [ext_resource type="Texture2D" uid="uid://mpyqfjdnheft" path="res://textures/my art/MAIN SPRITE-32x0-16x16.png" id="3_xwchj"]
 [ext_resource type="Texture2D" uid="uid://bj00rn335ke7k" path="res://textures/items/item579.png" id="4_pclap"]
@@ -19,6 +18,49 @@
 [ext_resource type="Texture2D" uid="uid://dscmltxhexckw" path="res://textures/my art/MAIN SPRITE-176x144-16x16.png" id="16_2f5qp"]
 [ext_resource type="Texture2D" uid="uid://c183fm0j6mctq" path="res://textures/my art/MAIN SPRITE-192x112-16x16.png" id="17_bcvbw"]
 [ext_resource type="Texture2D" uid="uid://vipyarcqh48o" path="res://textures/my art/MAIN SPRITE-208x144-16x16.png" id="18_n2tv0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_as6ls"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.60038817, 0.60038817, 0.60038817, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.8001019, 0.8001019, 0.8001019, 0)
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_14cef"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1931151, 0.050708726, 0.086104214, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.48677072, 0.36556464, 0, 0)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pclap"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.193)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.8001019, 0.8001019, 0.8001019, 0.41500002)
+border_blend = true
 
 [node name="Control" type="Control" unique_id=1860695734]
 layout_mode = 3
@@ -46,20 +88,24 @@ steel_gear_texture = ExtResource("16_2f5qp")
 gold_wire_texture = ExtResource("17_bcvbw")
 circuit_board_texture = ExtResource("18_n2tv0")
 
-[node name="TextureButton" type="TextureButton" parent="." unique_id=101344401]
+[node name="TextureButton" type="Button" parent="." unique_id=1966739395]
 layout_mode = 0
-offset_right = 32.0
-offset_bottom = 20.0
-texture_normal = ExtResource("2_be1j3")
-stretch_mode = 0
+offset_left = 3.0
+offset_top = -1.0
+offset_right = 25.0
+offset_bottom = 21.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_as6ls")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_14cef")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pclap")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=385571656]
 layout_mode = 0
-offset_left = 10.0
+offset_left = 9.0
 offset_top = 2.0
-offset_right = 50.0
-offset_bottom = 21.0
+offset_right = 49.0
+offset_bottom = 22.0
 scale = Vector2(0.25, 0.25)
+mouse_filter = 2
 text = " 100kilo
 "
 fit_content = true
@@ -67,33 +113,36 @@ autowrap_mode = 0
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=418280124]
 layout_mode = 0
-offset_left = 10.0
+offset_left = 9.0
 offset_top = 6.0
-offset_right = 50.0
+offset_right = 49.0
 offset_bottom = 25.0
 scale = Vector2(0.25, 0.25)
+mouse_filter = 2
 text = " 100kilo"
 fit_content = true
 autowrap_mode = 0
 
 [node name="RichTextLabel3" type="RichTextLabel" parent="." unique_id=1301183808]
 layout_mode = 0
-offset_left = 10.0
+offset_left = 9.0
 offset_top = 10.0
-offset_right = 50.0
+offset_right = 49.0
 offset_bottom = 29.0
 scale = Vector2(0.25, 0.25)
+mouse_filter = 2
 text = " 100kilo"
 fit_content = true
 autowrap_mode = 0
 
 [node name="RichTextLabel4" type="RichTextLabel" parent="." unique_id=1568176758]
 layout_mode = 0
-offset_left = 10.0
+offset_left = 8.0
 offset_top = 14.0
-offset_right = 50.0
+offset_right = 48.0
 offset_bottom = 33.0
 scale = Vector2(0.25, 0.25)
+mouse_filter = 2
 text = " 100kilo"
 fit_content = true
 autowrap_mode = 0

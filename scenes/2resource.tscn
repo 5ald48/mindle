@@ -6,8 +6,6 @@
 
 [node name="Node2D" unique_id=402219238 instance=ExtResource("1_jvdnd")]
 script = ExtResource("2_7kt4s")
-resource_name = ""
-resource_used1 = ""
 resource_used2 = ""
 
 [node name="cost label" parent="cost" parent_id_path=PackedInt32Array(2045267571) index="0" unique_id=1304685655]

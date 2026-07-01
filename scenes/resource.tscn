@@ -8,14 +8,14 @@
 [ext_resource type="Texture2D" uid="uid://ceck3dlnrpjlf" path="res://textures/my art/MAIN SPRITE-304x224-32x16.png" id="6_oukxn"]
 [ext_resource type="Texture2D" uid="uid://cp0lltgtcfiky" path="res://textures/my art/MAIN SPRITE-304x240-48x16.png" id="6_qn0gw"]
 [ext_resource type="Texture2D" uid="uid://dd8oo6xymvmdy" path="res://textures/my art/MAIN SPRITE-64x16-16x16.png" id="7_8e877"]
+[ext_resource type="Texture2D" uid="uid://dbwql0bqbhhds" path="res://textures/my art/MAIN SPRITE-320x48-16x16.png" id="9_ge4wk"]
 [ext_resource type="Texture2D" uid="uid://bk1chogld7afj" path="res://textures/my art/MAIN SPRITE-352x240-48x16.png" id="9_ofw20"]
+[ext_resource type="Texture2D" uid="uid://cr6mg3puxl506" path="res://textures/my art/MAIN SPRITE-352x224-32x16.png" id="10_ofw20"]
 
 [node name="Node2D" type="Node2D" unique_id=402219238]
 script = ExtResource("1_3rbbe")
 texture_on = ExtResource("2_o1pcp")
 texture_off = ExtResource("7_8e877")
-resource_name = null
-resource_used1 = null
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=793220251]
 position = Vector2(0, 1)
@@ -33,34 +33,6 @@ bbcode_enabled = true
 text = " resource "
 fit_content = true
 autowrap_mode = 0
-
-[node name="miner upgrade" type="TextureButton" parent="Sprite2D2" unique_id=270947365]
-offset_left = 93.0
-offset_top = -6.0000005
-offset_right = 141.0
-offset_bottom = 10.0
-scale = Vector2(0.75, 0.75)
-texture_normal = ExtResource("6_qn0gw")
-stretch_mode = 0
-
-[node name="upgrade cost" type="RichTextLabel" parent="Sprite2D2/miner upgrade" unique_id=1082285736]
-layout_mode = 0
-offset_left = 13.333328
-offset_top = 5.3333344
-offset_right = 63.33333
-offset_bottom = 41.333336
-scale = Vector2(0.2, 0.2)
-mouse_filter = 2
-theme_override_fonts/normal_font = ExtResource("2_oukxn")
-theme_override_font_sizes/normal_font_size = 32
-text = " 100"
-fit_content = true
-autowrap_mode = 0
-
-[node name="Sprite2D" type="Sprite2D" parent="Sprite2D2/miner upgrade" unique_id=939404416]
-position = Vector2(9.333333, 8)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("6_n42d4")
 
 [node name="on off" type="TextureButton" parent="Sprite2D2" unique_id=727703705]
 offset_left = 129.0
@@ -86,7 +58,7 @@ offset_bottom = 10.0
 scale = Vector2(0.75, 0.75)
 texture_normal = ExtResource("6_oukxn")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D2/max_upgrade" unique_id=1434344579]
+[node name="upgrade max" type="RichTextLabel" parent="Sprite2D2/max_upgrade" unique_id=1434344579]
 layout_mode = 0
 offset_left = 4.0
 offset_top = 5.333333
@@ -100,8 +72,41 @@ text = " UPGRADE MAX "
 fit_content = true
 autowrap_mode = 0
 
+[node name="miner upgrade" type="TextureButton" parent="Sprite2D2" unique_id=270947365]
+offset_left = 93.0
+offset_top = -6.0000005
+offset_right = 141.0
+offset_bottom = 10.0
+scale = Vector2(0.75, 0.75)
+texture_normal = ExtResource("6_qn0gw")
+stretch_mode = 0
+
+[node name="upgrade cost" type="RichTextLabel" parent="Sprite2D2/miner upgrade" unique_id=1082285736]
+layout_mode = 0
+offset_left = 18.66666
+offset_top = 5.3333344
+offset_right = 68.66666
+offset_bottom = 41.333336
+scale = Vector2(0.2, 0.2)
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("2_oukxn")
+theme_override_font_sizes/normal_font_size = 32
+text = " 100"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D2/miner upgrade" unique_id=939404416]
+position = Vector2(16, 8)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_n42d4")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D2/miner upgrade" unique_id=684402280]
+position = Vector2(8.000002, 8)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_ge4wk")
+
 [node name="cost" type="Sprite2D" parent="." unique_id=2045267571]
-position = Vector2(-76, 1)
+position = Vector2(-53, 1)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("9_ofw20")
 
@@ -136,7 +141,27 @@ position = Vector2(-2.6666665, -2.6666667)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("6_n42d4")
 
-[connection signal="pressed" from="Sprite2D2/miner upgrade" to="." method="_on_miner_upgrade_pressed"]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1782240966]
+position = Vector2(-82, 1)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("10_ofw20")
+
+[node name="per sec" type="RichTextLabel" parent="Sprite2D" unique_id=995763858]
+offset_left = -6.666667
+offset_top = -2.6666667
+offset_right = 31.333332
+offset_bottom = 16.333334
+scale = Vector2(0.3, 0.3)
+text = "  212/s "
+fit_content = true
+autowrap_mode = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D" unique_id=1493321838]
+position = Vector2(-9.333334, 0)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("6_n42d4")
+
 [connection signal="pressed" from="Sprite2D2/on off" to="." method="_on_on_off_pressed"]
 [connection signal="pressed" from="Sprite2D2/resource" to="." method="_on_resource_pressed"]
 [connection signal="pressed" from="Sprite2D2/max_upgrade" to="." method="_on_max_upgrade_pressed"]
+[connection signal="pressed" from="Sprite2D2/miner upgrade" to="." method="_on_miner_upgrade_pressed"]
