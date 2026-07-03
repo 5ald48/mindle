@@ -376,10 +376,10 @@ autowrap_mode = 0
 
 [node name="exit" type="Button" parent="Control/HBoxContainer/Button3/Panel" unique_id=2141502903]
 layout_mode = 0
-offset_left = 170.99997
-offset_top = 274.99994
-offset_right = 335.99997
-offset_bottom = 348.99994
+offset_left = 175.99997
+offset_top = 279.99994
+offset_right = 340.99997
+offset_bottom = 353.99994
 text = "  save and exit  "
 script = SubResource("GDScript_6f8o3")
 

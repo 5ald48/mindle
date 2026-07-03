@@ -32,6 +32,7 @@ enabled=PackedStringArray("res://addons/cheatsheet_viewer/plugin.cfg", "res://ad
 
 [gui]
 
+common/snap_controls_to_pixels=false
 theme/custom="uid://bg8krmr5k6i85"
 
 [physics]

@@ -5,10 +5,15 @@ extends Node2D
 @export var resource_name: String  
 @export var resource_used1: String 
 
+var tween : Tween
+var upgrade_arrow : Node
+
 func _ready() -> void:
 	
 	#cost of item text
 	$"cost/cost label".text = " " + str(Gamedata.get(resource_name + "_cost1")) + " "
+	
+	upgrade_arrow = $"Sprite2D2/miner upgrade/upgrade_arrow"
 
 func _process(delta: float) -> void:
 	
@@ -38,6 +43,16 @@ func _process(delta: float) -> void:
 	
 	
 	$"Sprite2D/per sec".text = " " + Gamedata.get(resource_name + "_per_sec").to_metric_name(false) + "/s "
+	
+	
+	
+	
+	#upgrade sympol tween
+	if Gamedata.get(resource_name).is_greater_than_or_equal_to(Gamedata.get(resource_name + "_miner_upgrade_cost")):
+		if tween: tween.kill()
+		tween = create_tween()
+		tween.tween_property(upgrade_arrow,"position:y",-0.5,0.1).as_relative()
+		tween.tween_property(upgrade_arrow,"position:y",0.0,0.1).as_relative()
 
 
 

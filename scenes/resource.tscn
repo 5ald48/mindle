@@ -3,12 +3,13 @@
 [ext_resource type="Script" uid="uid://cgarfyu0xif6p" path="res://scripts/resource.gd" id="1_3rbbe"]
 [ext_resource type="Texture2D" uid="uid://cxsb8xaj6gp0i" path="res://textures/my art/MAIN SPRITE-80x0-16x16.png" id="2_o1pcp"]
 [ext_resource type="FontFile" uid="uid://c24bc2hmt208c" path="res://font/Jersey10-Regular.ttf" id="2_oukxn"]
+[ext_resource type="Script" uid="uid://dtd2fey4kvcjo" path="res://scripts/resource_tween.gd" id="4_n42d4"]
 [ext_resource type="Texture2D" uid="uid://clkmwc3ynindm" path="res://textures/my art/MAIN SPRITEd-64x192-288x16.png" id="4_oukxn"]
 [ext_resource type="Texture2D" uid="uid://dpbxbh3kws16f" path="res://textures/items/item585.png" id="6_n42d4"]
 [ext_resource type="Texture2D" uid="uid://ceck3dlnrpjlf" path="res://textures/my art/MAIN SPRITE-304x224-32x16.png" id="6_oukxn"]
 [ext_resource type="Texture2D" uid="uid://cp0lltgtcfiky" path="res://textures/my art/MAIN SPRITE-304x240-48x16.png" id="6_qn0gw"]
 [ext_resource type="Texture2D" uid="uid://dd8oo6xymvmdy" path="res://textures/my art/MAIN SPRITE-64x16-16x16.png" id="7_8e877"]
-[ext_resource type="Texture2D" uid="uid://dbwql0bqbhhds" path="res://textures/my art/MAIN SPRITE-320x48-16x16.png" id="9_ge4wk"]
+[ext_resource type="Texture2D" uid="uid://b4xh6minver8m" path="res://textures/my art/MAIN SPRITE-352x48-16x16.png" id="9_ge4wk"]
 [ext_resource type="Texture2D" uid="uid://bk1chogld7afj" path="res://textures/my art/MAIN SPRITE-352x240-48x16.png" id="9_ofw20"]
 [ext_resource type="Texture2D" uid="uid://cr6mg3puxl506" path="res://textures/my art/MAIN SPRITE-352x224-32x16.png" id="10_ofw20"]
 
@@ -16,6 +17,13 @@
 script = ExtResource("1_3rbbe")
 texture_on = ExtResource("2_o1pcp")
 texture_off = ExtResource("7_8e877")
+resource_name = null
+resource_used1 = null
+
+[node name="tweens" type="Node2D" parent="." unique_id=1105474457]
+position = Vector2(93, -5.0000005)
+scale = Vector2(0.75, 0.75)
+script = ExtResource("4_n42d4")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=793220251]
 position = Vector2(0, 1)
@@ -43,41 +51,21 @@ scale = Vector2(0.75, 0.75)
 texture_normal = ExtResource("7_8e877")
 
 [node name="resource" type="TextureButton" parent="Sprite2D2" unique_id=451976459]
-offset_left = -142.0
-offset_top = -4.0
-offset_right = -126.0
-offset_bottom = 12.0
+offset_left = -150.0
+offset_top = -8.0
+offset_right = -134.0
+offset_bottom = 8.0
 scale = Vector2(0.5, 0.5)
+pivot_offset_ratio = Vector2(1, 0.5)
 texture_normal = ExtResource("6_n42d4")
 
-[node name="max_upgrade" type="TextureButton" parent="Sprite2D2" unique_id=442341910]
-offset_left = 70.0
-offset_top = -6.0000005
-offset_right = 102.0
-offset_bottom = 10.0
-scale = Vector2(0.75, 0.75)
-texture_normal = ExtResource("6_oukxn")
-
-[node name="upgrade max" type="RichTextLabel" parent="Sprite2D2/max_upgrade" unique_id=1434344579]
-layout_mode = 0
-offset_left = 4.0
-offset_top = 5.333333
-offset_right = 163.0
-offset_bottom = 41.333332
-scale = Vector2(0.15, 0.15)
-mouse_filter = 2
-theme_override_fonts/normal_font = ExtResource("2_oukxn")
-theme_override_font_sizes/normal_font_size = 32
-text = " UPGRADE MAX "
-fit_content = true
-autowrap_mode = 0
-
 [node name="miner upgrade" type="TextureButton" parent="Sprite2D2" unique_id=270947365]
-offset_left = 93.0
-offset_top = -6.0000005
-offset_right = 141.0
-offset_bottom = 10.0
+offset_left = 87.0
+offset_top = -8.0
+offset_right = 135.0
+offset_bottom = 8.0
 scale = Vector2(0.75, 0.75)
+pivot_offset_ratio = Vector2(0.5, 0.5)
 texture_normal = ExtResource("6_qn0gw")
 stretch_mode = 0
 
@@ -100,10 +88,33 @@ position = Vector2(16, 8)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("6_n42d4")
 
-[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D2/miner upgrade" unique_id=684402280]
+[node name="upgrade_arrow" type="Sprite2D" parent="Sprite2D2/miner upgrade" unique_id=684402280]
 position = Vector2(8.000002, 8)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("9_ge4wk")
+
+[node name="max_upgrade" type="TextureButton" parent="Sprite2D2" unique_id=442341910]
+offset_left = 62.0
+offset_top = -8.0
+offset_right = 94.0
+offset_bottom = 8.0
+scale = Vector2(0.75, 0.75)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture_normal = ExtResource("6_oukxn")
+
+[node name="upgrade max" type="RichTextLabel" parent="Sprite2D2/max_upgrade" unique_id=1434344579]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.333333
+offset_right = 163.0
+offset_bottom = 41.333332
+scale = Vector2(0.15, 0.15)
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("2_oukxn")
+theme_override_font_sizes/normal_font_size = 32
+text = " UPGRADE MAX "
+fit_content = true
+autowrap_mode = 0
 
 [node name="cost" type="Sprite2D" parent="." unique_id=2045267571]
 position = Vector2(-53, 1)
@@ -162,6 +173,15 @@ scale = Vector2(0.25, 0.25)
 texture = ExtResource("6_n42d4")
 
 [connection signal="pressed" from="Sprite2D2/on off" to="." method="_on_on_off_pressed"]
+[connection signal="mouse_entered" from="Sprite2D2/resource" to="tweens" method="_on_resource_mouse_entered"]
+[connection signal="mouse_exited" from="Sprite2D2/resource" to="tweens" method="_on_resource_mouse_exited"]
 [connection signal="pressed" from="Sprite2D2/resource" to="." method="_on_resource_pressed"]
-[connection signal="pressed" from="Sprite2D2/max_upgrade" to="." method="_on_max_upgrade_pressed"]
+[connection signal="pressed" from="Sprite2D2/resource" to="tweens" method="_on_resource_pressed"]
+[connection signal="mouse_entered" from="Sprite2D2/miner upgrade" to="tweens" method="_on_miner_upgrade_mouse_entered"]
+[connection signal="mouse_exited" from="Sprite2D2/miner upgrade" to="tweens" method="_on_miner_upgrade_mouse_exited"]
 [connection signal="pressed" from="Sprite2D2/miner upgrade" to="." method="_on_miner_upgrade_pressed"]
+[connection signal="pressed" from="Sprite2D2/miner upgrade" to="tweens" method="_on_miner_upgrade_pressed"]
+[connection signal="mouse_entered" from="Sprite2D2/max_upgrade" to="tweens" method="_on_max_upgrade_mouse_entered"]
+[connection signal="mouse_exited" from="Sprite2D2/max_upgrade" to="tweens" method="_on_max_upgrade_mouse_exited"]
+[connection signal="pressed" from="Sprite2D2/max_upgrade" to="." method="_on_max_upgrade_pressed"]
+[connection signal="pressed" from="Sprite2D2/max_upgrade" to="tweens" method="_on_max_upgrade_pressed"]
