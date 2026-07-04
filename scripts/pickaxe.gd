@@ -72,7 +72,7 @@ func _process(_delta: float) -> void:
 		pickaxe_sprite3_1.show()
 		
 	else :
-		pickaxe_level_req_label_2.text = "\n max level "
+		pickaxe_level_req_label_2.text = "\n  max level  "
 		
 		pickaxe_sprite1_1.hide()
 		pickaxe_sprite2_1.hide()

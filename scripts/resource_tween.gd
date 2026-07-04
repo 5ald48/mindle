@@ -1,16 +1,15 @@
 extends Node2D
 
-var current_tween: Tween
-var btn_miner_upgrade : Node
-var btn_max_upgrade : Node
-var btn_resource : Node
+@onready var current_tween: Tween
+@onready var btn_miner_upgrade : Node = $"../Sprite2D2/miner upgrade"
+@onready var btn_max_upgrade : Node = $"../Sprite2D2/max_upgrade"
+@onready var btn_resource : Node = $"../Sprite2D2/resource"
+@onready var btn_unlock_button : Node = $"../unlock/unlock"
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	btn_miner_upgrade = $"../Sprite2D2/miner upgrade"
-	btn_max_upgrade = $"../Sprite2D2/max_upgrade"
-	btn_resource = $"../Sprite2D2/resource"
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -29,10 +28,11 @@ func _process(_delta: float) -> void:
 #resource
 	if not btn_resource.is_hovered():
 		current_tween = create_tween()
-
 		current_tween.tween_property(btn_resource,"scale",Vector2(0.5 ,0.5),0.1)
 
-
+	if not btn_unlock_button.is_hovered():
+		current_tween = create_tween()
+		current_tween.tween_property(btn_unlock_button,"scale",Vector2(0.75 ,0.75),0.1)
 
 
 #miner upgrade hover start
@@ -83,3 +83,21 @@ func _on_resource_pressed() -> void:
 	current_tween = create_tween()
 	current_tween.tween_property(btn_resource,"scale",Vector2(0.9 ,0.6),0.1)
 	current_tween.tween_property(btn_resource,"scale",Vector2(1.0 ,1.0),0.1)
+
+
+
+
+
+
+
+func _on_unlock_mouse_entered() -> void:
+	if current_tween: current_tween.kill()
+	current_tween = create_tween()
+	current_tween.tween_property(btn_unlock_button,"scale",Vector2(1.0 ,1.0),0.1)
+
+
+func _on_unlock_pressed() -> void:
+	if current_tween: current_tween.kill()
+	current_tween = create_tween()
+	current_tween.tween_property(btn_unlock_button,"scale",Vector2(0.9 ,0.6),0.1)
+	current_tween.tween_property(btn_unlock_button,"scale",Vector2(1.0 ,1.0),0.1)

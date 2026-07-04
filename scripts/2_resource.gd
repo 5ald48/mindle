@@ -2,15 +2,31 @@ extends Node2D
 
 @export var texture_on: Texture2D
 @export var texture_off: Texture2D
+@export var unlocked_lock: Texture2D
 @export var resource_name: String  
 @export var resource_used1: String 
 @export var resource_used2: String 
-
+@export var unolock_cost1 : float
+@export var unolock_cost2 : float
+@onready var unlock_node : Node = $unlock
+@onready var collecting_button : Node = $Sprite2D2/resource
 
 func _ready() -> void:
 	
 	#cost of item text
 	$"cost/cost label".text = " " + str(Gamedata.get(resource_name + "_cost1")) + "    " + str(Gamedata.get(resource_name + "_cost2")) + " "
+	
+	$"unlock/Control/Sprite2D2/unlock_cost".text = "                  " + str(int(unolock_cost1)) + "                 " + str(int(unolock_cost2))
+
+	if Gamedata.get(resource_name + "_miner_unlocked") == true and unlock_node.visible:
+		unlock_node.hide()
+
+	collecting_button.hide()
+
+	if Gamedata.get(resource_name + "_miner_unlocked") == true and not collecting_button.visible:
+		collecting_button.show()
+
+
 
 func _process(delta: float) -> void:
 	
@@ -90,3 +106,11 @@ func _on_max_upgrade_pressed() -> void:
 				Gamedata.get(resource_name + "_per_sec").multiply_equals(Gamedata.per_sec_multiplier)
 			
 			else : break
+
+func _on_unlock_pressed() -> void:
+	if Gamedata.get(resource_used1).is_greater_than_or_equal_to(unolock_cost1) and Gamedata.get(resource_used2).is_greater_than_or_equal_to(unolock_cost2):
+		collecting_button.show()
+		Gamedata.get(resource_used1).minus_equals(unolock_cost1)
+		Gamedata.get(resource_used2).minus_equals(unolock_cost2)
+		Gamedata.set(resource_name + "_miner_unlocked", true)
+		$unlock.hide()

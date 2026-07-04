@@ -155,14 +155,16 @@ texture = ExtResource("9_r3td7")
 
 [node name="pickaxe level" type="RichTextLabel" parent="Control/MainSprite352x22432x16" unique_id=1363757905]
 offset_left = -12.551178
-offset_top = -2.1428967
-offset_right = 86.44882
-offset_bottom = 20.857103
+offset_top = -4.0
+offset_right = 109.740204
+offset_bottom = 36.23551
 scale = Vector2(0.2, 0.2)
 text = "  pickaxe level"
 fit_content = true
 scroll_active = false
 autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="pickaxe level upgrade" type="TextureButton" parent="Control" unique_id=632866617]
 layout_mode = 0
@@ -308,5 +310,5 @@ texture = ExtResource("9_202q2")
 [connection signal="pressed" from="Control2/pickaxe click upgrade" to="." method="_on_pickaxe_click_upgrade_pressed"]
 [connection signal="pressed" from="Control2/pickaxe click upgrade" to="tweens" method="_on_pickaxe_click_upgrade_pressed"]
 [connection signal="mouse_entered" from="Control3/upgrade multiplayer" to="tweens" method="_on_upgrade_multiplayer_mouse_entered"]
-[connection signal="pressed" from="Control3/upgrade multiplayer" to="Control3/upgrade multiplayer" method="_on_pressed"]
 [connection signal="pressed" from="Control3/upgrade multiplayer" to="tweens" method="_on_upgrade_multiplayer_pressed"]
+[connection signal="pressed" from="Control3/upgrade multiplayer" to="Control3/upgrade multiplayer" method="_on_pressed"]

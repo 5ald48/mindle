@@ -3,14 +3,15 @@
 [ext_resource type="PackedScene" uid="uid://byyj4f8f8bxpy" path="res://scenes/2resource.tscn" id="1_nqw6y"]
 [ext_resource type="Script" uid="uid://c075oy7ch2haw" path="res://scripts/3_resources.gd" id="2_c1wkj"]
 [ext_resource type="Texture2D" uid="uid://dpbxbh3kws16f" path="res://textures/items/item585.png" id="3_ljko6"]
+[ext_resource type="Texture2D" uid="uid://vbru5svb4u5k" path="res://textures/my art/MAIN SPRITE-513x80-13x16.png" id="4_da1lo"]
 
 [node name="Node2D" unique_id=402219238 instance=ExtResource("1_nqw6y")]
 script = ExtResource("2_c1wkj")
 resource_used3 = ""
+unolock_cost3 = 0.0
 
-[node name="max_upgrade" parent="Sprite2D2" parent_id_path=PackedInt32Array(793220251) index="4" unique_id=442341910]
-offset_left = 62.0
-offset_right = 94.0
+[node name="tweens" parent="." index="0" unique_id=1105474457]
+position = Vector2(93, -5.0000005)
 
 [node name="cost label" parent="cost" parent_id_path=PackedInt32Array(2045267571) index="0" unique_id=1304685655]
 offset_left = -8.0
@@ -35,3 +36,26 @@ scale = Vector2(0.2, 0.2)
 position = Vector2(3.9999995, -1.3333333)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("3_ljko6")
+
+[node name="Sprite2D3" type="Sprite2D" parent="unlock/Control/Sprite2D2" parent_id_path=PackedInt32Array(172605269) index="3" unique_id=604610510]
+position = Vector2(11, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_ljko6")
+
+[node name="Control2" type="Control" parent="unlock" parent_id_path=PackedInt32Array(578679110) index="3" unique_id=1758217480]
+layout_mode = 3
+anchors_preset = 0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="unlock" type="TextureButton" parent="unlock/Control2" index="0" unique_id=1738964400]
+layout_mode = 0
+offset_left = -12.0
+offset_top = -9.500001
+offset_right = 12.0
+offset_bottom = 10.500001
+scale = Vector2(0.75, 0.75)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture_normal = ExtResource("4_da1lo")
+stretch_mode = 3
+
+[connection signal="pressed" from="unlock/Control2/unlock" to="." method="_on_unlock_pressed"]

@@ -13,6 +13,7 @@
 script = ExtResource("1_sneai")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1012002039]
+position = Vector2(0, 112.405)
 anchor_mode = 0
 script = ExtResource("1_d2vo2")
 

@@ -14,3 +14,6 @@ visible = false
 
 [node name="Sprite2D" parent="." index="3" unique_id=1782240966]
 position = Vector2(-82, 0)
+
+[node name="unlock" parent="." index="4" unique_id=578679110]
+visible = false

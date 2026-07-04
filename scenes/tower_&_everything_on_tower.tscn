@@ -34,40 +34,65 @@ position = Vector2(160, 412)
 
 [node name="iron ingot" parent="." unique_id=1765041984 instance=ExtResource("2_4txet")]
 position = Vector2(160, 172)
+unlocked_lock = null
+unolock_cost1 = 100.0
 
 [node name="pickaxe" parent="." unique_id=1632089896 instance=ExtResource("6_2tv1d")]
 position = Vector2(160, 268)
 
 [node name="copper_ingot" parent="." unique_id=1931176546 instance=ExtResource("7_qy3gr")]
-position = Vector2(160, 139)
+position = Vector2(160, 140)
+unlocked_lock = null
+unolock_cost1 = 100.0
 
 [node name="gold_ingot" parent="." unique_id=2097854766 instance=ExtResource("8_o1qpx")]
-position = Vector2(160, 43)
+position = Vector2(160, 44)
+unlocked_lock = null
+unolock_cost1 = 100.0
 
 [node name="iron screw" parent="." unique_id=2129017914 instance=ExtResource("9_owwnw")]
-position = Vector2(160, 107)
+position = Vector2(160, 124)
+unlocked_lock = null
+unolock_cost1 = 80.0
 
 [node name="iron plate" parent="." unique_id=1808151251 instance=ExtResource("10_st4r7")]
-position = Vector2(160, 91)
+position = Vector2(160, 92)
+unlocked_lock = null
 
 [node name="copper wire" parent="." unique_id=2077882649 instance=ExtResource("11_w4dkq")]
-position = Vector2(160, 75)
+position = Vector2(160, 76)
+unlocked_lock = null
+unolock_cost1 = 50.0
 
 [node name="steel_ingot" parent="." unique_id=808150511 instance=ExtResource("12_st4r7")]
-position = Vector2(160, 123)
+position = Vector2(160, 108)
+unlocked_lock = null
+unolock_cost1 = 100.0
+unolock_cost2 = 400.0
 
 [node name="sand" parent="." unique_id=1173812099 instance=ExtResource("13_e0plp")]
 position = Vector2(160, 204)
 
 [node name="glass" parent="." unique_id=1617562335 instance=ExtResource("14_w4o2p")]
-position = Vector2(160, 155)
+position = Vector2(160, 156)
+unlocked_lock = null
+unolock_cost1 = 300.0
 
 [node name="steel gear" parent="." unique_id=1508004114 instance=ExtResource("15_3rh7w")]
-position = Vector2(160, 59)
+position = Vector2(160, 60)
+unlocked_lock = null
+unolock_cost1 = 100.0
+unolock_cost2 = 400.0
 
 [node name="gold wire" parent="." unique_id=2106831370 instance=ExtResource("16_y2yhy")]
-position = Vector2(160, 27)
+position = Vector2(160, 28)
+unlocked_lock = null
 resource_used1 = "gold_ingot"
+unolock_cost1 = 100.0
 
 [node name="circuit_board" parent="." unique_id=1446845327 instance=ExtResource("17_w4o2p")]
-position = Vector2(160, 11)
+position = Vector2(160, 12)
+unlocked_lock = null
+unolock_cost1 = 200.0
+unolock_cost2 = 70.0
+unolock_cost3 = 100.0

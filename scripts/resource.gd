@@ -2,18 +2,33 @@ extends Node2D
 
 @export var texture_on: Texture2D
 @export var texture_off: Texture2D
+@export var unlocked_lock: Texture2D
 @export var resource_name: String  
 @export var resource_used1: String 
+@export var unolock_cost1 : float
+@onready var unlock_node : Node = $unlock
+@onready var upgrade_arrow : Node = $"Sprite2D2/miner upgrade/upgrade_arrow"
+@onready var collecting_button : Node = $Sprite2D2/resource
 
 var tween : Tween
-var upgrade_arrow : Node
+
 
 func _ready() -> void:
 	
 	#cost of item text
 	$"cost/cost label".text = " " + str(Gamedata.get(resource_name + "_cost1")) + " "
 	
-	upgrade_arrow = $"Sprite2D2/miner upgrade/upgrade_arrow"
+	$"unlock/Control/Sprite2D2/unlock_cost".text = "     "  +  str(int(unolock_cost1))
+
+	if Gamedata.get(resource_name + "_miner_unlocked") == true and unlock_node.visible:
+		unlock_node.hide()
+
+
+	collecting_button.hide()
+
+	if Gamedata.get(resource_name + "_miner_unlocked") == true and not collecting_button.visible:
+		collecting_button.show()
+
 
 func _process(delta: float) -> void:
 	
@@ -48,11 +63,11 @@ func _process(delta: float) -> void:
 	
 	
 	#upgrade sympol tween
-	if Gamedata.get(resource_name).is_greater_than_or_equal_to(Gamedata.get(resource_name + "_miner_upgrade_cost")):
-		if tween: tween.kill()
-		tween = create_tween()
-		tween.tween_property(upgrade_arrow,"position:y",-0.5,0.1).as_relative()
-		tween.tween_property(upgrade_arrow,"position:y",0.0,0.1).as_relative()
+	#if Gamedata.get(resource_name).is_greater_than_or_equal_to(Gamedata.get(resource_name + "_miner_upgrade_cost")):
+		#if tween: tween.kill()
+		#tween = create_tween()
+		#tween.tween_property(upgrade_arrow,"position:y",-0.5,0.1).as_relative()
+		#tween.tween_property(upgrade_arrow,"position:y",0.0,0.1).as_relative()
 
 
 
@@ -101,3 +116,19 @@ func _on_max_upgrade_pressed() -> void:
 				Gamedata.get(resource_name + "_per_sec").multiply_equals(Gamedata.per_sec_multiplier)
 			
 			else : break
+
+
+
+
+
+
+func _on_unlock_pressed() -> void:
+	if Gamedata.get(resource_used1).is_greater_than_or_equal_to(unolock_cost1):
+		collecting_button.show()
+		Gamedata.get(resource_used1).minus_equals(unolock_cost1)
+		Gamedata.set(resource_name + "_miner_unlocked", true)
+		$unlock.hide()
+		
+		
+		
+		

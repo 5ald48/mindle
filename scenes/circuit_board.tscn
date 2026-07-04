@@ -23,7 +23,6 @@ text = "  1      1     1
  "
 
 [node name="Sprite2D" parent="cost" parent_id_path=PackedInt32Array(2045267571) index="2" unique_id=472337601]
-position = Vector2(-16, -1.3333334)
 texture = ExtResource("2_8tabf")
 
 [node name="Sprite2D2" parent="cost" parent_id_path=PackedInt32Array(2045267571) index="3" unique_id=1355008196]
@@ -37,3 +36,12 @@ texture = ExtResource("4_ldy8g")
 
 [node name="Sprite2D" parent="Sprite2D" parent_id_path=PackedInt32Array(1782240966) index="1" unique_id=1493321838]
 texture = ExtResource("2_8tabf")
+
+[node name="Sprite2D" parent="unlock/Control/Sprite2D2" parent_id_path=PackedInt32Array(172605269) index="1" unique_id=1376066182]
+texture = ExtResource("2_wo1iu")
+
+[node name="Sprite2D2" parent="unlock/Control/Sprite2D2" parent_id_path=PackedInt32Array(172605269) index="2" unique_id=231730504]
+texture = ExtResource("3_8tabf")
+
+[node name="Sprite2D3" parent="unlock/Control/Sprite2D2" parent_id_path=PackedInt32Array(172605269) index="3" unique_id=604610510]
+texture = ExtResource("4_ldy8g")

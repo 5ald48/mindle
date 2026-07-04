@@ -7,6 +7,7 @@
 [node name="Node2D" unique_id=402219238 instance=ExtResource("1_3j4bq")]
 resource_name = "iron_plate"
 resource_used1 = "iron_ingot"
+unolock_cost1 = 100.0
 
 [node name="resource" parent="Sprite2D2" parent_id_path=PackedInt32Array(793220251) index="2" unique_id=451976459]
 texture_normal = ExtResource("2_5hwxg")
@@ -22,3 +23,6 @@ texture = ExtResource("3_covt5")
 
 [node name="Sprite2D" parent="Sprite2D" parent_id_path=PackedInt32Array(1782240966) index="1" unique_id=1493321838]
 texture = ExtResource("2_5hwxg")
+
+[node name="Sprite2D" parent="unlock/Control/Sprite2D2" parent_id_path=PackedInt32Array(172605269) index="1" unique_id=1376066182]
+texture = ExtResource("3_covt5")
