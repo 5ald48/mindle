@@ -113,4 +113,46 @@ func _on_unlock_pressed() -> void:
 		Gamedata.get(resource_used1).minus_equals(unolock_cost1)
 		Gamedata.get(resource_used2).minus_equals(unolock_cost2)
 		Gamedata.set(resource_name + "_miner_unlocked", true)
+
+		$unlock/unlock.texture_normal = unlocked_lock
+		
+		var tween: Tween = create_tween()
+		
+		
+		# the lock
+		tween.set_trans(Tween.TRANS_CIRC)
+		tween.set_ease(Tween.EASE_OUT)
+		tween.tween_property($unlock/unlock, "position", Vector2(20,-20),0.4).as_relative()
+		tween.parallel().tween_property($unlock/unlock, "rotation_degrees", 45.0,0.4).as_relative()
+		
+		#the lock fallen
+		tween.set_trans(Tween.TRANS_CIRC)
+		tween.set_ease(Tween.EASE_IN)
+		tween.tween_property($unlock/unlock, "position", Vector2(300,1000),0.5).as_relative()
+		tween.parallel().tween_property($unlock/unlock, "rotation_degrees", 180.0,0.2).as_relative()
+		
+		
+		
+		#lock mrb3
+		tween.set_trans(Tween.TRANS_BOUNCE)
+		tween.set_ease(Tween.EASE_OUT)
+		tween.parallel().tween_property($unlock/Control, "modulate:a", 0.0,1.5)
+		
+		
+		#chain left
+		tween.set_trans(Tween.TRANS_BOUNCE)
+		tween.set_ease(Tween.EASE_OUT)
+		tween.parallel().tween_property($unlock/Control3_left, "rotation_degrees", 90.0,1.5).as_relative()
+		tween.parallel().tween_property($unlock/Control3_left, "modulate:a", 0.0,1.5)
+		
+		#chain right
+		tween.set_trans(Tween.TRANS_BOUNCE)
+		tween.set_ease(Tween.EASE_OUT)
+		tween.parallel().tween_property($unlock/Control4_right, "rotation_degrees", -90.0,1.5).as_relative()
+		tween.parallel().tween_property($unlock/Control4_right, "modulate:a", 0.0,1.5)
+		
+		
+		
+		
+		await tween.finished
 		$unlock.hide()

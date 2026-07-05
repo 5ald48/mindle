@@ -181,13 +181,13 @@ texture = ExtResource("6_n42d4")
 layout_mode = 3
 anchors_preset = 0
 
-[node name="Sprite2D" type="Sprite2D" parent="unlock/Control" unique_id=424447985]
+[node name="lock_squar" type="Sprite2D" parent="unlock/Control" unique_id=424447985]
 position = Vector2(0, 0.5)
 scale = Vector2(1, 1.0625)
 texture = ExtResource("13_8e877")
 
 [node name="Sprite2D2" type="Sprite2D" parent="unlock/Control" unique_id=172605269]
-z_index = 1
+z_index = 2
 position = Vector2(-119, 0)
 texture = ExtResource("9_ofw20")
 
@@ -207,25 +207,28 @@ position = Vector2(-14, 0)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("6_n42d4")
 
-[node name="Control3" type="Control" parent="unlock" unique_id=398307156]
+[node name="Control3_left" type="Control" parent="unlock" unique_id=398307156]
 layout_mode = 3
 anchors_preset = 0
 pivot_offset = Vector2(-139.68, 0)
 
-[node name="Sprite2D3" type="Sprite2D" parent="unlock/Control3" unique_id=1413426372]
+[node name="chain_left" type="Sprite2D" parent="unlock/Control3_left" unique_id=1413426372]
+z_index = 1
 position = Vector2(-71, 1)
 texture = ExtResource("14_vlwkx")
 
-[node name="Control4" type="Control" parent="unlock" unique_id=1466821330]
+[node name="Control4_right" type="Control" parent="unlock" unique_id=1466821330]
 layout_mode = 3
 anchors_preset = 0
 pivot_offset = Vector2(139.75, 0)
 
-[node name="Sprite2D4" type="Sprite2D" parent="unlock/Control4" unique_id=841843215]
+[node name="chain_right" type="Sprite2D" parent="unlock/Control4_right" unique_id=841843215]
+z_index = 1
 position = Vector2(71, 1)
 texture = ExtResource("15_6vn0h")
 
 [node name="unlock" type="TextureButton" parent="unlock" unique_id=1738964400]
+z_index = 2
 offset_left = -11.999999
 offset_top = -9.999999
 offset_right = 12.000001
@@ -233,6 +236,7 @@ offset_bottom = 10.000001
 scale = Vector2(0.75, 0.75)
 pivot_offset_ratio = Vector2(0.5, 0.5)
 texture_normal = ExtResource("16_o5w4e")
+ignore_texture_size = true
 stretch_mode = 3
 
 [connection signal="pressed" from="Sprite2D2/on off" to="." method="_on_on_off_pressed"]
