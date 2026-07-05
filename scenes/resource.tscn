@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cla0y0sos1f1e" path="res://textures/my art/MAIN SPRITE-529x77-13x19.png" id="4_6vn0h"]
 [ext_resource type="Script" uid="uid://dtd2fey4kvcjo" path="res://scripts/resource_tween.gd" id="4_n42d4"]
 [ext_resource type="Texture2D" uid="uid://clkmwc3ynindm" path="res://textures/my art/MAIN SPRITEd-64x192-288x16.png" id="4_oukxn"]
+[ext_resource type="Texture2D" uid="uid://brkmkkoxxcg2t" path="res://textures/my art/GEAR.png" id="5_o5w4e"]
 [ext_resource type="Texture2D" uid="uid://dpbxbh3kws16f" path="res://textures/items/item585.png" id="6_n42d4"]
 [ext_resource type="Texture2D" uid="uid://ceck3dlnrpjlf" path="res://textures/my art/MAIN SPRITE-304x224-32x16.png" id="6_oukxn"]
 [ext_resource type="Texture2D" uid="uid://cp0lltgtcfiky" path="res://textures/my art/MAIN SPRITE-304x240-48x16.png" id="6_qn0gw"]
@@ -23,6 +24,16 @@ script = ExtResource("1_3rbbe")
 texture_on = ExtResource("2_o1pcp")
 texture_off = ExtResource("7_8e877")
 unlocked_lock = ExtResource("4_6vn0h")
+
+[node name="Control" type="Control" parent="." unique_id=253785064]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 144.0
+offset_right = 144.0
+
+[node name="gear" type="Sprite2D" parent="Control" unique_id=1541749464]
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("5_o5w4e")
 
 [node name="tweens" type="Node2D" parent="." unique_id=1105474457]
 scale = Vector2(0.75, 0.75)

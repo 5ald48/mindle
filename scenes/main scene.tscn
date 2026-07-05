@@ -25,4 +25,5 @@ script = ExtResource("1_d2vo2")
 
 [node name="tutorial" parent="." unique_id=1468054677 instance=ExtResource("6_esn7u")]
 visible = false
+z_index = 100
 position = Vector2(304, 140)

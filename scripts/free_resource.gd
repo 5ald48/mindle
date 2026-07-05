@@ -3,8 +3,12 @@ extends Node2D
 @export var texture_on: Texture2D
 @export var texture_off: Texture2D
 @export var resource_name: String
+@onready var upgrade_arrow : Node = $"Sprite2D2/miner upgrade/upgrade_arrow"
+@onready var gear: Sprite2D = $Control/gear
 
-
+var tween_running : bool = false
+var gear_tween_running : bool = false
+var tween : Tween 
 
 
 
@@ -29,6 +33,47 @@ func _process(delta: float) -> void:
 		Gamedata.get(resource_name).plus_equals(Gamedata.get(resource_name + "_per_sec").multiply(delta))
 		
 	$"Sprite2D/per sec".text = " " + Gamedata.get(resource_name + "_per_sec").to_metric_name(false) + "/s "
+	
+	
+	#upgrade sympol tween
+	if Gamedata.get(resource_name).is_greater_than_or_equal_to(Gamedata.get(resource_name + "_miner_upgrade_cost")) and tween_running == false:
+		
+		tween_running = true
+		
+		
+		if tween: tween.kill()
+		tween = create_tween()
+		
+		tween.set_trans(Tween.TRANS_BOUNCE)
+		tween.set_ease(Tween.EASE_OUT)
+		tween.tween_property(upgrade_arrow,"position:y",-2,0.5).as_relative()
+		tween.tween_property(upgrade_arrow,"position:y",2,0.5).as_relative()
+		
+		
+		await tween.finished 
+		tween_running = false
+
+
+
+#gear tween
+	if Gamedata.get(resource_name + "_miner_on_off") == true and gear_tween_running == false:
+		
+		gear_tween_running = true
+		
+		
+		if tween: tween.kill()
+		tween = create_tween()
+		
+		
+		tween.tween_property(gear,"rotation",1,0.1).as_relative()
+
+		
+		
+		await tween.finished 
+		gear_tween_running = false
+
+
+
 
 
 #miner upgrade func
