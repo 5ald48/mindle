@@ -15,6 +15,7 @@ extends Node2D
 var tween_running : bool = false
 var gear_tween_running : bool = false
 var tween : Tween 
+var gear_tween : Tween
 
 
 
@@ -89,22 +90,23 @@ func _process(delta: float) -> void:
 		tween_running = false
 
 
-	#gear tween
+#gear tween
 	if Gamedata.get(resource_name + "_miner_on_off") == true and gear_tween_running == false:
 		
 		gear_tween_running = true
 		
 		
-		if tween: tween.kill()
-		tween = create_tween()
+		if gear_tween: gear_tween.kill()
+		gear_tween = create_tween()
 		
 		
-		tween.tween_property(gear,"rotation",1,0.1).as_relative()
+		gear_tween.tween_property(gear,"rotation",1,0.1).as_relative()
 
 		
 		
-		await tween.finished 
+		await gear_tween.finished 
 		gear_tween_running = false
+
 
 
 

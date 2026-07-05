@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cla0y0sos1f1e" path="res://textures/my art/MAIN SPRITE-529x77-13x19.png" id="4_6vn0h"]
 [ext_resource type="Script" uid="uid://dtd2fey4kvcjo" path="res://scripts/resource_tween.gd" id="4_n42d4"]
 [ext_resource type="Texture2D" uid="uid://clkmwc3ynindm" path="res://textures/my art/MAIN SPRITEd-64x192-288x16.png" id="4_oukxn"]
-[ext_resource type="Texture2D" uid="uid://brkmkkoxxcg2t" path="res://textures/my art/GEAR.png" id="5_o5w4e"]
+[ext_resource type="Texture2D" uid="uid://c2h0g4hukaay7" path="res://textures/my art/MAIN SPRITE-96x0-16x16.png" id="5_o5w4e"]
 [ext_resource type="Texture2D" uid="uid://dpbxbh3kws16f" path="res://textures/items/item585.png" id="6_n42d4"]
 [ext_resource type="Texture2D" uid="uid://ceck3dlnrpjlf" path="res://textures/my art/MAIN SPRITE-304x224-32x16.png" id="6_oukxn"]
 [ext_resource type="Texture2D" uid="uid://cp0lltgtcfiky" path="res://textures/my art/MAIN SPRITE-304x240-48x16.png" id="6_qn0gw"]
@@ -32,6 +32,7 @@ offset_left = 144.0
 offset_right = 144.0
 
 [node name="gear" type="Sprite2D" parent="Control" unique_id=1541749464]
+position = Vector2(0, 1)
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("5_o5w4e")
 
