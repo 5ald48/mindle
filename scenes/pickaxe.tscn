@@ -123,7 +123,7 @@ func _on_pressed() -> void:
 		Gamedata.pristage_coin.minus_equals(Gamedata.per_sec_multiplier_cost)
 		Gamedata.per_sec_multiplier.multiply_equals(Gamedata.per_sec_multiplier_multiplier)
 		Gamedata.per_sec_multiplier_cost.multiply_equals(Gamedata.per_sec_multiplier_cost_multiplier)
-		$\"../spritee/RichTextLabel\".text = \" upgrade multiplyer = \" + Gamedata.per_sec_multiplier.to_metric_name(false) + \" \"
+		$\"../spritee/RichTextLabel\".text = \" upgrade  multiplyer  \\n     =          \" + Gamedata.per_sec_multiplier.to_metric_name(false) + \" \"
 		$RichTextLabel2.text = \" \" + Gamedata.per_sec_multiplier_cost.to_metric_name(true) + \" \"
 "
 

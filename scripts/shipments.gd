@@ -1,5 +1,7 @@
 extends Control
 
+
+
 #textures vars
 @export var coin_texture : Texture2D
 @export var iron_texture : Texture2D
@@ -38,6 +40,8 @@ var full_coin_gain : BigNumber
 #just the first random resoures shipment
 func _ready() -> void:
 	
+	add_to_group("shipments")
+	
 	
 	resource_name1  = random_resource_pick()
 	resource_shipment_cost1  =  shipment_cost(resource_name1)
@@ -53,6 +57,19 @@ func _ready() -> void:
 	
 	
 
+func shipment_reset():
+	
+	resource_name1  = random_resource_pick()
+	resource_shipment_cost1  =  shipment_cost(resource_name1)
+	
+	resource_name2  = random_resource_pick()
+	resource_shipment_cost2  =  shipment_cost(resource_name2)
+	
+	resource_name3  = random_resource_pick()
+	resource_shipment_cost3  =  shipment_cost(resource_name3)
+	
+	how_many_resources = randi_range(1 , 3)
+	shipment_choice()
 
 
 #shipment resourses icon

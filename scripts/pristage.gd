@@ -12,7 +12,7 @@ func prestage_gain() -> BigNumber:
 		var product: BigNumber = amount.multiply(value)
 		total_prestage_gain.plus_equals(product)
 	
-	
+	total_prestage_gain.plus_equals(Gamedata.coin)
 	total_prestage_gain.divide_equals(Gamedata.resource_array.size())
 	
 	
@@ -32,5 +32,5 @@ func _on_pressed() -> void:
 	if Gamedata.coin.is_greater_than_or_equal_to(Gamedata.pristage_cost):
 		Gamedata.pristage_coin.plus_equals(prestage_gain())
 		Gamedata.pristage_lvl.plus_equals(1)
-		
 		Gamedata.reset()
+		get_tree().call_group("shipments", "shipment_reset")
