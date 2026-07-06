@@ -34,13 +34,15 @@ func _ready() -> void:
 	$"unlock/Control/Sprite2D2/unlock_cost".text = "     "  +  str(int(unolock_cost1))
 	
 	
-
+	collecting_button.hide()
 
 	if Gamedata.get(resource_name + "_miner_unlocked") == true and unlock_node.visible:
 		unlock_node.hide()
 
+	if Gamedata.pristage_lvl.is_greater_than_or_equal_to(1) and unlock_node.visible:
+		unlock_node.hide()
+		collecting_button.show()
 
-	collecting_button.hide()
 
 	if Gamedata.get(resource_name + "_miner_unlocked") == true and not collecting_button.visible:
 		collecting_button.show()

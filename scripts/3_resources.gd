@@ -40,7 +40,9 @@ func _ready() -> void:
 	if Gamedata.get(resource_name + "_miner_unlocked") == true and not collecting_button.visible:
 		collecting_button.show()
 
-
+	if Gamedata.pristage_lvl.is_greater_than_or_equal_to(1) and unlock_node.visible:
+		unlock_node.hide()
+		collecting_button.show()
 
 
 func _process(delta: float) -> void:
