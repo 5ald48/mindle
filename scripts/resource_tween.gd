@@ -5,6 +5,7 @@ extends Node2D
 @onready var btn_max_upgrade : Node = $"../Sprite2D2/max_upgrade"
 @onready var btn_resource : Node = $"../Sprite2D2/resource"
 @onready var btn_unlock_button : Node = $"../unlock/unlock"
+@onready var btn_on_off: TextureButton = $"../Sprite2D2/on off"
 
 
 # Called when the node enters the scene tree for the first time.
@@ -30,9 +31,16 @@ func _process(_delta: float) -> void:
 		current_tween = create_tween()
 		current_tween.tween_property(btn_resource,"scale",Vector2(0.5 ,0.5),0.1)
 
+#lock button
 	if not btn_unlock_button.is_hovered():
 		current_tween = create_tween()
 		current_tween.tween_property(btn_unlock_button,"scale",Vector2(0.75 ,0.75),0.1)
+
+#on off button
+	if not btn_on_off.is_hovered():
+		current_tween = create_tween()
+		current_tween.tween_property(btn_on_off,"scale",Vector2(0.75 ,0.75),0.1)
+
 
 
 #miner upgrade hover start
@@ -101,3 +109,16 @@ func _on_unlock_pressed() -> void:
 	current_tween = create_tween()
 	current_tween.tween_property(btn_unlock_button,"scale",Vector2(0.9 ,0.6),0.1)
 	current_tween.tween_property(btn_unlock_button,"scale",Vector2(1.0 ,1.0),0.1)
+
+
+func _on_on_off_mouse_entered() -> void:
+	if current_tween: current_tween.kill()
+	current_tween = create_tween()
+	current_tween.tween_property(btn_on_off,"scale",Vector2(1.0 ,1.0),0.1)
+
+
+func _on_on_off_pressed() -> void:
+	if current_tween: current_tween.kill()
+	current_tween = create_tween()
+	current_tween.tween_property(btn_on_off,"scale",Vector2(0.9 ,0.6),0.1)
+	current_tween.tween_property(btn_on_off,"scale",Vector2(1.0 ,1.0),0.1)

@@ -2,7 +2,7 @@ extends Node
 
 func _ready() -> void:
 	pass
-	#load_game()
+	load_game()
 	
 	
 

@@ -5,11 +5,16 @@ extends Node2D
 @export var resource_name: String
 @onready var upgrade_arrow : Node = $"Sprite2D2/miner upgrade/upgrade_arrow"
 @onready var gear: Sprite2D = $Control/gear
+@onready var resource_clickble: TextureButton = $Sprite2D2/resource
 
 var tween_running : bool = false
 var gear_tween_running : bool = false
+var upgrade_arrow_tween_running : bool = false
+
 var tween : Tween 
 var gear_tween : Tween 
+var upgrade_arrow_tween : Tween 
+var floating_click_text_tween : Tween
 
 
 
@@ -37,22 +42,22 @@ func _process(delta: float) -> void:
 	
 	
 	#upgrade sympol tween
-	if Gamedata.get(resource_name).is_greater_than_or_equal_to(Gamedata.get(resource_name + "_miner_upgrade_cost")) and tween_running == false:
+	if Gamedata.get(resource_name + "").is_greater_than_or_equal_to(Gamedata.get(resource_name + "_miner_upgrade_cost")) and upgrade_arrow_tween_running == false:
 		
-		tween_running = true
-		
-		
-		if tween: tween.kill()
-		tween = create_tween()
-		
-		tween.set_trans(Tween.TRANS_BOUNCE)
-		tween.set_ease(Tween.EASE_OUT)
-		tween.tween_property(upgrade_arrow,"position:y",-2,0.5).as_relative()
-		tween.tween_property(upgrade_arrow,"position:y",2,0.5).as_relative()
+		upgrade_arrow_tween_running = true
 		
 		
-		await tween.finished 
-		tween_running = false
+		if upgrade_arrow_tween: upgrade_arrow_tween.kill()
+		upgrade_arrow_tween = create_tween()
+		
+		upgrade_arrow_tween.set_trans(Tween.TRANS_BOUNCE)
+		upgrade_arrow_tween.set_ease(Tween.EASE_OUT)
+		upgrade_arrow_tween.tween_property(upgrade_arrow,"position:y",-2,0.5).as_relative()
+		upgrade_arrow_tween.tween_property(upgrade_arrow,"position:y",2,0.5).as_relative()
+		
+		
+		await upgrade_arrow_tween.finished 
+		upgrade_arrow_tween_running = false
 
 
 
@@ -100,6 +105,44 @@ func _on_on_off_pressed() -> void:
 func _on_resource_pressed() -> void:
 	if Gamedata.pickaxe_level >= Gamedata.get(resource_name + "_pickaxe_level_req"):
 		Gamedata.get(resource_name).plus_equals(Gamedata.pickaxe_click_multiplier)
+		
+		
+		
+		var rich_label = RichTextLabel.new()
+		
+		var x = randf_range(-5.0,10.0)
+		var y = randf_range(-5.0,10.0)
+		
+		rich_label.text = "[rainbow] +" + str(Gamedata.pickaxe_click_multiplier) 
+		rich_label.bbcode_enabled = true
+		rich_label.z_index = 1000
+		rich_label.position =Vector2(x,y)
+		rich_label.size = Vector2(16,16)
+		rich_label.scale = Vector2(0.5,0.5)
+		rich_label.fit_content = true
+		rich_label.autowrap_mode = TextServer.AUTOWRAP_OFF
+		rich_label.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		
+		
+
+		
+		resource_clickble.add_child(rich_label)
+		
+		
+		
+		
+		floating_click_text_tween = create_tween()
+		floating_click_text_tween.set_trans(Tween.TRANS_CUBIC)
+		
+		floating_click_text_tween.tween_property(rich_label,"position:y",-20.0,1.0).as_relative()
+		floating_click_text_tween.parallel().tween_property(rich_label,"modulate:a",0.0,1.0)
+		
+		
+		
+		
+		floating_click_text_tween.tween_callback(rich_label.queue_free)
+
+
 
 
 #the max upgrade botton func

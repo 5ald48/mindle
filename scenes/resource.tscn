@@ -58,11 +58,12 @@ fit_content = true
 autowrap_mode = 0
 
 [node name="on off" type="TextureButton" parent="Sprite2D2" unique_id=727703705]
-offset_left = 129.0
-offset_top = -6.0
-offset_right = 145.0
-offset_bottom = 10.0
+offset_left = 127.0
+offset_top = -8.0
+offset_right = 143.0
+offset_bottom = 8.0
 scale = Vector2(0.75, 0.75)
+pivot_offset_ratio = Vector2(0.5, 0.5)
 texture_normal = ExtResource("7_8e877")
 
 [node name="resource" type="TextureButton" parent="Sprite2D2" unique_id=451976459]
@@ -251,7 +252,9 @@ texture_normal = ExtResource("16_o5w4e")
 ignore_texture_size = true
 stretch_mode = 3
 
+[connection signal="mouse_entered" from="Sprite2D2/on off" to="tweens" method="_on_on_off_mouse_entered"]
 [connection signal="pressed" from="Sprite2D2/on off" to="." method="_on_on_off_pressed"]
+[connection signal="pressed" from="Sprite2D2/on off" to="tweens" method="_on_on_off_pressed"]
 [connection signal="mouse_entered" from="Sprite2D2/resource" to="tweens" method="_on_resource_mouse_entered"]
 [connection signal="mouse_exited" from="Sprite2D2/resource" to="tweens" method="_on_resource_mouse_exited"]
 [connection signal="pressed" from="Sprite2D2/resource" to="." method="_on_resource_pressed"]
