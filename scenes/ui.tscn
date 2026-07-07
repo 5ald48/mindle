@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://db40xavlkt8ln"]
 
-[ext_resource type="Texture2D" uid="uid://dsqfpxmy8yfoh" path="res://textures/my art/MAIN SPRITE-304x256-48x16.png" id="1_cgfq5"]
 [ext_resource type="FontFile" uid="uid://c24bc2hmt208c" path="res://font/Jersey10-Regular.ttf" id="1_ktti3"]
 [ext_resource type="Script" uid="uid://d2flmddlousyx" path="res://scripts/coins.gd" id="1_p7vwb"]
+[ext_resource type="Texture2D" uid="uid://dod2fa7sv5k20" path="res://textures/my art/MAIN SPRITE-272x272-80x16.png" id="1_vdcm2"]
 [ext_resource type="Texture2D" uid="uid://mpyqfjdnheft" path="res://textures/my art/MAIN SPRITE-32x0-16x16.png" id="3_yev5y"]
 [ext_resource type="Script" uid="uid://cff4tani5ckwo" path="res://scripts/pristage.gd" id="5_8dubc"]
 [ext_resource type="Texture2D" uid="uid://ceck3dlnrpjlf" path="res://textures/my art/MAIN SPRITE-304x224-32x16.png" id="6_ktti3"]
@@ -93,6 +93,26 @@ func _process(_delta: float) -> void:
 	$\".\".text = \" pristage  lvl  \" + Gamedata.pristage_lvl.to_metric_name(true)
 "
 
+[sub_resource type="GDScript" id="GDScript_qr0ht"]
+script/source = "extends TextureButton
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta: float) -> void:
+	pass
+
+
+func _on_pressed() -> void:
+	if Gamedata.coin.is_greater_than_or_equal_to(Gamedata.the_universe_cost):
+		Gamedata.own_the_universe = true
+		print(Gamedata.own_the_universe)
+"
+
 [sub_resource type="GDScript" id="GDScript_p7vwb"]
 script/source = "extends TextureButton
 
@@ -156,14 +176,14 @@ scale = Vector2(0.2, 0.2)
 transform = Transform2D(0.2, 0, 0, 0.2, 0, 0)
 
 [node name="MainSprite304x25648x17" type="Sprite2D" parent="." unique_id=1474765934]
-position = Vector2(345, 35)
+position = Vector2(595, 40)
 scale = Vector2(5, 5)
-texture = ExtResource("1_cgfq5")
+texture = ExtResource("1_vdcm2")
 
 [node name="pristage coin" type="RichTextLabel" parent="MainSprite304x25648x17" unique_id=1501325536]
-offset_left = -12.499992
+offset_left = -27.000008
 offset_top = -5.0
-offset_right = 69.50001
+offset_right = 54.999992
 offset_bottom = 31.0
 scale = Vector2(0.3, 0.3)
 theme_override_fonts/normal_font = ExtResource("1_ktti3")
@@ -174,19 +194,19 @@ autowrap_mode = 0
 script = SubResource("GDScript_8dubc")
 
 [node name="Sprite2D2" type="Sprite2D" parent="MainSprite304x25648x17" unique_id=1912809903]
-position = Vector2(-14.99999, 2.3841903e-07)
+position = Vector2(-31.000006, 2.3841903e-07)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("8_ktti3")
 
 [node name="MainSprite304x25648x16" type="Sprite2D" parent="." unique_id=412632247]
-position = Vector2(115, 35)
+position = Vector2(200, 40)
 scale = Vector2(5, 5)
-texture = ExtResource("1_cgfq5")
+texture = ExtResource("1_vdcm2")
 
 [node name="coins2" type="RichTextLabel" parent="MainSprite304x25648x16" unique_id=409305553]
-offset_left = -12.5
+offset_left = -27.0
 offset_top = -5.0
-offset_right = 66.16667
+offset_right = 56.66667
 offset_bottom = 31.0
 scale = Vector2(0.3, 0.3)
 theme_override_fonts/normal_font = ExtResource("1_ktti3")
@@ -198,7 +218,7 @@ autowrap_mode = 0
 script = ExtResource("1_p7vwb")
 
 [node name="Sprite2D" type="Sprite2D" parent="MainSprite304x25648x16" unique_id=356323573]
-position = Vector2(-14.999998, -2.3841858e-07)
+position = Vector2(-31, -2.3841858e-07)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_yev5y")
 
@@ -320,7 +340,7 @@ script = SubResource("GDScript_bhunq")
 [node name="Button3" type="Button" parent="Control/HBoxContainer" unique_id=92520544]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "options"
+text = "end goal"
 script = SubResource("GDScript_riqys")
 
 [node name="Panel" type="Panel" parent="Control/HBoxContainer/Button3" unique_id=332396862]
@@ -330,17 +350,99 @@ offset_top = -484.99997
 offset_right = 529.9999
 theme_override_styles/panel = SubResource("StyleBoxFlat_8dubc")
 
-[node name="load" type="TextureButton" parent="Control/HBoxContainer/Button3/Panel" unique_id=1604111801]
+[node name="Sprite2D" type="Sprite2D" parent="Control/HBoxContainer/Button3/Panel" unique_id=1019039357]
+position = Vector2(260.99994, 170.00003)
+scale = Vector2(10, 10)
+texture = ExtResource("8_vdcm2")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/HBoxContainer/Button3/Panel" unique_id=1201015652]
 layout_mode = 0
-offset_left = 175.99997
-offset_top = 74.99997
-offset_right = 207.99997
-offset_bottom = 90.99997
+offset_left = 0.9999695
+offset_top = 60.000015
+offset_right = 395.99997
+offset_bottom = 155.00002
+scale = Vector2(1.3, 1.3)
+text = "your end goal is to buy the universe
+but the universe cost this much money ( 10               )  
+which is a  1  with  9,999,999,999  zero
+
+
+
+
+after you buy the universe you will get new powers"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/HBoxContainer/Button3/Panel/RichTextLabel" unique_id=2090712054]
+layout_mode = 0
+offset_left = 289.99997
+offset_top = 19.999998
+offset_right = 422.99997
+offset_bottom = 60.0
+scale = Vector2(0.5, 0.5)
+text = " 9999999999"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Sprite2D2" type="Sprite2D" parent="Control/HBoxContainer/Button3/Panel/RichTextLabel/RichTextLabel" unique_id=490092489]
+position = Vector2(114.25, 16.630066)
+scale = Vector2(2, 2)
+texture = ExtResource("3_yev5y")
+
+[node name="TextureButton" type="TextureButton" parent="Control/HBoxContainer/Button3/Panel" unique_id=392163820]
+layout_mode = 0
+offset_left = 180.99995
+offset_top = 354.99994
+offset_right = 212.99995
+offset_bottom = 370.99994
+scale = Vector2(5, 5)
+texture_normal = ExtResource("6_ktti3")
+script = SubResource("GDScript_qr0ht")
+
+[node name="Sprite2D" type="Sprite2D" parent="Control/HBoxContainer/Button3/Panel/TextureButton" unique_id=1404415538]
+position = Vector2(16, 8)
+texture = ExtResource("3_yev5y")
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Control/HBoxContainer/Button3/Panel" unique_id=1805246703]
+visible = false
+layout_mode = 0
+offset_left = 205.99997
+offset_top = 269.99994
+offset_right = 299.99997
+offset_bottom = 309.99994
+text = " press esc and f1 "
+fit_content = true
+autowrap_mode = 0
+
+[node name="Button3" type="Button" parent="." unique_id=1841832709]
+offset_left = 1480.0
+offset_right = 1560.0
+offset_bottom = 39.000004
+scale = Vector2(1.5, 1.5)
+size_flags_horizontal = 3
+text = "options"
+script = SubResource("GDScript_riqys")
+
+[node name="Panel" type="Panel" parent="Button3" unique_id=1424043045]
+layout_mode = 0
+offset_left = -720.00006
+offset_top = 53.333332
+offset_right = -190.00012
+offset_bottom = 538.3333
+theme_override_styles/panel = SubResource("StyleBoxFlat_8dubc")
+
+[node name="load" type="TextureButton" parent="Button3/Panel" unique_id=1571530722]
+layout_mode = 0
+offset_left = 183.33339
+offset_top = 76.666664
+offset_right = 215.33339
+offset_bottom = 92.666664
 scale = Vector2(5, 5)
 texture_normal = ExtResource("8_cgfq5")
 script = SubResource("GDScript_p7vwb")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Control/HBoxContainer/Button3/Panel/load" unique_id=728996704]
+[node name="RichTextLabel" type="RichTextLabel" parent="Button3/Panel/load" unique_id=2077781532]
 layout_mode = 0
 offset_left = 2.9999998
 offset_top = 4.0
@@ -352,17 +454,17 @@ text = " load game "
 fit_content = true
 autowrap_mode = 0
 
-[node name="save" type="TextureButton" parent="Control/HBoxContainer/Button3/Panel" unique_id=1327907128]
+[node name="save" type="TextureButton" parent="Button3/Panel" unique_id=1891509370]
 layout_mode = 0
-offset_left = 175.99998
-offset_top = 169.99994
-offset_right = 207.99998
-offset_bottom = 185.99994
+offset_left = 183.3334
+offset_top = 169.99998
+offset_right = 215.3334
+offset_bottom = 185.99998
 scale = Vector2(5, 5)
 texture_normal = ExtResource("6_ktti3")
 script = SubResource("GDScript_sn0t7")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Control/HBoxContainer/Button3/Panel/save" unique_id=611246144]
+[node name="RichTextLabel" type="RichTextLabel" parent="Button3/Panel/save" unique_id=907678426]
 layout_mode = 0
 offset_left = 2.9999998
 offset_top = 4.0000076
@@ -374,12 +476,12 @@ text = " save game "
 fit_content = true
 autowrap_mode = 0
 
-[node name="exit" type="Button" parent="Control/HBoxContainer/Button3/Panel" unique_id=2141502903]
+[node name="exit" type="Button" parent="Button3/Panel" unique_id=559521225]
 layout_mode = 0
-offset_left = 175.99997
-offset_top = 279.99994
-offset_right = 340.99997
-offset_bottom = 353.99994
+offset_left = 183.33339
+offset_top = 280.0
+offset_right = 348.33337
+offset_bottom = 354.0
 text = "  save and exit  "
 script = SubResource("GDScript_6f8o3")
 
@@ -387,6 +489,8 @@ script = SubResource("GDScript_6f8o3")
 [connection signal="pressed" from="Control/HBoxContainer/Button2" to="Control/HBoxContainer/Button2" method="_on_pressed"]
 [connection signal="pressed" from="Control/HBoxContainer/Button2/Panel/pristage cost" to="Control/HBoxContainer/Button2/Panel/pristage cost" method="_on_pressed"]
 [connection signal="pressed" from="Control/HBoxContainer/Button3" to="Control/HBoxContainer/Button3" method="_on_pressed"]
-[connection signal="pressed" from="Control/HBoxContainer/Button3/Panel/load" to="Control/HBoxContainer/Button3/Panel/load" method="_on_pressed"]
-[connection signal="pressed" from="Control/HBoxContainer/Button3/Panel/save" to="Control/HBoxContainer/Button3/Panel/save" method="_on_pressed"]
-[connection signal="pressed" from="Control/HBoxContainer/Button3/Panel/exit" to="Control/HBoxContainer/Button3/Panel/exit" method="_on_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer/Button3/Panel/TextureButton" to="Control/HBoxContainer/Button3/Panel/TextureButton" method="_on_pressed"]
+[connection signal="pressed" from="Button3" to="Button3" method="_on_pressed"]
+[connection signal="pressed" from="Button3/Panel/load" to="Button3/Panel/load" method="_on_pressed"]
+[connection signal="pressed" from="Button3/Panel/save" to="Button3/Panel/save" method="_on_pressed"]
+[connection signal="pressed" from="Button3/Panel/exit" to="Button3/Panel/exit" method="_on_pressed"]

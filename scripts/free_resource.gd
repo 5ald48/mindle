@@ -113,7 +113,7 @@ func _on_resource_pressed() -> void:
 		var x = randf_range(-5.0,10.0)
 		var y = randf_range(-5.0,10.0)
 		
-		rich_label.text = "[rainbow] +" + str(Gamedata.pickaxe_click_multiplier) 
+		rich_label.text = "[rainbow] +" + str(Gamedata.pickaxe_click_multiplier)  + " "
 		rich_label.bbcode_enabled = true
 		rich_label.z_index = 1000
 		rich_label.position =Vector2(x,y)

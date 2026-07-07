@@ -18,6 +18,10 @@ func _process(delta):
 
 func get_save_data() -> Dictionary:
 	return {
+		
+		#own the universe
+		"own_the_universe":Gamedata.own_the_universe,
+		
 		# PICKAXE
 		"pickaxe_level": Gamedata.pickaxe_level,
 		"pickaxe_click_multiplier": Gamedata.pickaxe_click_multiplier,
@@ -157,6 +161,11 @@ func load_game():
 	var file = FileAccess.open("user://MINDLE_savefile.json", FileAccess.READ)
 	var data = JSON.parse_string(file.get_as_text())
 	file.close()
+	
+	
+	#own_the_universe
+	if data.has("own_the_universe"):
+		Gamedata.own_the_universe = data["own_the_universe"]
 	
 	# PICKAXE
 	Gamedata.pickaxe_level = data["pickaxe_level"]

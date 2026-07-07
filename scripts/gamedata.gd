@@ -1,5 +1,7 @@
 extends Node
 
+var own_the_universe:bool = false
+var the_universe_cost:BigNumber = BigNumber.new()
 
 var pickaxe_level : int = 1
 var pickaxe_click_multiplier : int = 1
@@ -188,6 +190,9 @@ var circuit_board_value : BigNumber = BigNumber.new()
 func _ready() -> void:
 	reset()
 	
+	the_universe_cost.mantissa = 1.0
+	the_universe_cost.exponent = 9999999999
+	
 	pristage_coin.mantissa = 0.0
 	pristage_coin.exponent = 0
 	
@@ -206,8 +211,8 @@ func _ready() -> void:
 
 func reset():
 	
-	coin.mantissa = 10.0
-	coin.exponent = 10
+	coin.mantissa = 1.0
+	coin.exponent = 9999999999
 	
 
 	pristage_cost.mantissa = 1.0
