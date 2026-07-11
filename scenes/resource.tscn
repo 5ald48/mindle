@@ -14,10 +14,56 @@
 [ext_resource type="Texture2D" uid="uid://b4xh6minver8m" path="res://textures/my art/MAIN SPRITE-352x48-16x16.png" id="9_ge4wk"]
 [ext_resource type="Texture2D" uid="uid://bk1chogld7afj" path="res://textures/my art/MAIN SPRITE-352x240-48x16.png" id="9_ofw20"]
 [ext_resource type="Texture2D" uid="uid://cr6mg3puxl506" path="res://textures/my art/MAIN SPRITE-352x224-32x16.png" id="10_ofw20"]
+[ext_resource type="AudioStream" uid="uid://c88v4fvnt8f02" path="res://audio/freesoundeffects-button-click-289742.mp3" id="12_luk33"]
+[ext_resource type="Script" uid="uid://cifgpk0sdsnsr" path="res://scenes/audio_stream_player.gd" id="12_nd05n"]
 [ext_resource type="Texture2D" uid="uid://75ymqy7ijc8a" path="res://textures/my art/MAIN SPRITE-400x16-288x16.png" id="13_8e877"]
 [ext_resource type="Texture2D" uid="uid://cs274r7pdtyor" path="res://textures/my art/MAIN SPRITE-399x48-145x16.png" id="14_vlwkx"]
 [ext_resource type="Texture2D" uid="uid://qnjbi3bxfeuf" path="res://textures/my art/MAIN SPRITE-544x48-145x16.png" id="15_6vn0h"]
 [ext_resource type="Texture2D" uid="uid://vbru5svb4u5k" path="res://textures/my art/MAIN SPRITE-513x80-13x16.png" id="16_o5w4e"]
+
+[sub_resource type="GDScript" id="GDScript_3488u"]
+script/source = "extends AudioStreamPlayer
+@onready var audio_stream_player: AudioStreamPlayer = $\".\"
+
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta: float) -> void:
+	pass
+
+
+
+
+
+func _on_on_off_pressed() -> void:
+	audio_stream_player.play()
+"
+
+[sub_resource type="GDScript" id="GDScript_luk33"]
+script/source = "extends AudioStreamPlayer
+@onready var audio_stream_player: AudioStreamPlayer = $\".\"
+
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta: float) -> void:
+	pass
+
+
+
+func _on_max_upgrade_pressed() -> void:
+	audio_stream_player.play()
+"
 
 [node name="Node2D" type="Node2D" unique_id=402219238]
 script = ExtResource("1_3rbbe")
@@ -66,6 +112,11 @@ scale = Vector2(0.75, 0.75)
 pivot_offset_ratio = Vector2(0.5, 0.5)
 texture_normal = ExtResource("7_8e877")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Sprite2D2/on off" unique_id=603823383]
+stream = ExtResource("12_luk33")
+volume_db = -15.0
+script = SubResource("GDScript_3488u")
+
 [node name="resource" type="TextureButton" parent="Sprite2D2" unique_id=451976459]
 offset_left = -150.0
 offset_top = -8.0
@@ -76,9 +127,9 @@ pivot_offset_ratio = Vector2(1, 0.5)
 texture_normal = ExtResource("6_n42d4")
 
 [node name="miner upgrade" type="TextureButton" parent="Sprite2D2" unique_id=270947365]
-offset_left = 87.0
+offset_left = 85.0
 offset_top = -8.0
-offset_right = 135.0
+offset_right = 133.0
 offset_bottom = 8.0
 scale = Vector2(0.75, 0.75)
 pivot_offset_ratio = Vector2(0.5, 0.5)
@@ -109,10 +160,15 @@ position = Vector2(8.000002, 8)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("9_ge4wk")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Sprite2D2/miner upgrade" unique_id=172227156]
+stream = ExtResource("12_luk33")
+volume_db = -15.0
+script = ExtResource("12_nd05n")
+
 [node name="max_upgrade" type="TextureButton" parent="Sprite2D2" unique_id=442341910]
-offset_left = 62.0
+offset_left = 60.0
 offset_top = -8.0
-offset_right = 94.0
+offset_right = 92.0
 offset_bottom = 8.0
 scale = Vector2(0.75, 0.75)
 pivot_offset_ratio = Vector2(0.5, 0.5)
@@ -131,6 +187,11 @@ theme_override_font_sizes/normal_font_size = 32
 text = " UPGRADE MAX "
 fit_content = true
 autowrap_mode = 0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Sprite2D2/max_upgrade" unique_id=1551996308]
+stream = ExtResource("12_luk33")
+volume_db = -15.0
+script = SubResource("GDScript_luk33")
 
 [node name="cost" type="Sprite2D" parent="." unique_id=2045267571]
 position = Vector2(-53, 1)
@@ -255,6 +316,7 @@ stretch_mode = 3
 [connection signal="mouse_entered" from="Sprite2D2/on off" to="tweens" method="_on_on_off_mouse_entered"]
 [connection signal="pressed" from="Sprite2D2/on off" to="." method="_on_on_off_pressed"]
 [connection signal="pressed" from="Sprite2D2/on off" to="tweens" method="_on_on_off_pressed"]
+[connection signal="pressed" from="Sprite2D2/on off" to="Sprite2D2/on off/AudioStreamPlayer" method="_on_on_off_pressed"]
 [connection signal="mouse_entered" from="Sprite2D2/resource" to="tweens" method="_on_resource_mouse_entered"]
 [connection signal="mouse_exited" from="Sprite2D2/resource" to="tweens" method="_on_resource_mouse_exited"]
 [connection signal="pressed" from="Sprite2D2/resource" to="." method="_on_resource_pressed"]
@@ -263,10 +325,12 @@ stretch_mode = 3
 [connection signal="mouse_exited" from="Sprite2D2/miner upgrade" to="tweens" method="_on_miner_upgrade_mouse_exited"]
 [connection signal="pressed" from="Sprite2D2/miner upgrade" to="." method="_on_miner_upgrade_pressed"]
 [connection signal="pressed" from="Sprite2D2/miner upgrade" to="tweens" method="_on_miner_upgrade_pressed"]
+[connection signal="pressed" from="Sprite2D2/miner upgrade" to="Sprite2D2/miner upgrade/AudioStreamPlayer" method="_on_miner_upgrade_pressed"]
 [connection signal="mouse_entered" from="Sprite2D2/max_upgrade" to="tweens" method="_on_max_upgrade_mouse_entered"]
 [connection signal="mouse_exited" from="Sprite2D2/max_upgrade" to="tweens" method="_on_max_upgrade_mouse_exited"]
 [connection signal="pressed" from="Sprite2D2/max_upgrade" to="." method="_on_max_upgrade_pressed"]
 [connection signal="pressed" from="Sprite2D2/max_upgrade" to="tweens" method="_on_max_upgrade_pressed"]
+[connection signal="pressed" from="Sprite2D2/max_upgrade" to="Sprite2D2/max_upgrade/AudioStreamPlayer" method="_on_max_upgrade_pressed"]
 [connection signal="mouse_entered" from="unlock/unlock" to="tweens" method="_on_unlock_mouse_entered"]
 [connection signal="pressed" from="unlock/unlock" to="." method="_on_unlock_pressed"]
 [connection signal="pressed" from="unlock/unlock" to="tweens" method="_on_unlock_pressed"]

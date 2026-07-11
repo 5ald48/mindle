@@ -10,4 +10,5 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	pass
 	if Input.is_action_just_pressed("cheat_mod"):
-		$"../Panel".visible = not $"../Panel".visible
+		if Gamedata.own_the_universe == true:
+			$"../Panel".visible = not $"../Panel".visible

@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://db40xavlkt8ln" path="res://scenes/ui.tscn" id="2_k0ot2"]
 [ext_resource type="PackedScene" uid="uid://ce13aky1v6trk" path="res://scenes/tower_&_everything_on_tower.tscn" id="3_ijdfw"]
 [ext_resource type="PackedScene" uid="uid://bx1jsfmieltd3" path="res://scenes/tutorial.tscn" id="6_esn7u"]
+[ext_resource type="AudioStream" uid="uid://cru55abfwuvxf" path="res://audio/luis_humanoide-clockwork-adventure-steampunk-music-with-melody-288524.mp3" id="7_sneai"]
 
 [node name="MainScene" type="Node2D" unique_id=579106627]
 
@@ -27,3 +28,9 @@ script = ExtResource("1_d2vo2")
 visible = false
 z_index = 100
 position = Vector2(304, 140)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=142952051]
+stream = ExtResource("7_sneai")
+volume_db = -30.0
+autoplay = true
+parameters/looping = true

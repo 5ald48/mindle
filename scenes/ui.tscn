@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cr6mg3puxl506" path="res://textures/my art/MAIN SPRITE-352x224-32x16.png" id="8_cgfq5"]
 [ext_resource type="Texture2D" uid="uid://bqqmbexurhmlp" path="res://textures/my art/MAIN SPRITE-0x0-16x16.png" id="8_ktti3"]
 [ext_resource type="Texture2D" uid="uid://5i0l0p3hwb3t" path="res://textures/my art/MAIN SPRITE-352x256-48x32.png" id="8_vdcm2"]
+[ext_resource type="AudioStream" uid="uid://c88v4fvnt8f02" path="res://audio/freesoundeffects-button-click-289742.mp3" id="8_vsj0x"]
 [ext_resource type="Script" uid="uid://pjc3swgib3i8" path="res://scripts/cheat_mod.gd" id="12_6rmj2"]
 
 [sub_resource type="GDScript" id="GDScript_8dubc"]
@@ -64,6 +65,32 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
+[sub_resource type="GDScript" id="GDScript_qsv74"]
+script/source = "extends AudioStreamPlayer
+@onready var audio_stream_player: AudioStreamPlayer = $\".\"
+
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta: float) -> void:
+	pass
+
+
+
+
+
+
+
+
+func _on_button_pressed() -> void:
+	audio_stream_player.play()
+"
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8dubc"]
 content_margin_left = 0.0
 content_margin_top = 0.0
@@ -92,6 +119,30 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	$\".\".text = \" pristage  lvl  \" + Gamedata.pristage_lvl.to_metric_name(true)
+"
+
+[sub_resource type="GDScript" id="GDScript_vsj0x"]
+script/source = "extends AudioStreamPlayer
+@onready var audio_stream_player: AudioStreamPlayer = $\".\"
+
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta: float) -> void:
+	pass
+
+
+
+
+
+
+func _on_button_2_pressed() -> void:
+	audio_stream_player.play()
 "
 
 [sub_resource type="GDScript" id="GDScript_qr0ht"]
@@ -140,6 +191,31 @@ func _on_mouse_entered() -> void:
 	if current_tween: current_tween.kill()
 	current_tween = create_tween()
 	current_tween.tween_property(buying_the_universe,\"scale\",Vector2(6.0 ,6.0),0.1)
+"
+
+[sub_resource type="GDScript" id="GDScript_h1mc3"]
+script/source = "extends AudioStreamPlayer
+@onready var audio_stream_player: AudioStreamPlayer = $\".\"
+
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta: float) -> void:
+	pass
+
+
+
+
+
+
+
+func _on_button_3_pressed() -> void:
+	audio_stream_player.play()
 "
 
 [sub_resource type="GDScript" id="GDScript_p7vwb"]
@@ -198,6 +274,31 @@ func _process(_delta: float) -> void:
 func _on_pressed() -> void:
 	SaveAndLoad.save()
 	get_tree().quit()
+"
+
+[sub_resource type="GDScript" id="GDScript_cof4p"]
+script/source = "extends AudioStreamPlayer
+@onready var audio_stream_player: AudioStreamPlayer = $\".\"
+
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta: float) -> void:
+	pass
+
+
+
+
+
+
+
+func _on_button_3_pressed() -> void:
+	audio_stream_player.play()
 "
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1543564076]
@@ -294,6 +395,11 @@ texture = ExtResource("7_7dvkv")
 position = Vector2(140, 370)
 scale = Vector2(5.5, 5.5)
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control/HBoxContainer/Button" unique_id=1439129788]
+stream = ExtResource("8_vsj0x")
+volume_db = -15.0
+script = SubResource("GDScript_qsv74")
+
 [node name="Button2" type="Button" parent="Control/HBoxContainer" unique_id=836041338]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -367,6 +473,11 @@ autowrap_mode = 0
 horizontal_alignment = 1
 script = SubResource("GDScript_bhunq")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control/HBoxContainer/Button2" unique_id=1973578364]
+stream = ExtResource("8_vsj0x")
+volume_db = -15.0
+script = SubResource("GDScript_vsj0x")
+
 [node name="Button3" type="Button" parent="Control/HBoxContainer" unique_id=92520544]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -399,7 +510,7 @@ which is a  1  with  9,999,999,999  zero
 
 
 
-after you buy the universe you will get new powers"
+after you buy the universe you will get new power"
 fit_content = true
 autowrap_mode = 0
 horizontal_alignment = 1
@@ -448,6 +559,11 @@ fit_content = true
 autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control/HBoxContainer/Button3" unique_id=854701349]
+stream = ExtResource("8_vsj0x")
+volume_db = -15.0
+script = SubResource("GDScript_h1mc3")
 
 [node name="Button3" type="Button" parent="." unique_id=1841832709]
 offset_left = 1480.0
@@ -520,6 +636,11 @@ offset_bottom = 354.0
 text = "  save and exit  "
 script = SubResource("GDScript_6f8o3")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button3" unique_id=1841420470]
+stream = ExtResource("8_vsj0x")
+volume_db = -15.0
+script = SubResource("GDScript_cof4p")
+
 [node name="cheat_mod" type="Control" parent="." unique_id=2093069176]
 layout_mode = 3
 anchors_preset = 0
@@ -540,13 +661,17 @@ scale = Vector2(25.031248, 14.015624)
 color = Color(0.103743516, 0.10374353, 0.103743516, 1)
 
 [connection signal="pressed" from="Control/HBoxContainer/Button" to="Control/HBoxContainer/Button" method="_on_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer/Button" to="Control/HBoxContainer/Button/AudioStreamPlayer" method="_on_button_pressed"]
 [connection signal="pressed" from="Control/HBoxContainer/Button2" to="Control/HBoxContainer/Button2" method="_on_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer/Button2" to="Control/HBoxContainer/Button2/AudioStreamPlayer" method="_on_button_2_pressed"]
 [connection signal="mouse_entered" from="Control/HBoxContainer/Button2/Panel/pristage cost" to="Control/HBoxContainer/Button2/Panel/pristage cost" method="_on_mouse_entered"]
 [connection signal="pressed" from="Control/HBoxContainer/Button2/Panel/pristage cost" to="Control/HBoxContainer/Button2/Panel/pristage cost" method="_on_pressed"]
 [connection signal="pressed" from="Control/HBoxContainer/Button3" to="Control/HBoxContainer/Button3" method="_on_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer/Button3" to="Control/HBoxContainer/Button3/AudioStreamPlayer" method="_on_button_3_pressed"]
 [connection signal="mouse_entered" from="Control/HBoxContainer/Button3/Panel/buying_the_universe" to="Control/HBoxContainer/Button3/Panel/buying_the_universe" method="_on_mouse_entered"]
 [connection signal="pressed" from="Control/HBoxContainer/Button3/Panel/buying_the_universe" to="Control/HBoxContainer/Button3/Panel/buying_the_universe" method="_on_pressed"]
 [connection signal="pressed" from="Button3" to="Button3" method="_on_pressed"]
+[connection signal="pressed" from="Button3" to="Button3/AudioStreamPlayer" method="_on_button_3_pressed"]
 [connection signal="pressed" from="Button3/Panel/load" to="Button3/Panel/load" method="_on_pressed"]
 [connection signal="pressed" from="Button3/Panel/save" to="Button3/Panel/save" method="_on_pressed"]
 [connection signal="pressed" from="Button3/Panel/exit" to="Button3/Panel/exit" method="_on_pressed"]

@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bkjpvwa3d8glw" path="res://textures/my art/MAIN SPRITE-144x0-16x16.png" id="7_h48u7"]
 [ext_resource type="Texture2D" uid="uid://bqqmbexurhmlp" path="res://textures/my art/MAIN SPRITE-0x0-16x16.png" id="9_202q2"]
 [ext_resource type="Texture2D" uid="uid://cr6mg3puxl506" path="res://textures/my art/MAIN SPRITE-352x224-32x16.png" id="9_r3td7"]
+[ext_resource type="AudioStream" uid="uid://c88v4fvnt8f02" path="res://audio/freesoundeffects-button-click-289742.mp3" id="11_r3td7"]
 
 [sub_resource type="GDScript" id="GDScript_riqys"]
 script/source = "extends Node2D
@@ -103,6 +104,64 @@ func _on_pickaxe_level_upgrade_mouse_entered() -> void:
 	current_tween.tween_property(btn_pickaxe_level_upgrade,\"scale\",Vector2(1.5 ,1.5),0.1)
 "
 
+[sub_resource type="GDScript" id="GDScript_crkqf"]
+script/source = "extends AudioStreamPlayer
+@onready var audio_stream_player: AudioStreamPlayer = $\".\"
+
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta: float) -> void:
+	pass
+
+
+
+
+
+
+
+
+
+
+
+
+func _on_pickaxe_level_upgrade_pressed() -> void:
+	audio_stream_player.play()
+"
+
+[sub_resource type="GDScript" id="GDScript_r3td7"]
+script/source = "extends AudioStreamPlayer
+@onready var audio_stream_player: AudioStreamPlayer = $\".\"
+
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta: float) -> void:
+	pass
+
+
+
+
+
+
+
+
+
+
+func _on_pickaxe_click_upgrade_pressed() -> void:
+	audio_stream_player.play()
+"
+
 [sub_resource type="GDScript" id="GDScript_bhunq"]
 script/source = "extends TextureButton
 
@@ -125,6 +184,33 @@ func _on_pressed() -> void:
 		Gamedata.per_sec_multiplier_cost.multiply_equals(Gamedata.per_sec_multiplier_cost_multiplier)
 		$\"../spritee/RichTextLabel\".text = \" upgrade  multiplyer  \\n     =          \" + Gamedata.per_sec_multiplier.to_metric_name(false) + \" \"
 		$RichTextLabel2.text = \" \" + Gamedata.per_sec_multiplier_cost.to_metric_name(true) + \" \"
+"
+
+[sub_resource type="GDScript" id="GDScript_gtqff"]
+script/source = "extends AudioStreamPlayer
+@onready var audio_stream_player: AudioStreamPlayer = $\".\"
+
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta: float) -> void:
+	pass
+
+
+
+
+
+
+
+
+
+func _on_upgrade_multiplayer_pressed() -> void:
+	audio_stream_player.play()
 "
 
 [node name="pickaxe" type="Node2D" unique_id=1632089896]
@@ -206,6 +292,11 @@ position = Vector2(12.487976, 10.607103)
 scale = Vector2(0.18, 0.18)
 texture = ExtResource("5_h48u7")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control/pickaxe level upgrade" unique_id=860158351]
+stream = ExtResource("11_r3td7")
+volume_db = -15.0
+script = SubResource("GDScript_crkqf")
+
 [node name="Control2" type="Control" parent="." unique_id=1592290157]
 layout_mode = 3
 anchors_preset = 0
@@ -253,6 +344,11 @@ autowrap_mode = 0
 position = Vector2(9.213514, 8)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("6_nsjyk")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control2/pickaxe click upgrade" unique_id=1626528341]
+stream = ExtResource("11_r3td7")
+volume_db = -15.0
+script = SubResource("GDScript_r3td7")
 
 [node name="Control3" type="Control" parent="." unique_id=1154397034]
 layout_mode = 3
@@ -303,12 +399,20 @@ position = Vector2(8.431225, 8)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("9_202q2")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control3/upgrade multiplayer" unique_id=1156224740]
+stream = ExtResource("11_r3td7")
+volume_db = -15.0
+script = SubResource("GDScript_gtqff")
+
 [connection signal="mouse_entered" from="Control/pickaxe level upgrade" to="tweens" method="_on_pickaxe_level_upgrade_mouse_entered"]
 [connection signal="pressed" from="Control/pickaxe level upgrade" to="." method="_on_pickaxe_level_upgrade_pressed"]
 [connection signal="pressed" from="Control/pickaxe level upgrade" to="tweens" method="_on_pickaxe_level_upgrade_pressed"]
+[connection signal="pressed" from="Control/pickaxe level upgrade" to="Control/pickaxe level upgrade/AudioStreamPlayer" method="_on_pickaxe_level_upgrade_pressed"]
 [connection signal="mouse_entered" from="Control2/pickaxe click upgrade" to="tweens" method="_on_pickaxe_click_upgrade_mouse_entered"]
 [connection signal="pressed" from="Control2/pickaxe click upgrade" to="." method="_on_pickaxe_click_upgrade_pressed"]
 [connection signal="pressed" from="Control2/pickaxe click upgrade" to="tweens" method="_on_pickaxe_click_upgrade_pressed"]
+[connection signal="pressed" from="Control2/pickaxe click upgrade" to="Control2/pickaxe click upgrade/AudioStreamPlayer" method="_on_pickaxe_click_upgrade_pressed"]
 [connection signal="mouse_entered" from="Control3/upgrade multiplayer" to="tweens" method="_on_upgrade_multiplayer_mouse_entered"]
 [connection signal="pressed" from="Control3/upgrade multiplayer" to="tweens" method="_on_upgrade_multiplayer_pressed"]
 [connection signal="pressed" from="Control3/upgrade multiplayer" to="Control3/upgrade multiplayer" method="_on_pressed"]
+[connection signal="pressed" from="Control3/upgrade multiplayer" to="Control3/upgrade multiplayer/AudioStreamPlayer" method="_on_upgrade_multiplayer_pressed"]
