@@ -36,20 +36,20 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_14cef"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pclap"]
 content_margin_left = 4.0
 content_margin_top = 4.0
 content_margin_right = 4.0
 content_margin_bottom = 4.0
-bg_color = Color(0.1931151, 0.050708726, 0.086104214, 0)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color(0.48677072, 0.36556464, 0, 0)
+bg_color = Color(0, 0, 0, 0.374)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.8001019, 0.8001019, 0.8001019, 0.41500002)
 border_blend = true
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pclap"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_14cef"]
 content_margin_left = 4.0
 content_margin_top = 4.0
 content_margin_right = 4.0
@@ -67,8 +67,11 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -299.0
+offset_bottom = -160.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
 script = ExtResource("1_0rhww")
 coin_texture = ExtResource("3_xwchj")
 iron_texture = ExtResource("3_14cef")
@@ -90,19 +93,20 @@ circuit_board_texture = ExtResource("18_n2tv0")
 
 [node name="TextureButton" type="Button" parent="." unique_id=1966739395]
 layout_mode = 0
-offset_left = 3.0
+offset_left = 2.0
 offset_top = -1.0
 offset_right = 25.0
-offset_bottom = 21.0
+offset_bottom = 22.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
 theme_override_styles/normal = SubResource("StyleBoxFlat_as6ls")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_14cef")
-theme_override_styles/hover = SubResource("StyleBoxFlat_pclap")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pclap")
+theme_override_styles/hover = SubResource("StyleBoxFlat_14cef")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=385571656]
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureButton" unique_id=385571656]
 layout_mode = 0
-offset_left = 9.0
+offset_left = 7.0
 offset_top = 2.0
-offset_right = 49.0
+offset_right = 47.0
 offset_bottom = 22.0
 scale = Vector2(0.25, 0.25)
 mouse_filter = 2
@@ -111,11 +115,11 @@ text = " 100kilo
 fit_content = true
 autowrap_mode = 0
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=418280124]
+[node name="RichTextLabel2" type="RichTextLabel" parent="TextureButton" unique_id=418280124]
 layout_mode = 0
-offset_left = 9.0
+offset_left = 7.0
 offset_top = 6.0
-offset_right = 49.0
+offset_right = 47.0
 offset_bottom = 25.0
 scale = Vector2(0.25, 0.25)
 mouse_filter = 2
@@ -123,11 +127,11 @@ text = " 100kilo"
 fit_content = true
 autowrap_mode = 0
 
-[node name="RichTextLabel3" type="RichTextLabel" parent="." unique_id=1301183808]
+[node name="RichTextLabel3" type="RichTextLabel" parent="TextureButton" unique_id=1301183808]
 layout_mode = 0
-offset_left = 9.0
+offset_left = 7.0
 offset_top = 10.0
-offset_right = 49.0
+offset_right = 47.0
 offset_bottom = 29.0
 scale = Vector2(0.25, 0.25)
 mouse_filter = 2
@@ -135,11 +139,11 @@ text = " 100kilo"
 fit_content = true
 autowrap_mode = 0
 
-[node name="RichTextLabel4" type="RichTextLabel" parent="." unique_id=1568176758]
+[node name="RichTextLabel4" type="RichTextLabel" parent="TextureButton" unique_id=1568176758]
 layout_mode = 0
-offset_left = 8.0
+offset_left = 6.0
 offset_top = 14.0
-offset_right = 48.0
+offset_right = 46.0
 offset_bottom = 33.0
 scale = Vector2(0.25, 0.25)
 mouse_filter = 2
@@ -147,24 +151,25 @@ text = " 100kilo"
 fit_content = true
 autowrap_mode = 0
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2017918445]
-position = Vector2(6, 4)
+[node name="Sprite2D" type="Sprite2D" parent="TextureButton" unique_id=2017918445]
+position = Vector2(4, 4)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("3_xwchj")
 
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=2104258941]
-position = Vector2(6, 8)
+[node name="Sprite2D2" type="Sprite2D" parent="TextureButton" unique_id=2104258941]
+position = Vector2(4, 8)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("3_xwchj")
 
-[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=962125786]
-position = Vector2(6, 12)
+[node name="Sprite2D3" type="Sprite2D" parent="TextureButton" unique_id=962125786]
+position = Vector2(4, 12)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("3_xwchj")
 
-[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=1577821801]
-position = Vector2(6, 16)
+[node name="Sprite2D4" type="Sprite2D" parent="TextureButton" unique_id=1577821801]
+position = Vector2(4, 16)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("3_xwchj")
 
+[connection signal="mouse_entered" from="TextureButton" to="." method="_on_texture_button_mouse_entered"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

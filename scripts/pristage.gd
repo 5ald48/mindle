@@ -1,6 +1,7 @@
 extends TextureButton
 
-
+@onready var btn_pristage_cost: TextureButton = $"."
+@onready var current_tween: Tween
 
 func prestage_gain() -> BigNumber:
 	
@@ -25,8 +26,11 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	pass
-
+	
+	
+	if not btn_pristage_cost.is_hovered():
+		current_tween = create_tween()
+		current_tween.tween_property(btn_pristage_cost,"scale",Vector2(5.0 ,5.0),0.1)
 
 func _on_pressed() -> void:
 	if Gamedata.coin.is_greater_than_or_equal_to(Gamedata.pristage_cost):
@@ -34,3 +38,16 @@ func _on_pressed() -> void:
 		Gamedata.pristage_lvl.plus_equals(1)
 		Gamedata.reset()
 		get_tree().call_group("shipments", "shipment_reset")
+		
+		
+		
+	if current_tween: current_tween.kill()
+	current_tween = create_tween()
+	current_tween.tween_property(btn_pristage_cost,"scale",Vector2(4.5 ,4.0),0.1)
+	current_tween.tween_property(btn_pristage_cost,"scale",Vector2(6.0 ,6.0),0.1)
+
+
+func _on_mouse_entered() -> void:
+	if current_tween: current_tween.kill()
+	current_tween = create_tween()
+	current_tween.tween_property(btn_pristage_cost,"scale",Vector2(6.0 ,6.0),0.1)

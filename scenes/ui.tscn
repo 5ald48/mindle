@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cr6mg3puxl506" path="res://textures/my art/MAIN SPRITE-352x224-32x16.png" id="8_cgfq5"]
 [ext_resource type="Texture2D" uid="uid://bqqmbexurhmlp" path="res://textures/my art/MAIN SPRITE-0x0-16x16.png" id="8_ktti3"]
 [ext_resource type="Texture2D" uid="uid://5i0l0p3hwb3t" path="res://textures/my art/MAIN SPRITE-352x256-48x32.png" id="8_vdcm2"]
+[ext_resource type="Script" uid="uid://pjc3swgib3i8" path="res://scripts/cheat_mod.gd" id="12_6rmj2"]
 
 [sub_resource type="GDScript" id="GDScript_8dubc"]
 script/source = "extends RichTextLabel
@@ -96,6 +97,12 @@ func _process(_delta: float) -> void:
 [sub_resource type="GDScript" id="GDScript_qr0ht"]
 script/source = "extends TextureButton
 
+@onready var buying_the_universe: TextureButton = $\".\"
+
+@onready var press_g: RichTextLabel = $\"../press g\"
+
+@onready var current_tween: Tween
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -104,13 +111,35 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	pass
+	
+	
+	if not buying_the_universe.is_hovered():
+		current_tween = create_tween()
+		current_tween.tween_property(buying_the_universe,\"scale\",Vector2(5.0 ,5.0),0.1)
+	
+	
+	
+	
+	if Gamedata.own_the_universe == true :
+		press_g.show()
 
 
 func _on_pressed() -> void:
 	if Gamedata.coin.is_greater_than_or_equal_to(Gamedata.the_universe_cost):
 		Gamedata.own_the_universe = true
-		print(Gamedata.own_the_universe)
+		
+		
+		
+	if current_tween: current_tween.kill()
+	current_tween = create_tween()
+	current_tween.tween_property(buying_the_universe,\"scale\",Vector2(4.5 ,4.0),0.1)
+	current_tween.tween_property(buying_the_universe,\"scale\",Vector2(6.0 ,6.0),0.1)
+
+
+func _on_mouse_entered() -> void:
+	if current_tween: current_tween.kill()
+	current_tween = create_tween()
+	current_tween.tween_property(buying_the_universe,\"scale\",Vector2(6.0 ,6.0),0.1)
 "
 
 [sub_resource type="GDScript" id="GDScript_p7vwb"]
@@ -285,11 +314,12 @@ texture = ExtResource("8_vdcm2")
 
 [node name="pristage cost" type="TextureButton" parent="Control/HBoxContainer/Button2/Panel" unique_id=1555537736]
 layout_mode = 0
-offset_left = 185.99998
-offset_top = 390.0
-offset_right = 217.99998
-offset_bottom = 406.0
+offset_left = 250.99998
+offset_top = 430.0
+offset_right = 283.0
+offset_bottom = 446.0
 scale = Vector2(5, 5)
+pivot_offset_ratio = Vector2(0.5, 0.5)
 texture_normal = ExtResource("6_ktti3")
 script = ExtResource("5_8dubc")
 
@@ -390,30 +420,34 @@ position = Vector2(114.25, 16.630066)
 scale = Vector2(2, 2)
 texture = ExtResource("3_yev5y")
 
-[node name="TextureButton" type="TextureButton" parent="Control/HBoxContainer/Button3/Panel" unique_id=392163820]
+[node name="buying_the_universe" type="TextureButton" parent="Control/HBoxContainer/Button3/Panel" unique_id=392163820]
 layout_mode = 0
-offset_left = 180.99995
-offset_top = 354.99994
-offset_right = 212.99995
-offset_bottom = 370.99994
+offset_left = 240.99995
+offset_top = 389.99994
+offset_right = 272.99994
+offset_bottom = 405.99994
 scale = Vector2(5, 5)
+pivot_offset_ratio = Vector2(0.5, 0.5)
 texture_normal = ExtResource("6_ktti3")
 script = SubResource("GDScript_qr0ht")
 
-[node name="Sprite2D" type="Sprite2D" parent="Control/HBoxContainer/Button3/Panel/TextureButton" unique_id=1404415538]
+[node name="Sprite2D" type="Sprite2D" parent="Control/HBoxContainer/Button3/Panel/buying_the_universe" unique_id=1404415538]
 position = Vector2(16, 8)
 texture = ExtResource("3_yev5y")
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="Control/HBoxContainer/Button3/Panel" unique_id=1805246703]
+[node name="press g" type="RichTextLabel" parent="Control/HBoxContainer/Button3/Panel" unique_id=1805246703]
 visible = false
 layout_mode = 0
-offset_left = 205.99997
-offset_top = 269.99994
-offset_right = 299.99997
-offset_bottom = 309.99994
-text = " press esc and f1 "
+offset_left = 120.99997
+offset_top = 124.99995
+offset_right = 214.99997
+offset_bottom = 164.99994
+scale = Vector2(3, 3)
+text = " press  G "
 fit_content = true
 autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Button3" type="Button" parent="." unique_id=1841832709]
 offset_left = 1480.0
@@ -425,6 +459,7 @@ text = "options"
 script = SubResource("GDScript_riqys")
 
 [node name="Panel" type="Panel" parent="Button3" unique_id=1424043045]
+visible = false
 layout_mode = 0
 offset_left = -720.00006
 offset_top = 53.333332
@@ -485,11 +520,32 @@ offset_bottom = 354.0
 text = "  save and exit  "
 script = SubResource("GDScript_6f8o3")
 
+[node name="cheat_mod" type="Control" parent="." unique_id=2093069176]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("12_6rmj2")
+
+[node name="Panel" type="Panel" parent="." unique_id=1952166181]
+visible = false
+offset_right = 1599.9999
+offset_bottom = 899.99994
+
+[node name="Sprite2D" type="ColorRect" parent="Panel" unique_id=1538850994]
+layout_mode = 0
+offset_right = 63.9201
+offset_bottom = 64.21405
+scale = Vector2(25.031248, 14.015624)
+color = Color(0.103743516, 0.10374353, 0.103743516, 1)
+
 [connection signal="pressed" from="Control/HBoxContainer/Button" to="Control/HBoxContainer/Button" method="_on_pressed"]
 [connection signal="pressed" from="Control/HBoxContainer/Button2" to="Control/HBoxContainer/Button2" method="_on_pressed"]
+[connection signal="mouse_entered" from="Control/HBoxContainer/Button2/Panel/pristage cost" to="Control/HBoxContainer/Button2/Panel/pristage cost" method="_on_mouse_entered"]
 [connection signal="pressed" from="Control/HBoxContainer/Button2/Panel/pristage cost" to="Control/HBoxContainer/Button2/Panel/pristage cost" method="_on_pressed"]
 [connection signal="pressed" from="Control/HBoxContainer/Button3" to="Control/HBoxContainer/Button3" method="_on_pressed"]
-[connection signal="pressed" from="Control/HBoxContainer/Button3/Panel/TextureButton" to="Control/HBoxContainer/Button3/Panel/TextureButton" method="_on_pressed"]
+[connection signal="mouse_entered" from="Control/HBoxContainer/Button3/Panel/buying_the_universe" to="Control/HBoxContainer/Button3/Panel/buying_the_universe" method="_on_mouse_entered"]
+[connection signal="pressed" from="Control/HBoxContainer/Button3/Panel/buying_the_universe" to="Control/HBoxContainer/Button3/Panel/buying_the_universe" method="_on_pressed"]
 [connection signal="pressed" from="Button3" to="Button3" method="_on_pressed"]
 [connection signal="pressed" from="Button3/Panel/load" to="Button3/Panel/load" method="_on_pressed"]
 [connection signal="pressed" from="Button3/Panel/save" to="Button3/Panel/save" method="_on_pressed"]

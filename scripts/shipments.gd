@@ -1,6 +1,7 @@
 extends Control
 
-
+@onready var current_tween: Tween
+@onready var texture_button: Button = $TextureButton
 
 #textures vars
 @export var coin_texture : Texture2D
@@ -74,7 +75,9 @@ func shipment_reset():
 
 #shipment resourses icon
 func _process(_delta: float) -> void:
-	pass
+	if not texture_button.is_hovered():
+		current_tween = create_tween()
+		current_tween.tween_property(texture_button,"scale",Vector2(1.0 ,1.0),0.1)
 
 #the botton on click comands
 func _on_texture_button_pressed() -> void:
@@ -90,6 +93,13 @@ func _on_texture_button_pressed() -> void:
 	elif how_many_resources == 3:
 		shipment_procces_3_resource()
 		shipment_choice()
+		
+		
+		
+	if current_tween: current_tween.kill()
+	current_tween = create_tween()
+	current_tween.tween_property(texture_button,"scale",Vector2(1.1 ,1.1),0.1)
+	current_tween.tween_property(texture_button,"scale",Vector2(1.2 ,1.2),0.1)
 
 
 #the random resoures random choice
@@ -202,57 +212,57 @@ func shipment_choice() -> void:
 	if how_many_resources == 1:
 		
 		
-		$RichTextLabel.show()
-		$RichTextLabel2.hide()
-		$RichTextLabel3.hide()
+		$TextureButton/RichTextLabel.show()
+		$TextureButton/RichTextLabel2.hide()
+		$TextureButton/RichTextLabel3.hide()
 		
-		$Sprite2D.show()
-		$Sprite2D2.hide()
-		$Sprite2D3.hide()
+		$TextureButton/Sprite2D.show()
+		$TextureButton/Sprite2D2.hide()
+		$TextureButton/Sprite2D3.hide()
 		
-		$RichTextLabel.text = " " + resource_shipment_cost1.to_metric_name(true) + " "
+		$TextureButton/RichTextLabel.text = " " + resource_shipment_cost1.to_metric_name(true) + " "
 		
 		full_coin_gain1()
 		
 	elif how_many_resources == 2:
 		
 		
-		$RichTextLabel.show()
-		$RichTextLabel2.show()
-		$RichTextLabel3.hide()
+		$TextureButton/RichTextLabel.show()
+		$TextureButton/RichTextLabel2.show()
+		$TextureButton/RichTextLabel3.hide()
 		
-		$Sprite2D.show()
-		$Sprite2D2.show()
-		$Sprite2D3.hide()
+		$TextureButton/Sprite2D.show()
+		$TextureButton/Sprite2D2.show()
+		$TextureButton/Sprite2D3.hide()
 		
-		$RichTextLabel.text = " " + resource_shipment_cost1.to_metric_name(true) + " " 
-		$RichTextLabel2.text = " " + resource_shipment_cost2.to_metric_name(true) + " "
+		$TextureButton/RichTextLabel.text = " " + resource_shipment_cost1.to_metric_name(true) + " " 
+		$TextureButton/RichTextLabel2.text = " " + resource_shipment_cost2.to_metric_name(true) + " "
 		
 		full_coin_gain2()
 		
 	elif how_many_resources == 3:
 		
 		
-		$RichTextLabel.show()
-		$RichTextLabel2.show()
-		$RichTextLabel3.show()
+		$TextureButton/RichTextLabel.show()
+		$TextureButton/RichTextLabel2.show()
+		$TextureButton/RichTextLabel3.show()
 		
-		$Sprite2D.show()
-		$Sprite2D2.show()
-		$Sprite2D3.show()
+		$TextureButton/Sprite2D.show()
+		$TextureButton/Sprite2D2.show()
+		$TextureButton/Sprite2D3.show()
 		
-		$RichTextLabel.text = " " + resource_shipment_cost1.to_metric_name(true) + " " 
-		$RichTextLabel2.text = " " + resource_shipment_cost2.to_metric_name(true) + " " 
-		$RichTextLabel3.text = " " + resource_shipment_cost3.to_metric_name(true) + " "
+		$TextureButton/RichTextLabel.text = " " + resource_shipment_cost1.to_metric_name(true) + " " 
+		$TextureButton/RichTextLabel2.text = " " + resource_shipment_cost2.to_metric_name(true) + " " 
+		$TextureButton/RichTextLabel3.text = " " + resource_shipment_cost3.to_metric_name(true) + " "
 		
 		full_coin_gain3()
 	
 	
-	$Sprite2D.texture = get(resource_name1 + "_texture")
-	$Sprite2D2.texture = get(resource_name2 + "_texture")
-	$Sprite2D3.texture = get(resource_name3 + "_texture")
+	$TextureButton/Sprite2D.texture = get(resource_name1 + "_texture")
+	$TextureButton/Sprite2D2.texture = get(resource_name2 + "_texture")
+	$TextureButton/Sprite2D3.texture = get(resource_name3 + "_texture")
 	
-	$RichTextLabel4.text = " =  " + full_coin_gain.to_metric_name(true) + " "
+	$TextureButton/RichTextLabel4.text = " =  " + full_coin_gain.to_metric_name(true) + " "
 	
 func full_coin_gain1 () -> void:
 	full_coin_gain = (resource_shipment_cost1.multiply(Gamedata.get(resource_name1 + "_value")))
@@ -264,3 +274,9 @@ func full_coin_gain3 () -> void:
 	full_coin_gain = (resource_shipment_cost1.multiply(Gamedata.get(resource_name1 + "_value"))).plus((resource_shipment_cost2.multiply(Gamedata.get(resource_name2 + "_value")))).plus((resource_shipment_cost3.multiply(Gamedata.get(resource_name3 + "_value"))))
 	
 	
+
+
+func _on_texture_button_mouse_entered() -> void:
+	if current_tween: current_tween.kill()
+	current_tween = create_tween()
+	current_tween.tween_property(texture_button,"scale",Vector2(1.2 ,1.2),0.1)

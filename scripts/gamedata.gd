@@ -211,8 +211,8 @@ func _ready() -> void:
 
 func reset():
 	
-	coin.mantissa = 1.0
-	coin.exponent = 9999999999
+	coin.mantissa = 0.0
+	coin.exponent = 0
 	
 
 	pristage_cost.mantissa = 1.0
